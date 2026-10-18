@@ -27,6 +27,12 @@ class RenderTest(unittest.TestCase):
         cls.events, _ = normalize.build_events(SNAPSHOT, CONFIG)
         cls.page = page_for(cls.events)
 
+    def test_is_a_complete_document_that_scales_on_phones(self):
+        self.assertTrue(self.page.startswith("<!doctype html>"))
+        self.assertIn('<meta name="viewport" content="width=device-width, initial-scale=1', self.page)
+        self.assertIn('<html lang="en">', self.page)
+        self.assertTrue(self.page.rstrip().endswith("</html>"))
+
     def test_no_unfilled_tokens(self):
         self.assertEqual(re.findall(r"__[A-Z_]{3,}__", self.page), [])
 

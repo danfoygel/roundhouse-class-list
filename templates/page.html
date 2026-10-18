@@ -1,6 +1,9 @@
+<!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>__TITLE__</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Bricolage+Grotesque:wght@600;700&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap">
@@ -8,6 +11,9 @@
 /* Layout: one scrolling column of ticket-style tiles grouped under sticky month rails.
    Each tile = date stub (left), class details + three facts (middle), booking action (right). */
 :root {
+  color-scheme: light;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   --bg: #ecefed;
   --surface: #ffffff;
   --ink: #14202b;
@@ -69,7 +75,9 @@
 }
 
 * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 body {
+  margin: 0;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
@@ -244,16 +252,25 @@ footer p { margin: 0 0 6px; }
   .ico { width: 44px; height: 44px; }
   .top { gap: 12px; }
   .act { padding: 0 16px 16px; }
-  .facts { gap: 10px; }
-}
-@media (max-width: 400px) {
-  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .fact:last-child { grid-column: 1 / -1; }
+  .facts { gap: 8px; }
+  .fact .v { font-size: 1.1rem; }
+  .fact .note.warn { display: block; width: fit-content; margin-top: 4px; }
+  header { flex-wrap: nowrap; gap: 14px; }
+  .logo img { height: 46px; }
+  h1 { font-size: 1.8rem; }
+  .filters { gap: 8px; padding-top: 6px; margin-top: 14px; }
+  .controls { gap: 8px; }
+  .controls .seg { flex: 1 1 100%; min-width: 0; }
+  .seg { display: flex; flex-wrap: nowrap; max-width: 100%; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .seg::-webkit-scrollbar { display: none; }
+  .seg button { flex: none; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .btn { transition: filter 0.15s ease, background-color 0.15s ease; }
 }
 </style>
+</head>
+<body>
 
 <div class="wrap">
   <header>
@@ -444,3 +461,5 @@ renderControls();
 render();
 syncFiltersHeight();
 </script>
+</body>
+</html>

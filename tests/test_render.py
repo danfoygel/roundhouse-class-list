@@ -41,6 +41,17 @@ class RenderTest(unittest.TestCase):
         self.assertIn("@media (prefers-color-scheme: dark)", self.page)
         self.assertIn(':root[data-theme="dark"]', self.page)
 
+    def test_theme_icon_uses_the_hidden_attribute(self):
+        # `hidden` is not a property of SVG elements, so assigning it changes nothing on screen.
+        self.assertNotIn(".hidden =", self.page)
+        self.assertIn('.toggleAttribute("hidden"', self.page)
+
+    def test_filter_bar_is_pinned_on_every_screen_width(self):
+        css = self.page.split("<style>")[1].split("</style>")[0]
+        filters_rule = css.split(".filters {")[1].split("}")[0]
+        self.assertIn("position: sticky", filters_rule)
+        self.assertNotIn("min-width: 701px", css)
+
     def test_no_unfilled_tokens(self):
         self.assertEqual(re.findall(r"__[A-Z_]{3,}__", self.page), [])
 

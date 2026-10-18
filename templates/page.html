@@ -135,9 +135,12 @@ h1 {
   padding: 10px 0 12px;
   background: var(--bg);
   border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 3;
 }
-@media (min-width: 701px) and (min-height: 520px) {
-  .filters { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 3; }
+@media (max-height: 440px) {
+  .filters { position: static; }
 }
 .seg { display: inline-flex; flex-wrap: wrap; gap: 5px; }
 .seg button {
@@ -270,6 +273,8 @@ footer p { margin: 0 0 6px; }
   .logo img { height: 46px; }
   h1 { font-size: 1.8rem; }
   .filters { gap: 8px; padding-top: 6px; margin-top: 14px; }
+  .month { margin: 14px 0 8px; padding: 6px 0; }
+  .month h2 { font-size: 1.15rem; }
   .controls { gap: 8px; }
   .controls .seg { flex: 1 1 100%; min-width: 0; }
   .seg { display: flex; flex-wrap: nowrap; max-width: 100%; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
@@ -508,8 +513,8 @@ function currentTheme() {
 }
 function syncThemeButton() {
   const dark = currentTheme() === "dark";
-  themeButton.querySelector(".i-moon").hidden = dark;
-  themeButton.querySelector(".i-sun").hidden = !dark;
+  themeButton.querySelector(".i-moon").toggleAttribute("hidden", dark);
+  themeButton.querySelector(".i-sun").toggleAttribute("hidden", !dark);
   const label = dark ? "Switch to light mode" : "Switch to dark mode";
   themeButton.setAttribute("aria-label", label);
   themeButton.title = label;

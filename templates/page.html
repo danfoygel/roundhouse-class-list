@@ -484,10 +484,10 @@ function renderControls() {
   cats.innerHTML = [chip("data-c", "all", "All Shops", byKind.length, cat === "all")]
     .concat(CAT_ORDER.map((k) => chip("data-c", k, k, byKind.filter((c) => c.cat === k).length, cat === k))).join("");
   cats.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { cat = b.dataset.c; renderControls(); render(); }));
-  const waitlisted = items.filter((c) => c.status === "w").length;
-  document.getElementById("waitlistedLabel").textContent = `Show waitlisted (${waitlisted})`;
-  const cancelled = items.filter((c) => c.status === "x").length;
-  document.getElementById("cancelledLabel").textContent = `Show cancelled (${cancelled})`;
+  // The checkboxes count what they would add to the current type and shop selection.
+  const inScope = items.filter((c) => (filter === "all" || c.kind === filter) && (cat === "all" || c.cat === cat));
+  document.getElementById("waitlistedLabel").textContent = `Show waitlisted (${inScope.filter((c) => c.status === "w").length})`;
+  document.getElementById("cancelledLabel").textContent = `Show cancelled (${inScope.filter((c) => c.status === "x").length})`;
   syncFiltersHeight();
 }
 

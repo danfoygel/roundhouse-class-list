@@ -91,7 +91,7 @@ class PriceTest(unittest.TestCase):
 
     def test_free_members_only_from_description(self):
         self.assertEqual(normalize.parse_price("Metal Shop Mentor Hours - Members Only", "Free to Members Only. You must book."),
-                         ("Free", "members only"))
+                         ("Free", None))
 
     def test_free_in_name(self):
         self.assertEqual(normalize.parse_price("Free KTG Reuse & Repair Workshop: Electronics Repair", ""), ("Free", None))
@@ -202,6 +202,9 @@ class SnapshotRegressionTest(unittest.TestCase):
         "Mandala Drawing": {"pnote": "materials included"},
         "Learn to Sew Pajama Pants": {"pnote": "materials included"},
         "Handsew Gingerbread People": {"pnote": "per gingerbread-maker"},
+        # The type label ("Member Session") now says it, so the "members only" note and badge are gone.
+        "Metal Shop Mentor Hours": {"pnote": None},
+        "Textiles Open Studio": {"pnote": None},
     }
 
     @classmethod
@@ -226,7 +229,7 @@ class SnapshotRegressionTest(unittest.TestCase):
                 continue
             checked.add(title)
             expected = {
-                "sub": T[title].get("sub"), "tag": T[title].get("tag"), "kind": TYPE.get(title, "c"), "cat": CAT[title],
+                "sub": T[title].get("sub"), "kind": TYPE.get(title, "c"), "cat": CAT[title],
                 "price": T[title]["price"], "pnote": T[title].get("pnote"), "age": T[title]["age"],
                 "anote": T[title].get("anote"), "icon": ICON_FOR.get(CAT[title], "generic"),
             }
@@ -246,6 +249,7 @@ class SnapshotRegressionTest(unittest.TestCase):
 
     def test_every_event_is_complete(self):
         for event in self.events:
+            self.assertNotIn("tag", event)
             self.assertIn(event["status"], "bwfx")
             self.assertIn(event["kind"], "cmp")
             self.assertTrue(event["sessions"] and event["inst"] and event["icon"], event["title"])

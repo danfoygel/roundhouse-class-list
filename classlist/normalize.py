@@ -91,7 +91,7 @@ def parse_price(raw_name, description):
     if re.search(r"\bfree\b|\bgratuito\b", name, re.I):
         return "Free", None
     if re.search(r"free to members?( only)?", description, re.I):
-        return "Free", "members only"
+        return "Free", None
     return None, None
 
 
@@ -247,7 +247,6 @@ def build_events(snapshot, config):
         events.append({
             "title": title,
             "sub": sub,
-            "tag": "Members only" if re.search(r"members only", raw_name, re.I) else None,
             "kind": kind_for(raw_name, category_name, config),
             "cat": shop,
             "icon": config["icons"].get(shop, config["generic_icon"]),

@@ -226,7 +226,6 @@ h1 {
   color: var(--muted);
   white-space: nowrap;
 }
-.badge.mem { background: var(--pine-soft); color: var(--pine); }
 .when { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 0; color: var(--ink); }
 .when .time { font-weight: 600; font-variant-numeric: tabular-nums; }
 .when .who { color: var(--muted); }
@@ -432,7 +431,6 @@ function tile(c) {
           <p class="cat"><span>${KIND_LABEL[c.kind]} :</span> <span>${esc(c.cat)}</span></p>
           <div class="head">
             <h3 class="title">${esc(c.title)}</h3>
-            ${c.tag ? `<span class="badge mem">${esc(c.tag)}</span>` : ""}
             ${multi ? `<span class="badge">${c.sessions.length} sessions</span>` : ""}
           </div>
           ${c.sub ? `<p class="sub">${esc(c.sub)}</p>` : ""}

@@ -1,0 +1,66 @@
+import json
+import re
+import unittest
+from pathlib import Path
+
+from classlist import normalize, render
+
+ROOT = Path(__file__).resolve().parent.parent
+CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+SNAPSHOT = json.loads((ROOT / "tests" / "fixtures" / "snapshot_2026-10-17.json").read_text(encoding="utf-8"))
+TEMPLATE = ROOT / "templates" / "page.html"
+ASSETS = ROOT / "assets"
+
+
+def page_for(events, meta=None):
+    return render.render_page(events, meta or SNAPSHOT["meta"], CONFIG, TEMPLATE, ASSETS)
+
+
+def embedded(page, name):
+    match = re.search(r"^const %s = (.*);$" % name, page, re.M)
+    return json.loads(match.group(1))
+
+
+class RenderTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.events, _ = normalize.build_events(SNAPSHOT, CONFIG)
+        cls.page = page_for(cls.events)
+
+    def test_no_unfilled_tokens(self):
+        self.assertEqual(re.findall(r"__[A-Z_]{3,}__", self.page), [])
+
+    def test_events_are_embedded_intact(self):
+        self.assertEqual(embedded(self.page, "EVENTS"), self.events)
+
+    def test_page_text_comes_from_config(self):
+        self.assertIn("<title>Roundhouse Class List</title>", self.page)
+        self.assertIn("<h1>Classes and Events</h1>", self.page)
+        self.assertIn('href="https://www.truckeeroundhouse.org/"', self.page)
+
+    def test_footer_date_is_the_snapshot_date_in_local_time(self):
+        self.assertIn("Copied from their public Mindbody schedule on Oct 17, 2026.", self.page)
+
+    def test_only_used_icons_are_embedded(self):
+        icons = embedded(self.page, "ICONS")
+        self.assertEqual(set(icons), {e["icon"] for e in self.events})
+        for uri in icons.values():
+            self.assertTrue(uri.startswith("data:image/png;base64,"))
+
+    def test_same_input_gives_identical_page(self):
+        self.assertEqual(self.page, page_for(self.events))
+
+    def test_script_breaking_text_is_escaped(self):
+        event = dict(self.events[0], title="</script><b>x")
+        page = page_for([event])
+        self.assertNotIn("</script><b>", page)
+        self.assertEqual(embedded(page, "EVENTS")[0]["title"], "</script><b>x")
+
+    def test_missing_icon_image_is_an_error(self):
+        event = dict(self.events[0], icon="nonexistent")
+        with self.assertRaises(ValueError):
+            page_for([event])
+
+
+if __name__ == "__main__":
+    unittest.main()

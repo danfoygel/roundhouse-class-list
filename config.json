@@ -1,0 +1,54 @@
+{
+  "studio_id": 317649,
+  "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
+  "home_url": "https://www.truckeeroundhouse.org/",
+  "timezone": "America/Los_Angeles",
+  "horizon_days": 90,
+  "snapshot_path": "data/snapshot.json",
+  "output_path": "classes.html",
+  "page": {
+    "title": "Roundhouse Class List",
+    "heading": "Classes and Events"
+  },
+
+  "shops": ["Textiles", "Metal Shop", "Wood Shop", "Skill-Share", "Jewelry", "Tech Shop", "Ceramics"],
+  "category_aliases": {
+    "Textiles Shop": "Textiles",
+    "Skill Share": "Skill-Share",
+    "Skillshare": "Skill-Share",
+    "Metal": "Metal Shop",
+    "Technology": "Tech Shop",
+    "Wood Shop Closed": "Wood Shop",
+    "Ceramics Shop": "Ceramics",
+    "Ceramics  Multi Day Workshops": "Ceramics",
+    "Ceramics Two Session Workshop": "Ceramics",
+    "Ceramics Workshop_short": "Ceramics"
+  },
+  "icons": {
+    "Wood Shop": "wood",
+    "Metal Shop": "metal",
+    "Textiles": "textiles",
+    "Ceramics": "ceramics",
+    "Tech Shop": "tech"
+  },
+  "generic_icon": "generic",
+
+  "public_categories": ["Public Tour"],
+  "member_name_patterns": ["members only", "open studio", "mentor hours"],
+  "series_prefixes": ["Free KTG Reuse & Repair Workshop", "Jewelry"],
+  "course_max_gap_days": 21,
+
+  "display_overrides": {
+    "Crochet 102: Working in the Round, Trinket Basket": {"title": "Crochet 102: Working in the Round", "sub": "Trinket Basket"},
+    "Wood Shop 102: Make a Picture Frame": {"title": "Wood Shop 102", "sub": "Make a Picture Frame"},
+    "Intermediate Silversmithing: Bezel Making and Stone Setting": {"title": "Intermediate Silversmithing", "sub": "Bezel Making & Stone Setting"},
+    "Public Tour - Come Check Out the Space": {"title": "Public Tour", "sub": "Come check out the space"},
+    "Taller GRATUITO en español sobre reparación y arreglo de ropa": {"title": "Taller gratuito: reparación y arreglo de ropa", "sub": "Free workshop in Spanish"}
+  },
+  "instructor_names": {
+    "Josh Buchanan Seth Itow": "Josh Buchanan & Seth Itow",
+    "Maria Vega Cecilia Cortez": "Maria Vega & Cecilia Cortez",
+    "Volunteer Volunteer": "Volunteer guide"
+  },
+  "missing_instructor": "Instructor not listed"
+}

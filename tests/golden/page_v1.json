@@ -1,0 +1,924 @@
+{
+ "note": "Hand-built values from the first, manually maintained version of the page (snapshot of Oct 17, 2026). Used as a reference when checking the rule-based normalizer.",
+ "T": {
+  "Crochet 102: Working in the Round": {
+   "sub": "Trinket Basket",
+   "price": "$65",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Fall Mini Rustic Porch Pots": {
+   "price": "$100",
+   "pnote": "materials included",
+   "age": 12,
+   "kind": "c"
+  },
+  "Metal Shop Mentor Hours": {
+   "tag": "Members only",
+   "price": "Free",
+   "pnote": "members only",
+   "age": null,
+   "kind": "w"
+  },
+  "Textiles Open Studio": {
+   "tag": "Members only",
+   "price": "Free",
+   "pnote": "members only",
+   "age": 12,
+   "anote": "Under 15 with an adult",
+   "kind": "w"
+  },
+  "Butcher Blocks for Beginners": {
+   "price": "$115",
+   "pnote": "materials included",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Mixed Metal Geometric Earrings": {
+   "price": "$85",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Sewing 101": {
+   "sub": "Practical Sewing Fundamentals",
+   "price": "$145",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Public Tour": {
+   "sub": "Come check out the space",
+   "price": null,
+   "age": null,
+   "kind": "w"
+  },
+  "Wood Shop 102": {
+   "sub": "Make a Picture Frame",
+   "price": "$145",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Block Printing": {
+   "price": "$65",
+   "age": 12,
+   "kind": "c"
+  },
+  "Crochet Open Studio": {
+   "price": "Free",
+   "pnote": "members · $45 non-members",
+   "age": 12,
+   "anote": "Under 15 with an adult",
+   "kind": "c"
+  },
+  "Encaustic Photo Art": {
+   "price": "$85",
+   "age": 12,
+   "anote": "Under 15 with an adult",
+   "kind": "c"
+  },
+  "Beaded Necklaces & Bracelets": {
+   "sub": "Jewelry",
+   "price": "$65",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Learn to Sew Pajama Pants": {
+   "price": "$90",
+   "pnote": "materials provided",
+   "age": 12,
+   "anote": "Under 15 with an adult",
+   "kind": "c"
+  },
+  "Crochet 101: Make a Pot Holder": {
+   "price": "$55",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Electronics Repair": {
+   "sub": "Free KTG Reuse & Repair Workshop",
+   "price": "Free",
+   "age": 12,
+   "anote": "Under 15 with an adult",
+   "kind": "c"
+  },
+  "Mandala Drawing": {
+   "sub": "with Nicole Stirling",
+   "price": "$140",
+   "age": 12,
+   "kind": "c"
+  },
+  "Wood Shop 101": {
+   "price": "$145",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Taller gratuito: reparación y arreglo de ropa": {
+   "sub": "Free workshop in Spanish",
+   "price": "Free",
+   "age": null,
+   "kind": "c"
+  },
+  "Crochet 102: Make a Beanie": {
+   "price": "$65",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Handsew Gingerbread People": {
+   "sub": "Family-friendly",
+   "price": "$55",
+   "pnote": "per person",
+   "age": 8,
+   "kind": "c"
+  },
+  "Winter Terrarium Making": {
+   "price": "$95",
+   "age": 12,
+   "kind": "c"
+  },
+  "Intermediate Silversmithing": {
+   "sub": "Bezel Making & Stone Setting",
+   "price": "$140",
+   "pnote": "materials included",
+   "age": 12,
+   "anote": "Under 16 with an adult",
+   "kind": "c"
+  },
+  "Reusable Gift Bag": {
+   "sub": "Free KTG Reuse & Repair Workshop",
+   "price": "Free",
+   "age": 12,
+   "anote": "Under 15 with an adult",
+   "kind": "c"
+  }
+ },
+ "CAT": {
+  "Crochet 102: Working in the Round": "Textiles",
+  "Fall Mini Rustic Porch Pots": "Skill-Share",
+  "Metal Shop Mentor Hours": "Metal Shop",
+  "Textiles Open Studio": "Textiles",
+  "Butcher Blocks for Beginners": "Wood Shop",
+  "Mixed Metal Geometric Earrings": "Jewelry",
+  "Sewing 101": "Textiles",
+  "Public Tour": "Other",
+  "Wood Shop 102": "Wood Shop",
+  "Block Printing": "Skill-Share",
+  "Crochet Open Studio": "Textiles",
+  "Encaustic Photo Art": "Skill-Share",
+  "Beaded Necklaces & Bracelets": "Jewelry",
+  "Learn to Sew Pajama Pants": "Textiles",
+  "Crochet 101: Make a Pot Holder": "Textiles",
+  "Electronics Repair": "Tech Shop",
+  "Mandala Drawing": "Skill-Share",
+  "Wood Shop 101": "Wood Shop",
+  "Taller gratuito: reparación y arreglo de ropa": "Textiles",
+  "Crochet 102: Make a Beanie": "Textiles",
+  "Handsew Gingerbread People": "Textiles",
+  "Winter Terrarium Making": "Skill-Share",
+  "Intermediate Silversmithing": "Jewelry",
+  "Reusable Gift Bag": "Textiles"
+ },
+ "TYPE": {
+  "Metal Shop Mentor Hours": "m",
+  "Textiles Open Studio": "m",
+  "Crochet Open Studio": "m",
+  "Public Tour": "p"
+ },
+ "R": [
+  [
+   "2026-10-19T00:00Z",
+   180,
+   "Crochet 102: Working in the Round",
+   "Jane Rudolph-Bloom",
+   4,
+   5,
+   "w",
+   0
+  ],
+  [
+   "2026-10-19T00:00Z",
+   120,
+   "Fall Mini Rustic Porch Pots",
+   "Chandler Bertoli",
+   8,
+   0,
+   "x",
+   0
+  ],
+  [
+   "2026-10-20T21:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "x",
+   0
+  ],
+  [
+   "2026-10-23T21:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   2,
+   "w",
+   0
+  ],
+  [
+   "2026-10-24T00:00Z",
+   180,
+   "Butcher Blocks for Beginners",
+   "ALIN LUCHIAN",
+   5,
+   5,
+   "w",
+   [
+    1,
+    2
+   ]
+  ],
+  [
+   "2026-10-24T00:00Z",
+   180,
+   "Mixed Metal Geometric Earrings",
+   "Aurora Pinkey",
+   10,
+   10,
+   "w",
+   0
+  ],
+  [
+   "2026-10-24T00:00Z",
+   180,
+   "Sewing 101",
+   "Judi Morales",
+   4,
+   4,
+   "w",
+   [
+    1,
+    2
+   ]
+  ],
+  [
+   "2026-10-24T20:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   1,
+   "b",
+   0
+  ],
+  [
+   "2026-10-25T00:00Z",
+   180,
+   "Butcher Blocks for Beginners",
+   "ALIN LUCHIAN",
+   5,
+   5,
+   "w",
+   [
+    2,
+    2
+   ]
+  ],
+  [
+   "2026-10-26T00:00Z",
+   210,
+   "Wood Shop 102",
+   "Brent Ferrera",
+   4,
+   4,
+   "w",
+   [
+    1,
+    2
+   ]
+  ],
+  [
+   "2026-10-27T00:00Z",
+   180,
+   "Block Printing",
+   "Sarinah Simons",
+   6,
+   2,
+   "b",
+   0
+  ],
+  [
+   "2026-10-27T00:00Z",
+   180,
+   "Sewing 101",
+   "Judi Morales",
+   4,
+   4,
+   "w",
+   [
+    2,
+    2
+   ]
+  ],
+  [
+   "2026-10-27T00:00Z",
+   210,
+   "Wood Shop 102",
+   "Brent Ferrera",
+   4,
+   4,
+   "w",
+   [
+    2,
+    2
+   ]
+  ],
+  [
+   "2026-10-27T21:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-10-30T21:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-10-31T20:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-02T01:00Z",
+   180,
+   "Crochet Open Studio",
+   "Jane Rudolph-Bloom",
+   4,
+   2,
+   "b",
+   0
+  ],
+  [
+   "2026-11-03T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-06T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-07T01:00Z",
+   150,
+   "Encaustic Photo Art",
+   "Nancy Holliday",
+   8,
+   0,
+   "b",
+   [
+    1,
+    2
+   ]
+  ],
+  [
+   "2026-11-07T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-08T01:00Z",
+   180,
+   "Beaded Necklaces & Bracelets",
+   "Aurora Pinkey",
+   10,
+   5,
+   "b",
+   0
+  ],
+  [
+   "2026-11-08T01:00Z",
+   150,
+   "Encaustic Photo Art",
+   "Nancy Holliday",
+   8,
+   0,
+   "b",
+   [
+    2,
+    2
+   ]
+  ],
+  [
+   "2026-11-10T01:00Z",
+   180,
+   "Learn to Sew Pajama Pants",
+   "Bella Brinkman",
+   5,
+   3,
+   "b",
+   [
+    1,
+    2
+   ]
+  ],
+  [
+   "2026-11-10T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-13T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-14T01:00Z",
+   180,
+   "Crochet 101: Make a Pot Holder",
+   "Jane Rudolph-Bloom",
+   5,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-14T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-16T01:00Z",
+   180,
+   "Electronics Repair",
+   "Josh Buchanan & Seth Itow",
+   6,
+   1,
+   "b",
+   0
+  ],
+  [
+   "2026-11-16T01:00Z",
+   180,
+   "Mandala Drawing",
+   "Nicole Stirling",
+   12,
+   0,
+   "b",
+   [
+    1,
+    2
+   ]
+  ],
+  [
+   "2026-11-16T17:00Z",
+   210,
+   "Wood Shop 101",
+   "Terry Cavanagh",
+   4,
+   4,
+   "w",
+   [
+    1,
+    2
+   ]
+  ],
+  [
+   "2026-11-17T01:00Z",
+   180,
+   "Learn to Sew Pajama Pants",
+   "Bella Brinkman",
+   5,
+   3,
+   "b",
+   [
+    2,
+    2
+   ]
+  ],
+  [
+   "2026-11-17T01:00Z",
+   180,
+   "Mandala Drawing",
+   "Nicole Stirling",
+   12,
+   0,
+   "b",
+   [
+    2,
+    2
+   ]
+  ],
+  [
+   "2026-11-17T17:00Z",
+   210,
+   "Wood Shop 101",
+   "Terry Cavanagh",
+   4,
+   4,
+   "w",
+   [
+    2,
+    2
+   ]
+  ],
+  [
+   "2026-11-17T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-20T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   1,
+   "b",
+   0
+  ],
+  [
+   "2026-11-21T01:00Z",
+   180,
+   "Butcher Blocks for Beginners",
+   "ALIN LUCHIAN",
+   5,
+   0,
+   "b",
+   [
+    1,
+    2
+   ]
+  ],
+  [
+   "2026-11-21T01:00Z",
+   180,
+   "Taller gratuito: reparación y arreglo de ropa",
+   "Maria Vega & Cecilia Cortez",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-21T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "x",
+   0
+  ],
+  [
+   "2026-11-22T01:00Z",
+   180,
+   "Butcher Blocks for Beginners",
+   "ALIN LUCHIAN",
+   5,
+   0,
+   "b",
+   [
+    2,
+    2
+   ]
+  ],
+  [
+   "2026-11-24T01:00Z",
+   180,
+   "Crochet 102: Make a Beanie",
+   "Jane Rudolph-Bloom",
+   5,
+   2,
+   "b",
+   0
+  ],
+  [
+   "2026-11-24T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-27T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-28T01:00Z",
+   180,
+   "Handsew Gingerbread People",
+   "Judi Morales",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-11-28T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-01T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-04T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "x",
+   0
+  ],
+  [
+   "2026-12-05T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-07T01:00Z",
+   180,
+   "Crochet Open Studio",
+   "Jane Rudolph-Bloom",
+   4,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-07T01:00Z",
+   120,
+   "Winter Terrarium Making",
+   "Chandler Bertoli",
+   6,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-07T21:00Z",
+   240,
+   "Intermediate Silversmithing",
+   "Aurora Pinkey",
+   8,
+   8,
+   "w",
+   0
+  ],
+  [
+   "2026-12-08T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-11T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-12T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-15T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-18T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-19T01:00Z",
+   180,
+   "Reusable Gift Bag",
+   "Judi Morales",
+   10,
+   1,
+   "b",
+   0
+  ],
+  [
+   "2026-12-19T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-22T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-25T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-26T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2026-12-29T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2027-01-01T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2027-01-02T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2027-01-05T22:00Z",
+   60,
+   "Metal Shop Mentor Hours",
+   "Chris Cumberworth",
+   1,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2027-01-08T22:00Z",
+   180,
+   "Textiles Open Studio",
+   "Judi Morales",
+   2,
+   0,
+   "b",
+   0
+  ],
+  [
+   "2027-01-09T21:00Z",
+   30,
+   "Public Tour",
+   "Volunteer guide",
+   10,
+   0,
+   "b",
+   0
+  ]
+ ],
+ "ICON_FOR": {
+  "Wood Shop": "wood",
+  "Metal Shop": "metal",
+  "Textiles": "textiles",
+  "Ceramics": "ceramics",
+  "Tech Shop": "tech"
+ },
+ "NAME_FIX": {
+  "ALIN LUCHIAN": "Alin Luchian"
+ }
+}

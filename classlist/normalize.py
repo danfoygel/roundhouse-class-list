@@ -62,12 +62,44 @@ class _ParagraphReader(HTMLParser):
 _HEADLINE_FACT = re.compile(r"\$\s?\d|^\d+[\s-]*(?:days?|sessions?)\b|\b\d+(?:\.\d+)?[\s-]*(?:hours?|hrs?)\b", re.I)
 
 
-def describe(markup, raw_name):
-    """The class description as plain-text paragraphs, without the repeated name/length/price headline."""
+_SENTENCE_END = re.compile(r"(?<=[.!?])\s+")
+_MAX_STUDENTS = re.compile(r"\bmax(?:imum)?\b[^.]{0,20}\bstudents?\b|\b\d+\s+students?\s+max(?:imum)?\b", re.I)
+_AGE_SENTENCE = [
+    re.compile(r"\bages?\b\s*:?\s*\d", re.I),
+    re.compile(r"^appropriate for (?:students|ages?)\b[^.]*\d", re.I),
+    re.compile(r"\b\d{1,2}\s*(?:and|&)\s*(?:over|above|up|older)\b", re.I),
+    re.compile(r"\b\d{1,2}\s*(?:-|to)\s*adult\b", re.I),
+]
+_ACCOMPANY_SENTENCE = re.compile(r"(?:accompanied|chaperoned|attend with)\b[^.]*\badult", re.I)
+
+
+def _repeats_the_page(sentence, boilerplate, min_age, age_note):
+    """True for a sentence the page already says: booking and policy wording, seats, minimum age."""
+    if any(p.search(sentence) for p in boilerplate):
+        return True
+    if _MAX_STUDENTS.search(sentence):
+        return True
+    if min_age is not None and any(p.search(sentence) for p in _AGE_SENTENCE):
+        return True
+    return age_note is not None and bool(_ACCOMPANY_SENTENCE.search(sentence))
+
+
+def describe(markup, raw_name, boilerplate=(), min_age=None, age_note=None):
+    """The class description as plain-text paragraphs.
+
+    Left out: the repeated name/length/price headline, the studio's booking and policy wording
+    (`boilerplate`, regular expressions), and sentences about seats and ages that the page already
+    shows. Age sentences go only when `min_age` / `age_note` show that fact elsewhere.
+    """
     reader = _ParagraphReader()
     reader.feed(markup or "")
     reader.close()
-    paragraphs = reader.paragraphs
+    patterns = [re.compile(p, re.I) for p in boilerplate]
+    paragraphs = []
+    for paragraph in reader.paragraphs:
+        kept = [s for s in _SENTENCE_END.split(paragraph) if not _repeats_the_page(s, patterns, min_age, age_note)]
+        if kept:
+            paragraphs.append(" ".join(kept))
     lead = clean_name(raw_name).lower()[:12]
     start = 0
     while start < len(paragraphs) - 1:
@@ -172,6 +204,12 @@ _ACCOMPANY = re.compile(
 )
 
 
+_ACCOMPANY_AND_UNDER = re.compile(
+    r"\b(\d{1,2})\s+and\s+under\b[^.]{0,90}?(?:accompanied|chaperoned|attend with)\s+(?:by\s+)?(?:an\s+)?adult",
+    re.I,
+)
+
+
 def parse_age(description):
     """(minimum age or None, note about younger participants or None)."""
     minimum = None
@@ -181,7 +219,13 @@ def parse_age(description):
             minimum = int(match.group(1))
             break
     accompany = _ACCOMPANY.search(description)
-    note = "Under %s with an adult" % accompany.group(1) if accompany else None
+    and_under = _ACCOMPANY_AND_UNDER.search(description)
+    if accompany:
+        note = "Under %s with an adult" % accompany.group(1)
+    elif and_under:
+        note = "Under %d with an adult" % (int(and_under.group(1)) + 1)
+    else:
+        note = None
     return minimum, note
 
 
@@ -317,7 +361,7 @@ def build_events(snapshot, config):
             "price": price,
             "pnote": price_note,
             "ptip": price_tooltip(raw_name),
-            "desc": describe(first.get("description"), raw_name),
+            "desc": describe(first.get("description"), raw_name, config.get("description_boilerplate", []), min_age, age_note),
             "age": min_age,
             "anote": age_note,
             "cap": first["capacity"],

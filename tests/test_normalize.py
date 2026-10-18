@@ -132,6 +132,10 @@ class AgeTest(unittest.TestCase):
         for text, expected in cases.items():
             self.assertEqual(normalize.parse_age(text)[1], expected, text)
 
+    def test_fifteen_and_under_means_under_sixteen(self):
+        self.assertEqual(normalize.parse_age("Students 15 and under must be accompanied by adult also taking the class.")[1],
+                         "Under 16 with an adult")
+
     def test_the_age_of_is_not_a_minimum(self):
         self.assertEqual(normalize.parse_age("All youth under the age of 16 must be chaperoned by an adult")[0], None)
 
@@ -157,6 +161,31 @@ class DescribeTest(unittest.TestCase):
 
     def test_single_paragraph_is_never_dropped(self):
         self.assertEqual(normalize.describe("<p>Public Tour - $0</p>", "Public Tour"), ["Public Tour - $0"])
+
+    BOILERPLATE = CONFIG["description_boilerplate"]
+
+    def test_seats_ages_and_adult_rules_are_dropped_when_the_page_shows_them(self):
+        markup = ("<p>Learn to sew.</p><p>Max 4 students</p><p>Ages: 12 and above. Students under the age of 16 must attend "
+                  "with an adult also taking the course.</p><p>Bring a project.</p>")
+        self.assertEqual(normalize.describe(markup, "Sewing - 2 Days", self.BOILERPLATE, 12, "Under 16 with an adult"),
+                         ["Learn to sew.", "Bring a project."])
+
+    def test_age_sentences_stay_when_the_page_does_not_show_them(self):
+        markup = "<p>Learn to sew.</p><p>Ages 12 and over.</p><p>Students under 15 must be accompanied by an adult.</p>"
+        self.assertEqual(normalize.describe(markup, "Sewing", self.BOILERPLATE, None, None),
+                         ["Learn to sew.", "Ages 12 and over.", "Students under 15 must be accompanied by an adult."])
+
+    def test_an_age_sentence_inside_a_longer_paragraph_is_removed_alone(self):
+        markup = "<p>Leave with a unique set of earrings handmade by you! Ages 12 and above</p>"
+        self.assertEqual(normalize.describe(markup, "Earrings", self.BOILERPLATE, 12, None),
+                         ["Leave with a unique set of earrings handmade by you!"])
+
+    def test_booking_and_policy_wording_is_dropped(self):
+        markup = ("<p>Make a frame.</p><p>To register, click on the BOOK button. If the class is full, you can add your name to the "
+                  "waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>"
+                  "<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit.</p>"
+                  "<p>Please note that we may take photos during the workshop to use for future marketing.</p>")
+        self.assertEqual(normalize.describe(markup, "Frame", self.BOILERPLATE), ["Make a frame."])
 
     def test_missing_description(self):
         self.assertEqual(normalize.describe(None, "Anything"), [])
@@ -231,7 +260,11 @@ class SnapshotRegressionTest(unittest.TestCase):
         "Encaustic Photo Art": {"pnote": "materials included"},
         "Mandala Drawing": {"pnote": "materials included"},
         "Learn to Sew Pajama Pants": {"pnote": "materials included"},
-        "Handsew Gingerbread People": {"pnote": "per gingerbread-maker"},
+        "Handsew Gingerbread People": {"pnote": "per gingerbread-maker", "anote": "Under 16 with an adult"},
+        # "Students 15 and under must be accompanied by adult": missed by the hand-built page, found by the rules.
+        "Block Printing": {"anote": "Under 16 with an adult"},
+        "Fall Mini Rustic Porch Pots": {"anote": "Under 16 with an adult"},
+        "Winter Terrarium Making": {"anote": "Under 16 with an adult"},
         # The type label ("Member Session") now says it, so the "members only" note and badge are gone.
         "Crochet Open Studio": {"pnote": None, "ptip": "$45 for non-members"},  # now a hover tooltip on "Free"
         "Metal Shop Mentor Hours": {"pnote": None},
@@ -273,6 +306,19 @@ class SnapshotRegressionTest(unittest.TestCase):
         self.assertEqual(sizes, [2] * 8)
         for event in self.events:
             self.assertEqual("stype=-8" in event["link"], len(event["sessions"]) > 1, event["title"])
+
+    def test_descriptions_no_longer_repeat_what_the_page_shows(self):
+        import re
+        policy = [re.compile(p, re.I) for p in CONFIG["description_boilerplate"]]
+        for event in self.events:
+            for paragraph in event["desc"]:
+                for sentence in normalize._SENTENCE_END.split(paragraph):
+                    self.assertFalse(any(p.search(sentence) for p in policy), sentence)
+                    self.assertIsNone(normalize._MAX_STUDENTS.search(sentence), sentence)
+                    if event["age"] is not None:
+                        self.assertFalse(any(p.search(sentence) for p in normalize._AGE_SENTENCE), sentence)
+                    if event["anote"] is not None:
+                        self.assertIsNone(normalize._ACCOMPANY_SENTENCE.search(sentence), sentence)
 
     def test_every_event_has_a_description_that_does_not_repeat_its_name(self):
         for event in self.events:

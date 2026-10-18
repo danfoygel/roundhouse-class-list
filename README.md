@@ -43,7 +43,7 @@ Mindbody widget ──fetch──▶ data/snapshot.json ──normalize──▶
 | Icon | `icons` maps a shop to an image in `assets/icons`; everything else uses the generic bulb. |
 | Type | Public event if the class type is in `public_categories`; member session if the name matches `member_name_patterns`; otherwise class. |
 | Multi-session course | A name that says "N Days" or "N sessions" (N of 2 or more) groups its sessions by series id into one event of N sessions. Runs more than `course_max_gap_days` apart stay separate. |
-| Description | The class description as plain-text paragraphs (bullets kept). Opening lines that repeat the name or state the length or price are dropped, and the page shows the rest, three lines at first with "Show more" to open it. Identical descriptions are stored once. |
+| Description | The class description as plain-text paragraphs (bullets kept). Opening lines that repeat the name or state the length or price are dropped, as are sentences the page already shows (seats; minimum age and adult accompaniment, only when the tile shows them) and the studio's booking and policy wording (`description_boilerplate` in the config). The page shows the rest, three lines at first with "Show more" to open it. Identical descriptions are stored once. |
 | Status | cancelled, else bookable, else waitlistable, else full. |
 | Instructor | The listed staff; cancelled sessions borrow from another session with the same name; `instructor_names` fixes names; ALL CAPS becomes Title Case. |
 | Booking link | Mindbody's classic booking page on the class's local date: Classes tab for single sessions, Multi-Day Classes tab for courses (linked on day one). Mindbody has no link to a single class. |

@@ -50,5 +50,20 @@
     "Maria Vega Cecilia Cortez": "Maria Vega & Cecilia Cortez",
     "Volunteer Volunteer": "Volunteer guide"
   },
-  "missing_instructor": "Instructor not listed"
+  "missing_instructor": "Instructor not listed",
+
+  "description_boilerplate": [
+    "^to register, click on the book button",
+    "^if the class is full, you can add your name to the waitlist",
+    "^if there is no book\\b.*button",
+    "^cancellations made",
+    "^roundhouse class credit may be issued",
+    "^due to our limited class sizes",
+    "^please note that we may take photos",
+    "^if you do not wish to be photographed",
+    "^please be advised that when signing up for the waitlist",
+    "^should a space not open up",
+    "^if you wish for a refund",
+    "^we kindly ask that you only reserve a space"
+  ]
 }

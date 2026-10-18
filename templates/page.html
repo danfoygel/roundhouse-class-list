@@ -23,6 +23,8 @@
   --stub: #525c66;
   --stub-ink: #eef1f2;
   --signal: #f2c14e;
+  --chip-on: var(--stub);
+  --chip-on-ink: var(--stub-ink);
   --pine: #1b6a57;
   --pine-ink: #ffffff;
   --pine-soft: #dcefe9;
@@ -44,6 +46,8 @@
     --stub: #0a1015;
     --stub-ink: #cfd9de;
     --signal: #eeb62f;
+    --chip-on: var(--ink);
+    --chip-on-ink: var(--bg);
     --pine: #55c2a4;
     --pine-ink: #06241c;
     --pine-soft: #17372f;
@@ -61,6 +65,8 @@
   --stub: #0a1015;
   --stub-ink: #cfd9de;
   --signal: #eeb62f;
+  --chip-on: var(--ink);
+  --chip-on-ink: var(--bg);
   --pine: #55c2a4;
   --pine-ink: #06241c;
   --pine-soft: #17372f;
@@ -154,7 +160,7 @@ h1 {
   cursor: pointer;
 }
 .seg button .n { font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin-left: 5px; }
-.seg button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.seg button[aria-pressed="true"] { background: var(--chip-on); border-color: var(--chip-on); color: var(--chip-on-ink); }
 .seg button[aria-pressed="true"] .n { color: inherit; opacity: 0.75; }
 .toggles { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .cats { margin: 0; }

@@ -227,6 +227,10 @@ h1 {
 }
 .desc { color: var(--muted); font-size: 14px; line-height: 1.5; }
 .desc p { margin: 0 0 6px; }
+.desc p.lead { margin-bottom: 3px; }
+.desc ul { margin: 0 0 8px; padding-left: 1.5em; list-style: disc; }
+.desc li { margin: 0 0 2px; padding-left: 0.2em; }
+.desc li::marker { color: var(--muted); }
 .desc-short { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; margin: 0; }
 .desc-full { display: none; }
 .desc.open .desc-short { display: none; }
@@ -425,12 +429,34 @@ function writeUrl() {
 // Cards whose description is open; kept here so filtering and re-drawing don't collapse them.
 const expanded = new Set();
 
+// Paragraphs that start with a bullet become one indented list; the line before a list stays close to it.
+const BULLET = "\u2022 ";
+function descriptionHtml(paragraphs) {
+  let html = "";
+  let items = [];
+  const endList = () => {
+    if (items.length) html += `<ul>${items.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>`;
+    items = [];
+  };
+  paragraphs.forEach((text, i) => {
+    if (text.startsWith(BULLET)) {
+      items.push(text.slice(BULLET.length));
+      return;
+    }
+    endList();
+    const leadsList = (paragraphs[i + 1] || "").startsWith(BULLET);
+    html += `<p${leadsList ? ' class="lead"' : ""}>${esc(text)}</p>`;
+  });
+  endList();
+  return html;
+}
+
 function descriptionBlock(c) {
   if (!c.desc.length) return "";
   const open = expanded.has(c.id);
   return `<div class="desc${open ? " open" : ""}" data-id="${c.id}">
         <p class="desc-short">${esc(c.desc.join(" "))}</p>
-        <div class="desc-full">${c.desc.map((p) => `<p>${esc(p)}</p>`).join("")}</div>
+        <div class="desc-full">${descriptionHtml(c.desc)}</div>
         <button type="button" class="more" aria-expanded="${open}" hidden>${open ? "Show less" : "Show more"}</button>
       </div>`;
 }

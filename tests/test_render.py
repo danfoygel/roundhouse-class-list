@@ -63,6 +63,14 @@ class RenderTest(unittest.TestCase):
         self.assertIsNotNone(link)
         self.assertEqual(link.group(1), CONFIG["repo_url"].rstrip("/") + "/issues/new")
 
+    def test_bullet_paragraphs_become_an_indented_list(self):
+        self.assertIn("function descriptionHtml(", self.page)
+        css = self.page.split("<style>")[1].split("</style>")[0]
+        rule = css.split(".desc ul {")[1].split("}")[0]
+        self.assertIn("padding-left", rule)
+        self.assertIn("list-style: disc", rule)  # nested lists would otherwise get hollow circles
+        self.assertIn(".desc li {", css)
+
     def test_no_unfilled_tokens(self):
         self.assertEqual(re.findall(r"__[A-Z_]{3,}__", self.page), [])
 

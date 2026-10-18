@@ -60,7 +60,7 @@ tokens in `templates/page.html`: the light set on `:root`, the dark set under
 
 ## Report a problem
 
-The bug icon next to the sun/moon button opens the repository's new-issue page in a new tab
+The bug icon next to the sun/moon button opens the repository's issues page in a new tab
 (`repo_url` in `config.json`).
 
 ## Links to a filtered view

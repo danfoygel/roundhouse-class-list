@@ -58,10 +58,10 @@ class RenderTest(unittest.TestCase):
         self.assertIn('const KIND_LABEL = { c: "Class", m: "Member Session", p: "Public Event" };', self.page)
         self.assertIn("${KIND_LABEL[c.kind]} :", self.page)
 
-    def test_bug_icon_opens_the_new_issue_page_in_a_new_tab(self):
+    def test_bug_icon_opens_the_issues_page_in_a_new_tab(self):
         link = re.search(r'<a class="icon-btn" href="([^"]+)" target="_blank" rel="noopener"', self.page)
         self.assertIsNotNone(link)
-        self.assertEqual(link.group(1), CONFIG["repo_url"].rstrip("/") + "/issues/new")
+        self.assertEqual(link.group(1), CONFIG["repo_url"].rstrip("/") + "/issues")
 
     def test_bullet_paragraphs_become_an_indented_list(self):
         self.assertIn("function descriptionHtml(", self.page)

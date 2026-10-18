@@ -58,6 +58,11 @@ class RenderTest(unittest.TestCase):
         self.assertIn('const KIND_LABEL = { c: "Class", m: "Member Session", p: "Public Event" };', self.page)
         self.assertIn("${KIND_LABEL[c.kind]} :", self.page)
 
+    def test_bug_icon_opens_the_new_issue_page_in_a_new_tab(self):
+        link = re.search(r'<a class="icon-btn" href="([^"]+)" target="_blank" rel="noopener"', self.page)
+        self.assertIsNotNone(link)
+        self.assertEqual(link.group(1), CONFIG["repo_url"].rstrip("/") + "/issues/new")
+
     def test_no_unfilled_tokens(self):
         self.assertEqual(re.findall(r"__[A-Z_]{3,}__", self.page), [])
 

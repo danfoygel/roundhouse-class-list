@@ -58,6 +58,11 @@ it, and the choice is remembered in the browser (`localStorage`, key `theme`). T
 tokens in `templates/page.html`: the light set on `:root`, the dark set under
 `prefers-color-scheme` and under `[data-theme="dark"]`.
 
+## Report a problem
+
+The bug icon next to the sun/moon button opens the repository's new-issue page in a new tab
+(`repo_url` in `config.json`).
+
 ## Links to a filtered view
 
 The filters are kept in the page address, so a view can be shared. The address updates as you

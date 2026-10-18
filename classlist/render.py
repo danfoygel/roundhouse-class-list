@@ -44,6 +44,7 @@ def render_page(events, meta, config, template_path, assets_dir):
         "__TITLE__": html.escape(config["page"]["title"]),
         "__HEADING__": html.escape(config["page"]["heading"]),
         "__HOME_URL__": html.escape(config["home_url"], quote=True),
+        "__ISSUES_URL__": html.escape(config["repo_url"].rstrip("/") + "/issues/new", quote=True),
         "__FETCHED_DATE__": _long_date(meta["fetched_at"], config["timezone"]),
         "__TZ__": config["timezone"],
         "__EVENTS_JSON__": _script_json(slim),

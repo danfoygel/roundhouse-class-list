@@ -35,7 +35,7 @@ Mindbody widget ──fetch──▶ data/snapshot.json ──normalize──▶
 | Output | Rule |
 |---|---|
 | Title, subtitle | Split the name at " - ". Drop later pieces that are a price, "N Days", "N sessions", "Free…" or "Members Only". The next piece is the subtitle. A trailing "(Family-Friendly!)" or "w/ Name" becomes the subtitle. A name starting with a configured series prefix ("Free KTG Reuse & Repair Workshop: …") moves the prefix to the subtitle. `display_overrides` in the config handle names no rule can. |
-| Price | The first `$` amount in the name. "Free to Member, $45 Non-Members" gives Free with a note. "Free" or "gratuito" in the name gives Free. A members-only class whose description says "Free to members" gives Free. Otherwise none ("No fee listed"). |
+| Price | The first `$` amount in the name. "Free to Member, $45 Non-Members" gives Free, with "$45 for non-members" as a hover tooltip. "Free" or "gratuito" in the name gives Free. A members-only class whose description says "Free to members" gives Free. Otherwise none ("No fee listed"). |
 | Price note | "per X" if the description says `$N per X`; otherwise "materials included" if the name or description says materials are included or provided. |
 | Minimum age | `Ages N`, `students N and over`, `N - Adult`, or `N and over/above` in the description. |
 | Age note | `under N … accompanied/chaperoned/attend with … adult` gives "Under N with an adult". |

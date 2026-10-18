@@ -86,8 +86,12 @@ class PriceTest(unittest.TestCase):
             ("$55", "per gingerbread-maker"))
 
     def test_free_for_members_costs_non_members(self):
-        self.assertEqual(normalize.parse_price("Crochet Open Studio - Free to Member, $45 Non-Members", ""),
-                         ("Free", "members · $45 non-members"))
+        self.assertEqual(normalize.parse_price("Crochet Open Studio - Free to Member, $45 Non-Members", ""), ("Free", None))
+
+    def test_non_member_price_goes_in_a_tooltip(self):
+        self.assertEqual(normalize.price_tooltip("Crochet Open Studio - Free to Member, $45 Non-Members"), "$45 for non-members")
+        self.assertIsNone(normalize.price_tooltip("Block Printing - 1 Day - $65"))
+        self.assertIsNone(normalize.price_tooltip("Metal Shop Mentor Hours - Members Only"))
 
     def test_free_members_only_from_description(self):
         self.assertEqual(normalize.parse_price("Metal Shop Mentor Hours - Members Only", "Free to Members Only. You must book."),
@@ -203,6 +207,7 @@ class SnapshotRegressionTest(unittest.TestCase):
         "Learn to Sew Pajama Pants": {"pnote": "materials included"},
         "Handsew Gingerbread People": {"pnote": "per gingerbread-maker"},
         # The type label ("Member Session") now says it, so the "members only" note and badge are gone.
+        "Crochet Open Studio": {"pnote": None, "ptip": "$45 for non-members"},  # now a hover tooltip on "Free"
         "Metal Shop Mentor Hours": {"pnote": None},
         "Textiles Open Studio": {"pnote": None},
     }
@@ -242,6 +247,9 @@ class SnapshotRegressionTest(unittest.TestCase):
         self.assertEqual(sizes, [2] * 8)
         for event in self.events:
             self.assertEqual("stype=-8" in event["link"], len(event["sessions"]) > 1, event["title"])
+
+    def test_only_crochet_open_studio_has_a_price_tooltip(self):
+        self.assertEqual({e["title"] for e in self.events if e["ptip"]}, {"Crochet Open Studio"})
 
     def test_cancelled_events(self):
         cancelled = sorted(e["title"] for e in self.events if e["status"] == "x")

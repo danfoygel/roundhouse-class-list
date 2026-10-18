@@ -410,7 +410,7 @@ function tile(c) {
   const spots = c.status === "x" ? `<span class="v quiet">\u2014</span>` : `<span class="v">${left} of ${c.cap}</span>`;
 
   const price = c.price
-    ? `<span class="v">${esc(c.price)}</span>${c.pnote ? `<span class="note">${esc(c.pnote)}</span>` : ""}`
+    ? `<span class="v${c.ptip ? " has-tip" : ""}"${c.ptip ? ` title="${esc(c.ptip)}" tabindex="0"` : ""}>${esc(c.price)}</span>${c.pnote ? `<span class="note">${esc(c.pnote)}</span>` : ""}`
     : `<span class="v quiet">No fee listed</span>`;
   const age = c.age
     ? `<span class="v${c.anote ? " has-tip" : ""}"${c.anote ? ` title="${esc(c.anote)}" tabindex="0"` : ""}>${c.age}+</span>`

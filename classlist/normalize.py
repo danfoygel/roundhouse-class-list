@@ -71,12 +71,20 @@ def course_size(raw_name):
 
 # ------------------------------------------------------------- price and age
 
+_FREE_FOR_MEMBERS = re.compile(r"free to members?\b[^$]*\$\s?(\d+)\s*non-?members?", re.I)
+
+
+def price_tooltip(raw_name):
+    """For "Free to Member, $45 Non-Members": the non-member price, shown on hover over "Free"."""
+    match = _FREE_FOR_MEMBERS.search(clean(raw_name))
+    return "$%s for non-members" % match.group(1) if match else None
+
+
 def parse_price(raw_name, description):
     """(price, note). Prices come from the name; free and members-only classes are recognised by wording."""
     name = clean(raw_name)
-    free_for_members = re.search(r"free to members?\b[^$]*\$\s?(\d+)\s*non-?members?", name, re.I)
-    if free_for_members:
-        return "Free", "members · $%s non-members" % free_for_members.group(1)
+    if _FREE_FOR_MEMBERS.search(name):
+        return "Free", None
 
     priced = re.search(r"\$\s?(\d+(?:\.\d{2})?)", name)
     if priced:
@@ -252,6 +260,7 @@ def build_events(snapshot, config):
             "icon": config["icons"].get(shop, config["generic_icon"]),
             "price": price,
             "pnote": price_note,
+            "ptip": price_tooltip(raw_name),
             "age": min_age,
             "anote": age_note,
             "cap": first["capacity"],

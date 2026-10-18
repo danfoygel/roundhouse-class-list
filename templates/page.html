@@ -26,8 +26,6 @@
   --pine: #1b6a57;
   --pine-ink: #ffffff;
   --pine-soft: #dcefe9;
-  --amber-soft: #fff0d0;
-  --amber-ink: #6e4300;
   --gray-soft: #e4e8e6;
   --focus: #1b6a57;
   --brand: #ad6036;
@@ -49,8 +47,6 @@
     --pine: #55c2a4;
     --pine-ink: #06241c;
     --pine-soft: #17372f;
-    --amber-soft: #3a2c10;
-    --amber-ink: #f2cf8a;
     --gray-soft: #202c35;
     --focus: #55c2a4;
     color-scheme: dark;
@@ -68,8 +64,6 @@
   --pine: #55c2a4;
   --pine-ink: #06241c;
   --pine-soft: #17372f;
-  --amber-soft: #3a2c10;
-  --amber-ink: #f2cf8a;
   --gray-soft: #202c35;
   --focus: #55c2a4;
   color-scheme: dark;
@@ -239,7 +233,6 @@ h1 {
 .fact .v { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; line-height: 1.15; font-variant-numeric: tabular-nums; }
 .fact .v.quiet { font-family: var(--font-body); font-size: 15px; font-weight: 500; color: var(--muted); padding-top: 3px; display: inline-block; }
 .fact .note { display: block; font-size: 12.5px; color: var(--muted); line-height: 1.3; margin-top: 2px; }
-.fact .note.warn { color: var(--amber-ink); background: var(--amber-soft); display: inline-block; padding: 1px 6px; border-radius: 4px; }
 .act { display: flex; flex-direction: column; align-items: stretch; justify-content: center; gap: 6px; padding: 16px 16px 16px 4px; }
 .btn {
   display: block;
@@ -273,7 +266,6 @@ footer p { margin: 0 0 6px; }
   .act { padding: 0 16px 16px; }
   .facts { gap: 8px; }
   .fact .v { font-size: 1.1rem; }
-  .fact .note.warn { display: block; width: fit-content; margin-top: 4px; }
   header { flex-wrap: nowrap; gap: 14px; }
   .logo img { height: 46px; }
   h1 { font-size: 1.8rem; }
@@ -407,10 +399,7 @@ function tile(c) {
   const multi = c.sessions.length > 1;
   const lastS = c.sessions[c.sessions.length - 1];
   const left = Math.max(c.cap - c.reg, 0);
-  let capNote;
-  if (c.status === "x") capNote = `<span class="note">Cancelled</span>`;
-  else if (left === 0) capNote = `<span class="note warn">Full, waitlist open</span>`;
-  else capNote = `<span class="note">${left} open</span>`;
+  const spots = c.status === "x" ? `<span class="v quiet">\u2014</span>` : `<span class="v">${left} of ${c.cap}</span>`;
 
   const price = c.price
     ? `<span class="v">${esc(c.price)}</span>${c.pnote ? `<span class="note">${esc(c.pnote)}</span>` : ""}`
@@ -446,7 +435,7 @@ function tile(c) {
       </div>
       <dl class="facts">
         <div class="fact"><dt>Price</dt><dd>${price}</dd></div>
-        <div class="fact"><dt>Max students</dt><dd><span class="v">${c.cap}</span>${capNote}</dd></div>
+        <div class="fact"><dt>Open spots</dt><dd>${spots}</dd></div>
         <div class="fact"><dt>Min age</dt><dd>${age}</dd></div>
       </dl>
     </div>

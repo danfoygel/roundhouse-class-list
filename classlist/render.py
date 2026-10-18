@@ -31,13 +31,23 @@ def render_page(events, meta, config, template_path, assets_dir):
     if missing:
         raise ValueError("No icon image for: %s" % ", ".join(sorted(missing)))
 
+    # Weekly sessions repeat the same description, so events point into one shared table.
+    descriptions, positions, slim = [], {}, []
+    for event in events:
+        key = json.dumps(event["desc"], ensure_ascii=False)
+        if key not in positions:
+            positions[key] = len(descriptions)
+            descriptions.append(event["desc"])
+        slim.append(dict(event, desc=positions[key]))
+
     replacements = {
         "__TITLE__": html.escape(config["page"]["title"]),
         "__HEADING__": html.escape(config["page"]["heading"]),
         "__HOME_URL__": html.escape(config["home_url"], quote=True),
         "__FETCHED_DATE__": _long_date(meta["fetched_at"], config["timezone"]),
         "__TZ__": config["timezone"],
-        "__EVENTS_JSON__": _script_json(events),
+        "__EVENTS_JSON__": _script_json(slim),
+        "__DESCS_JSON__": _script_json(descriptions),
         "__ICONS_JSON__": _script_json({name: icons[name] for name in sorted(used)}),
         "__LOGO__": _data_uri(assets / "logo.png"),
     }

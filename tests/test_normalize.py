@@ -136,6 +136,32 @@ class AgeTest(unittest.TestCase):
         self.assertEqual(normalize.parse_age("All youth under the age of 16 must be chaperoned by an adult")[0], None)
 
 
+class DescribeTest(unittest.TestCase):
+    def test_paragraphs_lists_and_entities(self):
+        markup = "<div><strong>Wood Shop 101</strong></div><div>&nbsp;</div><p>Learn to saw &amp; plane.</p><ul><li>Safety</li><li>Tools</li></ul>"
+        self.assertEqual(normalize.describe(markup, "Wood Shop 101 - 2 Days - $145"),
+                         ["Learn to saw & plane.", "\u2022 Safety", "\u2022 Tools"])
+
+    def test_leading_headline_lines_are_dropped(self):
+        markup = "<div>Sewing 101 - Practical Sewing Fundamentals - $145</div><div>2 Days - 3 Hours each day</div><div>The broad goal is to help.</div>"
+        self.assertEqual(normalize.describe(markup, "Sewing 101 - Practical Sewing Fundamentals - 2 Days -$145"), ["The broad goal is to help."])
+
+    def test_price_and_length_lines_are_dropped_even_without_the_name(self):
+        markup = "<p>Mandala Drawing</p><p>2-Day Class | 3 Hours per Day</p><p>$140</p><p>Join artist Nicole Stirling to draw mandalas.</p>"
+        self.assertEqual(normalize.describe(markup, "Mandala Drawing w/ Nicole Stirling - 2 Days - $140"),
+                         ["Join artist Nicole Stirling to draw mandalas."])
+
+    def test_a_real_first_sentence_is_kept(self):
+        markup = "<p>Make your own Gingerbread person with your loved ones!</p><p>All materials are provided.</p>"
+        self.assertEqual(normalize.describe(markup, "Handsew Gingerbread People (Family-Friendly!)"), ["Make your own Gingerbread person with your loved ones!", "All materials are provided."])
+
+    def test_single_paragraph_is_never_dropped(self):
+        self.assertEqual(normalize.describe("<p>Public Tour - $0</p>", "Public Tour"), ["Public Tour - $0"])
+
+    def test_missing_description(self):
+        self.assertEqual(normalize.describe(None, "Anything"), [])
+
+
 class SmallRulesTest(unittest.TestCase):
     def test_plain_decodes_markup(self):
         self.assertEqual(normalize.plain("<div>Ages&nbsp;12 &amp; over</div><p>Fun</p>"), "Ages 12 & over Fun")
@@ -247,6 +273,12 @@ class SnapshotRegressionTest(unittest.TestCase):
         self.assertEqual(sizes, [2] * 8)
         for event in self.events:
             self.assertEqual("stype=-8" in event["link"], len(event["sessions"]) > 1, event["title"])
+
+    def test_every_event_has_a_description_that_does_not_repeat_its_name(self):
+        for event in self.events:
+            self.assertTrue(event["desc"], event["title"])
+            self.assertFalse(event["desc"][0].lower().startswith(event["title"].lower()[:12]) and len(event["desc"][0]) <= 120, event["title"])
+            self.assertTrue(all(isinstance(p, str) and p.strip() for p in event["desc"]))
 
     def test_only_crochet_open_studio_has_a_price_tooltip(self):
         self.assertEqual({e["title"] for e in self.events if e["ptip"]}, {"Crochet Open Studio"})

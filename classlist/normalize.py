@@ -6,6 +6,7 @@ always produce the same events.
 """
 import html
 import re
+from html.parser import HTMLParser
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
@@ -21,6 +22,61 @@ def plain(markup):
 
 def clean(text):
     return re.sub(r"\s+", " ", text or "").strip()
+
+
+class _ParagraphReader(HTMLParser):
+    """Splits an HTML fragment into paragraphs of plain text; list items start with a bullet."""
+
+    BLOCKS = {"p", "div", "li", "ul", "ol", "br", "tr", "h1", "h2", "h3", "h4"}
+
+    def __init__(self):
+        super().__init__()
+        self.paragraphs = []
+        self.current = []
+
+    def _flush(self):
+        text = clean("".join(self.current))
+        self.current = []
+        if text and text != "\u2022":
+            self.paragraphs.append(text)
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self.BLOCKS:
+            self._flush()
+            if tag == "li":
+                self.current.append("\u2022 ")
+
+    def handle_endtag(self, tag):
+        if tag in self.BLOCKS:
+            self._flush()
+
+    def handle_data(self, data):
+        self.current.append(data)
+
+    def close(self):
+        super().close()
+        self._flush()
+
+
+# A short opening line that repeats the class name, or states its length or price, is a headline.
+_HEADLINE_FACT = re.compile(r"\$\s?\d|^\d+[\s-]*(?:days?|sessions?)\b|\b\d+(?:\.\d+)?[\s-]*(?:hours?|hrs?)\b", re.I)
+
+
+def describe(markup, raw_name):
+    """The class description as plain-text paragraphs, without the repeated name/length/price headline."""
+    reader = _ParagraphReader()
+    reader.feed(markup or "")
+    reader.close()
+    paragraphs = reader.paragraphs
+    lead = clean_name(raw_name).lower()[:12]
+    start = 0
+    while start < len(paragraphs) - 1:
+        line = paragraphs[start]
+        if len(line) <= 120 and (line.lower().startswith(lead) or _HEADLINE_FACT.search(line)):
+            start += 1
+        else:
+            break
+    return paragraphs[start:]
 
 
 # ------------------------------------------------------------------- names
@@ -261,6 +317,7 @@ def build_events(snapshot, config):
             "price": price,
             "pnote": price_note,
             "ptip": price_tooltip(raw_name),
+            "desc": describe(first.get("description"), raw_name),
             "age": min_age,
             "anote": age_note,
             "cap": first["capacity"],

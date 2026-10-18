@@ -43,7 +43,9 @@ class RenderTest(unittest.TestCase):
 
     def test_theme_icon_uses_the_hidden_attribute(self):
         # `hidden` is not a property of SVG elements, so assigning it changes nothing on screen.
-        self.assertNotIn(".hidden =", self.page)
+        # (Ordinary elements such as buttons are fine.)
+        self.assertNotIn('.i-moon").hidden', self.page)
+        self.assertNotIn('.i-sun").hidden', self.page)
         self.assertIn('.toggleAttribute("hidden"', self.page)
 
     def test_filter_bar_is_pinned_on_every_screen_width(self):
@@ -60,7 +62,14 @@ class RenderTest(unittest.TestCase):
         self.assertEqual(re.findall(r"__[A-Z_]{3,}__", self.page), [])
 
     def test_events_are_embedded_intact(self):
-        self.assertEqual(embedded(self.page, "EVENTS"), self.events)
+        descriptions = embedded(self.page, "DESCS")
+        rebuilt = [dict(e, desc=descriptions[e["desc"]]) for e in embedded(self.page, "EVENTS")]
+        self.assertEqual(rebuilt, self.events)
+
+    def test_repeated_descriptions_are_stored_once(self):
+        descriptions = embedded(self.page, "DESCS")
+        self.assertEqual(len(descriptions), len({json.dumps(d) for d in descriptions}))
+        self.assertLess(len(descriptions), len(self.events))
 
     def test_page_text_comes_from_config(self):
         self.assertIn("<title>Roundhouse Class List</title>", self.page)
@@ -80,10 +89,12 @@ class RenderTest(unittest.TestCase):
         self.assertEqual(self.page, page_for(self.events))
 
     def test_script_breaking_text_is_escaped(self):
-        event = dict(self.events[0], title="</script><b>x")
+        event = dict(self.events[0], title="</script><b>x", desc=["</script><i>y"])
         page = page_for([event])
         self.assertNotIn("</script><b>", page)
+        self.assertNotIn("</script><i>", page)
         self.assertEqual(embedded(page, "EVENTS")[0]["title"], "</script><b>x")
+        self.assertEqual(embedded(page, "DESCS")[0], ["</script><i>y"])
 
     def test_missing_icon_image_is_an_error(self):
         event = dict(self.events[0], icon="nonexistent")

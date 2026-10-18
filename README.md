@@ -50,6 +50,13 @@ Mindbody widget ──fetch──▶ data/snapshot.json ──normalize──▶
 `python3 build.py build` prints a warning for anything it could not read, such as an unknown
 class type or a price it could not parse. Fix those by adding a rule or a config entry.
 
+## Light and dark mode
+
+The page follows the visitor's system setting. The sun/moon button in the top right switches
+it, and the choice is remembered in the browser (`localStorage`, key `theme`). The colours are
+tokens in `templates/page.html`: the light set on `:root`, the dark set under
+`prefers-color-scheme` and under `[data-theme="dark"]`.
+
 ## Links to a filtered view
 
 The filters are kept in the page address, so a view can be shared. The address updates as you

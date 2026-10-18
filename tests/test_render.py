@@ -33,6 +33,14 @@ class RenderTest(unittest.TestCase):
         self.assertIn('<html lang="en">', self.page)
         self.assertTrue(self.page.rstrip().endswith("</html>"))
 
+    def test_has_a_theme_toggle_that_starts_from_the_system_setting(self):
+        self.assertIn('id="themeToggle"', self.page)
+        # A saved choice is applied in <head>, before the page paints; with none saved, the system setting rules.
+        head = self.page.split("</head>")[0]
+        self.assertIn('localStorage.getItem("theme")', head)
+        self.assertIn("@media (prefers-color-scheme: dark)", self.page)
+        self.assertIn(':root[data-theme="dark"]', self.page)
+
     def test_no_unfilled_tokens(self):
         self.assertEqual(re.findall(r"__[A-Z_]{3,}__", self.page), [])
 

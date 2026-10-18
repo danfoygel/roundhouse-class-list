@@ -350,6 +350,36 @@ let cat = "all";
 let showWaitlisted = true;
 let showCancelled = false;
 
+// Filter settings live in the page address so a filtered view can be shared, for example
+//   ?type=classes&waitlisted=0          classes that can still be booked
+//   ?type=members&shop=wood-shop        wood shop member sessions
+//   type: classes | members | public    shop: textiles, metal-shop, wood-shop, skill-share, jewelry, tech-shop, other
+//   waitlisted=0 hides waitlisted events; cancelled=1 shows cancelled ones
+const TYPE_PARAM = { classes: "c", members: "m", public: "p" };
+const slug = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+function readUrl() {
+  const q = new URLSearchParams(location.search);
+  filter = TYPE_PARAM[q.get("type")] || "all";
+  cat = CAT_ORDER.find((name) => slug(name) === q.get("shop")) || "all";
+  showWaitlisted = q.get("waitlisted") !== "0";
+  showCancelled = q.get("cancelled") === "1";
+  document.getElementById("showWaitlisted").checked = showWaitlisted;
+  document.getElementById("showCancelled").checked = showCancelled;
+}
+function writeUrl() {
+  const q = new URLSearchParams(location.search);
+  for (const key of ["type", "shop", "waitlisted", "cancelled"]) q.delete(key);
+  const type = Object.keys(TYPE_PARAM).find((k) => TYPE_PARAM[k] === filter);
+  if (type) q.set("type", type);
+  if (cat !== "all") q.set("shop", slug(cat));
+  if (!showWaitlisted) q.set("waitlisted", "0");
+  if (showCancelled) q.set("cancelled", "1");
+  const query = q.toString();
+  try {
+    history.replaceState(null, "", location.pathname + (query ? "?" + query : "") + location.hash);
+  } catch (e) { /* a sandboxed preview can't change its address; the filters still work */ }
+}
+
 function tile(c) {
   const multi = c.sessions.length > 1;
   const lastS = c.sessions[c.sessions.length - 1];
@@ -402,6 +432,7 @@ function tile(c) {
 }
 
 function render() {
+  writeUrl();
   const visible = items.filter((c) => (filter === "all" || c.kind === filter) && (cat === "all" || c.cat === cat) && (showCancelled || c.status !== "x") && (showWaitlisted || c.status !== "w"));
   const groups = new Map();
   for (const c of visible) {
@@ -457,6 +488,7 @@ new ResizeObserver(syncFiltersHeight).observe(filtersEl);
 addEventListener("resize", syncFiltersHeight);
 document.fonts.ready.then(syncFiltersHeight);
 
+readUrl();
 renderControls();
 render();
 syncFiltersHeight();

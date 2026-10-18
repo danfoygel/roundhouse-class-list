@@ -50,6 +50,22 @@ Mindbody widget ──fetch──▶ data/snapshot.json ──normalize──▶
 `python3 build.py build` prints a warning for anything it could not read, such as an unknown
 class type or a price it could not parse. Fix those by adding a rule or a config entry.
 
+## Links to a filtered view
+
+The filters are kept in the page address, so a view can be shared. The address updates as you
+change filters, and opening a link restores them. Unknown values are ignored, and other
+parameters in the link are left alone.
+
+| Parameter | Values | Default |
+|---|---|---|
+| `type` | `classes`, `members`, `public` | all types |
+| `shop` | `textiles`, `metal-shop`, `wood-shop`, `skill-share`, `jewelry`, `tech-shop`, `ceramics`, `other` (whichever shops have events) | all shops |
+| `waitlisted` | `0` hides waitlisted events | shown |
+| `cancelled` | `1` shows cancelled events | hidden |
+
+For example, `?type=classes&waitlisted=0` is the classes you can still book directly, and
+`?type=members&shop=wood-shop` is the wood shop's member sessions.
+
 ## Hosting (GitHub Actions + Pages)
 
 `.github/workflows/pages.yml` runs the tests, then `python build.py refresh --out dist/index.html`,

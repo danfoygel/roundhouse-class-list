@@ -160,6 +160,7 @@ h1 {
 .toggles { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .cats { margin: 0; }
 .seg button.zero[aria-pressed="false"] { opacity: 0.5; }
+.cat span { white-space: nowrap; }
 .cat { margin: 0; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pine); }
 .toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); cursor: pointer; user-select: none; }
 .toggle input { width: 16px; height: 16px; accent-color: var(--pine); margin: 0; }
@@ -365,6 +366,9 @@ const items = EVENTS.map((e) => {
 const CAT_ORDER = Object.entries(items.filter((c) => c.status !== "x").reduce((o, c) => (o[c.cat] = (o[c.cat] || 0) + 1, o), {}))
   .sort((a, b) => (a[0] === "Other") - (b[0] === "Other") || b[1] - a[1] || a[0].localeCompare(b[0])).map(([k]) => k);
 
+// Singular names for the three types shown by the first filter
+const KIND_LABEL = { c: "Class", m: "Member Session", p: "Public Event" };
+
 let filter = "all";
 let cat = "all";
 let showWaitlisted = true;
@@ -425,7 +429,7 @@ function tile(c) {
       <div class="top">
         <img class="ico" src="${ICONS[c.icon]}" alt="" width="52" height="52">
         <div class="topText">
-          <p class="cat">${esc(c.cat)}</p>
+          <p class="cat"><span>${KIND_LABEL[c.kind]} :</span> <span>${esc(c.cat)}</span></p>
           <div class="head">
             <h3 class="title">${esc(c.title)}</h3>
             ${c.tag ? `<span class="badge mem">${esc(c.tag)}</span>` : ""}

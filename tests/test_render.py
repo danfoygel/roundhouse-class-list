@@ -52,6 +52,10 @@ class RenderTest(unittest.TestCase):
         self.assertIn("position: sticky", filters_rule)
         self.assertNotIn("min-width: 701px", css)
 
+    def test_tile_label_names_the_type_before_the_shop(self):
+        self.assertIn('const KIND_LABEL = { c: "Class", m: "Member Session", p: "Public Event" };', self.page)
+        self.assertIn("${KIND_LABEL[c.kind]} :", self.page)
+
     def test_no_unfilled_tokens(self):
         self.assertEqual(re.findall(r"__[A-Z_]{3,}__", self.page), [])
 

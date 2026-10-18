@@ -20,9 +20,9 @@
   --ink: #14202b;
   --muted: #586771;
   --line: #d7ddda;
-  --stub: #14202b;
-  --stub-ink: #e9eeef;
-  --signal: #f2b72f;
+  --stub: #e2e9e6;
+  --stub-ink: #46565e;
+  --signal: #ad6036;
   --pine: #1b6a57;
   --pine-ink: #ffffff;
   --pine-soft: #dcefe9;
@@ -202,6 +202,7 @@ h1 {
   gap: 2px;
   padding: 16px 8px;
   text-align: center;
+  border-right: 1px solid var(--line);
 }
 .stub .dow, .stub .mon { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; }
 .stub .day { font-family: var(--font-display); font-weight: 700; font-size: 2.4rem; line-height: 1; color: var(--signal); font-variant-numeric: tabular-nums; }
@@ -272,7 +273,7 @@ footer p { margin: 0 0 6px; }
 
 @media (max-width: 700px) {
   .tile { grid-template-columns: minmax(0, 1fr); }
-  .stub { flex-direction: row; justify-content: flex-start; gap: 10px; padding: 8px 16px; }
+  .stub { flex-direction: row; justify-content: flex-start; gap: 10px; padding: 8px 16px; border-right: 0; border-bottom: 1px solid var(--line); }
   .stub .day { font-size: 1.5rem; }
   .body { padding: 14px 16px 12px; }
   .ico { width: 44px; height: 44px; }

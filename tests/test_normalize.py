@@ -199,13 +199,23 @@ class SmallRulesTest(unittest.TestCase):
         self.assertEqual(normalize.status_for({"cancelled": True, "bookable": True}), "x")
         self.assertEqual(normalize.status_for({"bookable": True, "waitlistable": True}), "b")
         self.assertEqual(normalize.status_for({"bookable": False, "waitlistable": True}), "w")
-        self.assertEqual(normalize.status_for({"bookable": False, "waitlistable": False}), "f")
+        self.assertEqual(normalize.status_for({"bookable": False, "waitlistable": False, "capacity": 5}), "f")
+        # No seats at all: not full, just not bookable here (a drop-in, or registered elsewhere).
+        self.assertEqual(normalize.status_for({"bookable": False, "waitlistable": False, "capacity": 0}), "i")
+        self.assertEqual(normalize.status_for({"cancelled": True, "capacity": 0}), "x")
 
     def test_kind_rules(self):
         self.assertEqual(normalize.kind_for("Public Tour", "Public Tour", CONFIG), "p")
         self.assertEqual(normalize.kind_for("Textiles Open Studio - Members Only", "Textiles", CONFIG), "m")
         self.assertEqual(normalize.kind_for("Metal Shop Mentor Hours", "Metal Shop", CONFIG), "m")
         self.assertEqual(normalize.kind_for("Block Printing - 1 Day - $65", "Skill-Share", CONFIG), "c")
+        self.assertEqual(normalize.kind_for("Open House", "Open House", CONFIG), "p")
+
+    def test_a_listing_with_no_seats_is_a_public_event(self):
+        # The Fixit Clinic and a Rec & Park workshop are listed in Mindbody with capacity 0.
+        self.assertEqual(normalize.kind_for("Fixit Clinic - No Registration, just drop in", "Other", CONFIG, 0), "p")
+        self.assertEqual(normalize.kind_for("Free Senior Art Workshop: Make a Triangle Shelf", "Wood Shop", CONFIG, 0), "p")
+        self.assertEqual(normalize.kind_for("Block Printing - 1 Day - $65", "Skill-Share", CONFIG, 6), "c")
 
     def test_categories_merge_and_unknown_become_other(self):
         types = [{"id": "a", "name": "Textiles Shop"}, {"id": "b", "name": "Skillshare"},
@@ -326,6 +336,19 @@ class SnapshotRegressionTest(unittest.TestCase):
             self.assertFalse(event["desc"][0].lower().startswith(event["title"].lower()[:12]) and len(event["desc"][0]) <= 120, event["title"])
             self.assertTrue(all(isinstance(p, str) and p.strip() for p in event["desc"]))
 
+    def test_seatless_listings_become_information_only_public_events(self):
+        snapshot = json.loads(json.dumps(SNAPSHOT))
+        sample = dict(snapshot["classes"][0], id="fixit", name="Fixit Clinic with Keep Truckee Green - No Registration, just drop in 4 - 7pm!",
+                      classGroupId="csch_fixit", capacity=0, numberRegistered=0, bookable=False, waitlistable=False, cancelled=False,
+                      startDateTime="2026-10-19T23:00:00.0000000Z", duration=180)
+        snapshot["classes"].append(sample)
+        events, _ = normalize.build_events(snapshot, CONFIG)
+        fixit = next(e for e in events if e["title"].startswith("Fixit Clinic"))
+        self.assertEqual((fixit["kind"], fixit["status"], fixit["cap"]), ("p", "i", 0))
+        self.assertEqual(fixit["sub"], "No Registration, just drop in 4 - 7pm!")
+        # nothing that has seats changed type
+        self.assertEqual([e["kind"] for e in events if e["title"] == "Block Printing"], ["c"])
+
     def test_only_crochet_open_studio_has_a_price_tooltip(self):
         self.assertEqual({e["title"] for e in self.events if e["ptip"]}, {"Crochet Open Studio"})
 
@@ -336,7 +359,7 @@ class SnapshotRegressionTest(unittest.TestCase):
     def test_every_event_is_complete(self):
         for event in self.events:
             self.assertNotIn("tag", event)
-            self.assertIn(event["status"], "bwfx")
+            self.assertIn(event["status"], "bwfxi")
             self.assertIn(event["kind"], "cmp")
             self.assertTrue(event["sessions"] and event["inst"] and event["icon"], event["title"])
             self.assertTrue(event["link"].startswith("https://clients.mindbodyonline.com/classic/ws?studioid=317649"))

@@ -242,9 +242,13 @@ def category_names(session_types, config):
     return result
 
 
-def kind_for(raw_name, category_name, config):
-    """c = class, m = member session (open studio, mentor hours), p = public event."""
-    if category_name in config.get("public_categories", []):
+def kind_for(raw_name, category_name, config, capacity=None):
+    """c = class, m = member session (open studio, mentor hours), p = public event.
+
+    A listing with no seats at all (capacity 0) can't be booked through Mindbody: it is a drop-in or
+    an event registered elsewhere, such as the Fixit Clinic or a Rec & Park workshop. Those are public events.
+    """
+    if capacity == 0 or category_name in config.get("public_categories", []):
         return "p"
     if any(re.search(p, raw_name, re.I) for p in config.get("member_name_patterns", [])):
         return "m"
@@ -269,6 +273,8 @@ def status_for(record):
         return "b"
     if record.get("waitlistable"):
         return "w"
+    if record.get("capacity") == 0:
+        return "i"  # no seats to book: information only
     return "f"
 
 
@@ -355,7 +361,7 @@ def build_events(snapshot, config):
         events.append({
             "title": title,
             "sub": sub,
-            "kind": kind_for(raw_name, category_name, config),
+            "kind": kind_for(raw_name, category_name, config, first["capacity"]),
             "cat": shop,
             "icon": config["icons"].get(shop, config["generic_icon"]),
             "price": price,

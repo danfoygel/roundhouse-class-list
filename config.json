@@ -34,7 +34,7 @@
   },
   "generic_icon": "generic",
 
-  "public_categories": ["Public Tour"],
+  "public_categories": ["Public Tour", "Open House", "Announcment"],
   "member_name_patterns": ["members only", "open studio", "mentor hours"],
   "series_prefixes": ["Free KTG Reuse & Repair Workshop", "Jewelry"],
   "course_max_gap_days": 21,
@@ -44,6 +44,7 @@
     "Wood Shop 102: Make a Picture Frame": {"title": "Wood Shop 102", "sub": "Make a Picture Frame"},
     "Intermediate Silversmithing: Bezel Making and Stone Setting": {"title": "Intermediate Silversmithing", "sub": "Bezel Making & Stone Setting"},
     "Public Tour - Come Check Out the Space": {"title": "Public Tour", "sub": "Come check out the space"},
+    "Free Senior Art Workshop: Make a Triangle Shelf - Register at Free Senior Art Workshop: Make a Triangle Shelf Register for all Senior Art Workshops at the Truckee-Donner Rec & Park": {"title": "Free Senior Art Workshop: Make a Triangle Shelf", "sub": "Register at the Truckee-Donner Rec & Park"},
     "Taller GRATUITO en español sobre reparación y arreglo de ropa": {"title": "Taller gratuito: reparación y arreglo de ropa", "sub": "Free workshop in Spanish"}
   },
   "instructor_names": {

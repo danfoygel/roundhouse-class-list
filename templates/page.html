@@ -480,7 +480,7 @@ function tile(c) {
   const multi = c.sessions.length > 1;
   const lastS = c.sessions[c.sessions.length - 1];
   const left = Math.max(c.cap - c.reg, 0);
-  const spots = c.status === "x" ? `<span class="v quiet">\u2014</span>` : `<span class="v">${left} of ${c.cap}</span>`;
+  const spots = c.status === "x" || c.status === "i" ? `<span class="v quiet">\u2014</span>` : `<span class="v">${left} of ${c.cap}</span>`;
 
   const price = c.price
     ? `<span class="v${c.ptip ? " has-tip" : ""}"${c.ptip ? ` title="${esc(c.ptip)}" tabindex="0"` : ""}>${esc(c.price)}</span>${c.pnote ? `<span class="note">${esc(c.pnote)}</span>` : ""}`
@@ -493,7 +493,7 @@ function tile(c) {
   let action;
   if (c.status === "b") action = `<a class="btn" href="${c.link}" target="_blank" rel="noopener" aria-label="Book ${esc(label)} on Mindbody">Book</a>`;
   else if (c.status === "w") action = `<a class="btn alt" href="${c.link}" target="_blank" rel="noopener" aria-label="Join the waitlist for ${esc(label)} on Mindbody">Join waitlist</a>`;
-  else action = `<span class="btn off" role="note">${c.status === "x" ? "Cancelled" : "Full"}</span>`;
+  else action = `<span class="btn off" role="note">${{ x: "Cancelled", i: "Not bookable here" }[c.status] || "Full"}</span>`;
 
   return `<li class="tile${c.status === "x" ? " is-off" : ""}">
     <div class="stub" aria-hidden="true"><span class="dow">${c.dow}</span><span class="day">${c.day}</span><span class="mon">${c.mon}</span>${multi ? `<span class="to">to ${lastS.mon} ${lastS.day}</span>` : ""}</div>

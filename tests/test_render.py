@@ -71,6 +71,10 @@ class RenderTest(unittest.TestCase):
         self.assertIn("list-style: disc", rule)  # nested lists would otherwise get hollow circles
         self.assertIn(".desc li {", css)
 
+    def test_information_only_events_say_so_instead_of_full(self):
+        self.assertIn('i: "Not bookable here"', self.page)
+        self.assertIn('c.status === "x" || c.status === "i"', self.page)  # no fake "0 of 0" seats
+
     def test_no_unfilled_tokens(self):
         self.assertEqual(re.findall(r"__[A-Z_]{3,}__", self.page), [])
 

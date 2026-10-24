@@ -109,6 +109,7 @@ header { position: relative; display: flex; flex-wrap: wrap; align-items: center
   text-decoration: none;
 }
 .icon-btn:hover { border-color: var(--muted); }
+.icon-btn:focus-visible { outline: none; }
 .icon-btn svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .icon-btn svg[hidden] { display: none; }
 .logo { display: block; flex: none; border-radius: 4px; }
@@ -198,6 +199,8 @@ h1 {
   overflow: hidden;
 }
 .tile.is-off { opacity: 0.62; }
+.tile { scroll-margin-top: calc(env(safe-area-inset-top, 0px) + var(--filters-h, 0px) + 14px); }
+.tile.jump-highlight { box-shadow: 0 0 0 3px var(--focus); transition: box-shadow 0.4s ease; }
 .stub {
   background: var(--stub);
   color: var(--stub-ink);
@@ -338,6 +341,9 @@ h1 {
 .history-type { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
 .history-logged { font-family: var(--font-mono); font-size: 11px; color: var(--muted); white-space: nowrap; }
 .history-name { font-weight: 600; margin: 3px 0 0; }
+.history-link { all: unset; display: block; font-weight: 600; margin: 3px 0 0; cursor: pointer; color: var(--ink); }
+.history-link:hover { color: var(--pine); text-decoration: underline; }
+.history-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 .history-meta { color: var(--muted); font-size: 13px; margin: 2px 0 0; }
 .history-empty { padding: 28px 0; text-align: center; color: var(--muted); }
 
@@ -553,11 +559,13 @@ const items = EVENTS.map((e, id) => {
   const sessions = e.sessions.map((s) => {
     const start = new Date(s.start);
     const d = parts(fmtDay, start);
-    return { start, mins: s.mins, dow: d.weekday, mon: d.month, day: d.day };
+    return { start, mins: s.mins, id: s.id, dow: d.weekday, mon: d.month, day: d.day };
   });
   const first = sessions[0];
   return { ...e, id, desc: DESCS[e.desc], sessions, start: first.start, mins: first.mins, dow: first.dow, mon: first.mon, day: first.day, monthKey: fmtMonth.format(first.start) };
 });
+// Mindbody's own session id -> the event (tile) it belongs to, for jumping there from change history.
+const EVENT_BY_SESSION_ID = new Map(items.flatMap((c) => c.sessions.map((s) => [s.id, c])));
 
 // Category chips keep a fixed order (most sessions first) so they don't jump around as counts change
 const CAT_ORDER = Object.entries(items.filter((c) => c.status !== "x").reduce((o, c) => (o[c.cat] = (o[c.cat] || 0) + 1, o), {}))
@@ -663,7 +671,7 @@ function tile(c) {
   else if (c.status === "w") action = `<a class="btn alt" href="${c.link}" target="_blank" rel="noopener" aria-label="Join the waitlist for ${esc(label)} on Mindbody">Join waitlist</a>`;
   else action = `<span class="btn off" role="note">${{ x: "Cancelled", i: "Not bookable here" }[c.status] || "Full"}</span>`;
 
-  return `<li class="tile${c.status === "x" ? " is-off" : ""}">
+  return `<li class="tile${c.status === "x" ? " is-off" : ""}" id="evt-${c.id}">
     <div class="stub" aria-hidden="true"><span class="dow">${c.dow}</span><span class="day">${c.day}</span><span class="mon">${c.mon}</span>${multi ? `<span class="to">to ${lastS.mon} ${lastS.day}</span>` : ""}</div>
     <div class="body">
       <div class="top">
@@ -812,16 +820,46 @@ function historyMeta(e) {
 }
 function historyItem(e) {
   const meta = historyMeta(e);
+  // A removed session, or one outside the current fetch window, has no live event to jump to.
+  const match = EVENT_BY_SESSION_ID.get(e.class_id);
+  const name = match
+    ? `<button type="button" class="history-link" data-event-id="${match.id}">${esc(e.name)}</button>`
+    : `<p class="history-name">${esc(e.name)}</p>`;
   return `<li class="history-item">
     <div class="history-row">
       <span class="history-type">${esc(CHANGELOG_LABELS[e.type] || e.type)}</span>
       <span class="history-logged">${fmtLogged.format(new Date(e.at))}</span>
     </div>
-    <p class="history-name">${esc(e.name)}</p>
+    ${name}
     <p class="history-meta">${fmtDay.format(new Date(e.start))}${e.type === "time_changed" ? "" : `, ${fmtTime.format(new Date(e.start))}`}</p>
     ${meta ? `<p class="history-meta">${meta}</p>` : ""}
   </li>`;
 }
+// Closes the overlay and scrolls the main list to the event, loosening only whichever filters
+// would otherwise hide it (leaving the visitor's other filter choices alone).
+function goToEvent(match) {
+  if (filter !== "all" && filter !== match.kind) filter = "all";
+  if (cat !== "all" && cat !== match.cat) cat = "all";
+  if (match.status === "x") showCancelled = true;
+  if (match.status === "w") showWaitlisted = true;
+  document.getElementById("showWaitlisted").checked = showWaitlisted;
+  document.getElementById("showCancelled").checked = showCancelled;
+  renderControls();
+  render();
+  requestAnimationFrame(() => {
+    const el = document.getElementById("evt-" + match.id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    el.classList.add("jump-highlight");
+    setTimeout(() => el.classList.remove("jump-highlight"), 1600);
+  });
+}
+document.getElementById("historyList").addEventListener("click", (e) => {
+  const link = e.target.closest(".history-link");
+  if (!link) return;
+  historyDialog.close();
+  goToEvent(items[Number(link.dataset.eventId)]);
+});
 function renderHistory() {
   const list = document.getElementById("historyList");
   list.innerHTML = CHANGELOG.length

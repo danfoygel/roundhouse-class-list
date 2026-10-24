@@ -242,13 +242,21 @@ def category_names(session_types, config):
     return result
 
 
-def kind_for(raw_name, category_name, config, capacity=None):
+def kind_for(raw_name, category_name, config, capacity=None, description=""):
     """c = class, m = member session (open studio, mentor hours), p = public event.
 
     A listing with no seats at all (capacity 0) can't be booked through Mindbody: it is a drop-in or
     an event registered elsewhere, such as the Fixit Clinic or a Rec & Park workshop. Those are public events.
+    A listing whose description matches public_description_patterns is run by an outside group, such as
+    Keep Truckee Green's reuse & repair workshops: open to the public rather than a Roundhouse-taught
+    class. The name varies (English and Spanish listings of the same series), so this matches on the
+    sponsorship boilerplate in the description rather than the name.
     """
-    if capacity == 0 or category_name in config.get("public_categories", []):
+    if (
+        capacity == 0
+        or category_name in config.get("public_categories", [])
+        or any(re.search(p, description, re.I) for p in config.get("public_description_patterns", []))
+    ):
         return "p"
     if any(re.search(p, raw_name, re.I) for p in config.get("member_name_patterns", [])):
         return "m"
@@ -361,7 +369,7 @@ def build_events(snapshot, config):
         events.append({
             "title": title,
             "sub": sub,
-            "kind": kind_for(raw_name, category_name, config, first["capacity"]),
+            "kind": kind_for(raw_name, category_name, config, first["capacity"], description),
             "cat": shop,
             "icon": config["icons"].get(shop, config["generic_icon"]),
             "price": price,

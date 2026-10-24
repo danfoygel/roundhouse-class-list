@@ -1,73 +1,43 @@
 # Truckee Roundhouse class list
 
-Builds one self-contained HTML page listing the Roundhouse's upcoming classes and events from
-the data behind their Mindbody booking widget. Python 3.9 or newer, standard library only.
+**[View the live class list →](https://danfoygel.github.io/roundhouse-class-list/)**
 
-```
-python3 build.py build      # make classes.html from the saved snapshot (offline)
-python3 build.py fetch      # download a fresh snapshot to data/snapshot.json
-python3 build.py refresh    # fetch, then build
-python3 -m unittest discover -s tests -t .
-```
+[![Screenshot of the class list page](docs/screenshot.jpg)](https://danfoygel.github.io/roundhouse-class-list/)
 
-The same snapshot and config always produce the same page, byte for byte.
+A single page listing all of Truckee Roundhouse's upcoming classes, member sessions, and public
+events, pulled from their booking system — so you can browse and filter without digging through
+the booking widget.
 
-## How it works
+## What's on each tile
 
-```
-Mindbody widget ──fetch──▶ data/snapshot.json ──normalize──▶ events ──render──▶ classes.html
-  (classlist/fetch.py)        raw records          (classlist/normalize.py)  (classlist/render.py
-                                                                              + templates/page.html
-                                                                              + assets/)
-```
+- **Title, subtitle, and shop** (Textiles, Metal Shop, Wood Shop, Skill-Share, Jewelry, Tech
+  Shop, Ceramics, or Other), with an icon for the shop.
+- **Description**, shown collapsed at first with "Show more" to read the rest.
+- **Price**, or "No fee listed" if none was given, with notes like "materials included" or a
+  per-session rate where that applies.
+- **Minimum age**, if the class has one, and whether a minor needs to attend with an adult.
+- **Status** — bookable, waitlistable, full, cancelled, or "Not bookable here" for listings that
+  don't take seat reservations (register elsewhere, or just show up).
+- **Instructor**.
+- **A link to book** on Mindbody.
 
-- **fetch** loads the widget page, reads the two server actions and their encrypted arguments
-  that the page embeds, and calls the schedule action for consecutive 28-day windows (the server
-  refuses ranges of about 31 days or more). For 90 days that is one page load and four requests.
-  It also saves the list of class types (the shops).
-- **normalize** turns raw records into events using rules, listed below.
-- **render** fills `templates/page.html` with the events as JSON, the icons and logo as data
-  URIs, and a few strings from `config.json`. The page itself (filters, tiles, sticky bar) is
-  plain JavaScript in the template and renders from the embedded events.
+A class that runs across multiple days is shown as a single tile covering all of its sessions.
 
-## The rules (classlist/normalize.py)
+## Classes, member sessions, and public events
 
-| Output | Rule |
-|---|---|
-| Title, subtitle | Split the name at " - ". Drop later pieces that are a price, "N Days", "N sessions", "Free…" or "Members Only". The next piece is the subtitle. A trailing "(Family-Friendly!)" or "w/ Name" becomes the subtitle. A name starting with a configured series prefix ("Free KTG Reuse & Repair Workshop: …") moves the prefix to the subtitle. `display_overrides` in the config handle names no rule can. |
-| Price | The first `$` amount in the name. "Free to Member, $45 Non-Members" gives Free, with "$45 for non-members" as a hover tooltip. "Free" or "gratuito" in the name gives Free. A members-only class whose description says "Free to members" gives Free. Otherwise none ("No fee listed"). |
-| Price note | "per X" if the description says `$N per X`; otherwise "materials included" if the name or description says materials are included or provided. |
-| Minimum age | `Ages N`, `students N and over`, `N - Adult`, or `N and over/above` in the description. |
-| Age note | `under N … accompanied/chaperoned/attend with … adult` gives "Under N with an adult". |
-| Shop | The widget's class type, merged through `category_aliases`. Anything not in `shops` is "Other". |
-| Icon | `icons` maps a shop to an image in `assets/icons`; everything else uses the generic bulb. |
-| Type | Public event if the listing has no seats (capacity 0: a drop-in or an event registered elsewhere) or its class type is in `public_categories`; member session if the name matches `member_name_patterns`; otherwise class. |
-| Multi-session course | A name that says "N Days" or "N sessions" (N of 2 or more) groups its sessions by series id into one event of N sessions. Runs more than `course_max_gap_days` apart stay separate. |
-| Description | The class description as plain-text paragraphs (bullets kept). Opening lines that repeat the name or state the length or price are dropped, as are sentences the page already shows (seats; minimum age and adult accompaniment, only when the tile shows them) and the studio's booking and policy wording (`description_boilerplate` in the config). The page shows the rest, three lines at first with "Show more" to open it. Identical descriptions are stored once. |
-| Status | cancelled, else bookable, else waitlistable, else "information only" if capacity is 0 (shown as "Not bookable here" with no seat count), else full. |
-| Instructor | The listed staff; cancelled sessions borrow from another session with the same name; `instructor_names` fixes names; ALL CAPS becomes Title Case. |
-| Booking link | Mindbody's classic booking page on the class's local date: Classes tab for single sessions, Multi-Day Classes tab for courses (linked on day one). Mindbody has no link to a single class. |
+- **Classes** are paid instruction with a seat count.
+- **Member sessions** are open shop time reserved for members (open ceramics, open wood shop,
+  and the like).
+- **Public events** are open to anyone, including drop-ins that don't take a seat reservation.
 
-`python3 build.py build` prints a warning for anything it could not read, such as an unknown
-class type or a price it could not parse. Fix those by adding a rule or a config entry.
+Use the "All Types" filter at the top to narrow the list to just one of these.
 
-## Light and dark mode
+## Filtering
 
-The page follows the visitor's system setting. The sun/moon button in the top right switches
-it, and the choice is remembered in the browser (`localStorage`, key `theme`). The colours are
-tokens in `templates/page.html`: the light set on `:root`, the dark set under
-`prefers-color-scheme` and under `[data-theme="dark"]`.
-
-## Report a problem
-
-The bug icon next to the sun/moon button opens the repository's issues page in a new tab
-(`repo_url` in `config.json`).
-
-## Links to a filtered view
-
-The filters are kept in the page address, so a view can be shared. The address updates as you
-change filters, and opening a link restores them. Unknown values are ignored, and other
-parameters in the link are left alone.
+Filter buttons let you narrow by type and by shop, and checkboxes show or hide waitlisted and
+cancelled events. The filters you choose are saved in the page address, so you can bookmark or
+share a specific view — for example, the classes you can still book directly, or just the wood
+shop's member sessions.
 
 | Parameter | Values | Default |
 |---|---|---|
@@ -79,39 +49,21 @@ parameters in the link are left alone.
 For example, `?type=classes&waitlisted=0` is the classes you can still book directly, and
 `?type=members&shop=wood-shop` is the wood shop's member sessions.
 
-## Hosting (GitHub Actions + Pages)
+## Light and dark mode
 
-`.github/workflows/pages.yml` runs the tests, then `python build.py refresh --out dist/index.html`,
-and publishes `dist/` to GitHub Pages. It runs every 6 hours, on every push to `main`, and on
-demand (Actions tab, "Update class list", "Run workflow").
+The page follows your system's light/dark setting. Use the sun/moon button in the top right to
+switch it; your choice is remembered in the browser.
 
-- If the fetch or the tests fail, nothing is deployed, so the last good page stays up, and
-  GitHub emails the repository owner about the failed run.
-- The generated page is not committed. `data/snapshot.json` in the repo is only a seed for
-  offline builds; the workflow replaces it with a fresh fetch on every run.
-- To change how often it runs, edit the `cron` line. Each run makes five requests to Mindbody.
-- One-time setup: Settings, Pages, Source: "GitHub Actions".
+## Data freshness
 
-## Limits to know about
+The page is a snapshot. Spots left and cancellations are as of the time it was last generated —
+the footer shows when that was. It refreshes automatically every few hours, and weekly sessions
+continue to show even past the last date listed.
 
-- **The data source is unofficial.** The widget's server action is undocumented. Mindbody can
-  change it at any time, and the encrypted arguments only work for the page they came from, so
-  the fetcher always loads the page first. If a fetch fails, run
-  `LIVE_MINDBODY=1 python3 -m unittest tests.test_live` to see whether the page changed.
-- **Terms of service.** Mindbody's terms restrict automated retrieval. Keep refreshes occasional
-  and small. The supported route is the official Public API (`GET /public/v6/class/classes`),
-  which needs the Roundhouse to activate your developer account. Because `normalize` only reads a
-  snapshot dictionary, an API-based fetcher could replace `fetch.py` without touching the rest.
-- **The page is a snapshot.** Spots left and cancellations are as of the fetch time. The footer
-  says when that was. Weekly sessions continue past the last date shown.
-- **Descriptions are free text.** Price and age come from text people typed, so a rewritten
-  description can change what the rules find. The regression test in `tests/test_normalize.py`
-  compares the rules with the hand-built page the project started from.
+## Report a problem
 
-## Files
+The bug icon next to the sun/moon button opens the project's issue tracker in a new tab.
 
-- `config.json`: studio, widget, timezone, shops, icons, rules' lists, overrides, page text.
-- `data/snapshot.json`: the last fetch, unmodified.
-- `templates/page.html`: the page's markup, styles and script, with `__TOKENS__`.
-- `assets/`: logo and shop icons (the Roundhouse's artwork; see `assets/README.md`).
-- `tests/`: unit tests, a frozen snapshot, and the original hand-built values.
+---
+
+For how the page is built, hosted, and kept up to date, see [IMPLEMENTATION.md](IMPLEMENTATION.md).

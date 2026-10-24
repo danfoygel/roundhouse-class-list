@@ -4,8 +4,8 @@
     {
       "name": "classlist",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8732"],
-      "port": 8732
+      "runtimeArgs": ["-m", "http.server", "8000"],
+      "port": 8000
     }
   ]
 }

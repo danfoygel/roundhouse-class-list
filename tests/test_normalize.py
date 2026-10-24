@@ -217,6 +217,31 @@ class SmallRulesTest(unittest.TestCase):
         self.assertEqual(normalize.kind_for("Free Senior Art Workshop: Make a Triangle Shelf", "Wood Shop", CONFIG, 0), "p")
         self.assertEqual(normalize.kind_for("Block Printing - 1 Day - $65", "Skill-Share", CONFIG, 6), "c")
 
+    def test_an_outside_group_s_workshop_is_a_public_event_even_when_bookable(self):
+        # Keep Truckee Green sponsors these reuse & repair workshops; they're bookable through
+        # Mindbody with real seats, but they're KTG's events, not Roundhouse-taught classes. The
+        # sponsorship boilerplate appears in the description, so this is matched there rather than
+        # on the name, which varies between the English and Spanish listings of the same series.
+        sponsored = "Sponsored by Keep Truckee Green, these FREE workshops will teach you..."
+        self.assertEqual(
+            normalize.kind_for(
+                "Free KTG Reuse & Repair Workshop: Electronics Repair", "Tech Shop", CONFIG, 6,
+                description=sponsored,
+            ),
+            "p",
+        )
+        self.assertEqual(
+            normalize.kind_for(
+                "Taller GRATUITO en español sobre reparación y arreglo de ropa", "Textiles", CONFIG, 10,
+                description=sponsored,
+            ),
+            "p",
+        )
+        self.assertEqual(
+            normalize.kind_for("Block Printing - 1 Day - $65", "Skill-Share", CONFIG, 6, description=""),
+            "c",
+        )
+
     def test_categories_merge_and_unknown_become_other(self):
         types = [{"id": "a", "name": "Textiles Shop"}, {"id": "b", "name": "Skillshare"},
                  {"id": "c", "name": "Public Tour"}, {"id": "d", "name": "Wood Shop"}]
@@ -279,6 +304,10 @@ class SnapshotRegressionTest(unittest.TestCase):
         "Crochet Open Studio": {"pnote": None, "ptip": "$45 for non-members"},  # now a hover tooltip on "Free"
         "Metal Shop Mentor Hours": {"pnote": None},
         "Textiles Open Studio": {"pnote": None},
+        # They're Keep Truckee Green's events, not Roundhouse-taught classes, even though they're bookable.
+        "Electronics Repair": {"kind": "p"},
+        "Reusable Gift Bag": {"kind": "p"},
+        "Taller gratuito: reparación y arreglo de ropa": {"kind": "p"},
     }
 
     @classmethod

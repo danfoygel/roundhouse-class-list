@@ -35,6 +35,7 @@
   "generic_icon": "generic",
 
   "public_categories": ["Public Tour", "Open House", "Announcment"],
+  "public_description_patterns": ["Sponsored by Keep Truckee Green"],
   "member_name_patterns": ["members only", "open studio", "mentor hours"],
   "series_prefixes": ["Free KTG Reuse & Repair Workshop", "Jewelry"],
   "course_max_gap_days": 21,

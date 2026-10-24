@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-from classlist import fetch, normalize, render  # noqa: E402
+from classlist import changelog, fetch, normalize, render  # noqa: E402
 
 
 def load_config(path):
@@ -25,9 +25,23 @@ def load_config(path):
 def do_fetch(config):
     snapshot = fetch.fetch_snapshot(config["widget_url"], config["timezone"], config["horizon_days"])
     target = ROOT / config["snapshot_path"]
+    old_snapshot = None
+    if target.exists():
+        try:
+            old_snapshot = json.loads(target.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            old_snapshot = None
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(snapshot, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print("Saved %d sessions to %s" % (len(snapshot["classes"]), target.relative_to(ROOT)))
+
+    if old_snapshot is not None:
+        entries = changelog.diff_snapshots(old_snapshot, snapshot, config)
+        if entries:
+            log_path = ROOT / config["changelog_path"]
+            changelog.append_entries(log_path, entries)
+            print("Logged %d change%s to %s" % (
+                len(entries), "" if len(entries) == 1 else "s", log_path.relative_to(ROOT)))
 
 
 def do_build(config, output=None):
@@ -36,7 +50,8 @@ def do_build(config, output=None):
         sys.exit("No snapshot at %s. Run: python3 build.py fetch" % source.relative_to(ROOT))
     snapshot = json.loads(source.read_text(encoding="utf-8"))
     events, warnings = normalize.build_events(snapshot, config)
-    page = render.render_page(events, snapshot["meta"], config, ROOT / "templates" / "page.html", ROOT / "assets")
+    history = changelog.load_entries(ROOT / config["changelog_path"])
+    page = render.render_page(events, snapshot["meta"], config, ROOT / "templates" / "page.html", ROOT / "assets", history)
     target = Path(output) if output else ROOT / config["output_path"]
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(page, encoding="utf-8")

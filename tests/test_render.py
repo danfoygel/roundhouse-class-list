@@ -3,7 +3,7 @@ import re
 import unittest
 from pathlib import Path
 
-from classlist import normalize, render
+from classlist import changelog, normalize, render
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
@@ -12,8 +12,8 @@ TEMPLATE = ROOT / "templates" / "page.html"
 ASSETS = ROOT / "assets"
 
 
-def page_for(events, meta=None):
-    return render.render_page(events, meta or SNAPSHOT["meta"], CONFIG, TEMPLATE, ASSETS)
+def page_for(events, meta=None, changelog_entries=None):
+    return render.render_page(events, meta or SNAPSHOT["meta"], CONFIG, TEMPLATE, ASSETS, changelog_entries)
 
 
 def embedded(page, name):
@@ -117,6 +117,37 @@ class RenderTest(unittest.TestCase):
         event = dict(self.events[0], icon="nonexistent")
         with self.assertRaises(ValueError):
             page_for([event])
+
+
+class HistoryDialogTest(unittest.TestCase):
+    ENTRIES = [
+        {"at": "2026-10-03T08:14:33Z", "type": "time_changed", "class_id": "c1", "name": "Winter Terrarium Making",
+         "start": "2026-12-07T01:00:00Z", "detail": {"was_start": "2026-11-30T19:00:00Z", "was_start_label": "Mon Nov 30, 2026, 11:00 AM"}},
+    ]
+
+    def test_clock_icon_is_left_of_the_other_icon_buttons(self):
+        page = page_for([], changelog_entries=self.ENTRIES)
+        tools = page.split('<div class="tools">')[1].split("</div>")[0]
+        issues_url = CONFIG["repo_url"].rstrip("/") + "/issues"
+        self.assertLess(tools.index('id="historyToggle"'), tools.index(issues_url))
+        self.assertLess(tools.index('id="historyToggle"'), tools.index('id="themeToggle"'))
+
+    def test_history_dialog_is_closed_by_default_and_scrolls_internally(self):
+        page = page_for([], changelog_entries=self.ENTRIES)
+        self.assertIn('<dialog class="history" id="historyDialog"', page)
+        self.assertNotIn('<dialog class="history" id="historyDialog" open', page)
+        css = page.split("<style>")[1].split("</style>")[0]
+        list_rule = css.split(".history-list {")[1].split("}")[0]
+        self.assertIn("overflow-y: auto", list_rule)
+
+    def test_entries_and_labels_are_embedded(self):
+        page = page_for([], changelog_entries=self.ENTRIES)
+        self.assertEqual(embedded(page, "CHANGELOG"), self.ENTRIES)
+        self.assertEqual(embedded(page, "CHANGELOG_LABELS"), changelog.TYPE_LABELS)
+
+    def test_no_changelog_entries_is_the_default(self):
+        page = page_for([])  # changelog_entries omitted
+        self.assertEqual(embedded(page, "CHANGELOG"), [])
 
 
 if __name__ == "__main__":

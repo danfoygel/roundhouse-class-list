@@ -383,6 +383,6 @@ def build_events(snapshot, config):
             "status": status_for(first),
             "inst": instructor,
             "link": booking_link(config["studio_id"], parse_utc(first["startDateTime"]), tz, course),
-            "sessions": [{"start": iso_utc(r["startDateTime"]), "mins": r["duration"]} for r in group],
+            "sessions": [{"start": iso_utc(r["startDateTime"]), "mins": r["duration"], "id": r["id"]} for r in group],
         })
     return events, warnings

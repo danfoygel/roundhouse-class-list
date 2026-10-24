@@ -109,6 +109,7 @@ header { position: relative; display: flex; flex-wrap: wrap; align-items: center
   text-decoration: none;
 }
 .icon-btn:hover { border-color: var(--muted); }
+.icon-btn:focus-visible { outline: none; }
 .icon-btn svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .icon-btn svg[hidden] { display: none; }
 .logo { display: block; flex: none; border-radius: 4px; }
@@ -198,6 +199,8 @@ h1 {
   overflow: hidden;
 }
 .tile.is-off { opacity: 0.62; }
+.tile { scroll-margin-top: calc(env(safe-area-inset-top, 0px) + var(--filters-h, 0px) + 14px); }
+.tile.jump-highlight { box-shadow: 0 0 0 3px var(--focus); transition: box-shadow 0.4s ease; }
 .stub {
   background: var(--stub);
   color: var(--stub-ink);
@@ -314,6 +317,36 @@ h1 {
 .cal-menu a { display: block; font: inherit; font-size: 13.5px; text-decoration: none; color: var(--ink); border-radius: 6px; padding: 8px 10px; }
 .cal-menu a:hover { background: var(--gray-soft); }
 
+/* change history dialog */
+.history {
+  position: fixed;
+  margin: auto;
+  width: min(560px, calc(100vw - 32px));
+  max-height: min(640px, calc(100vh - 96px));
+  padding: 0;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
+}
+.history[open] { display: flex; flex-direction: column; } /* dialog defaults to display:none until [open] */
+.history::backdrop { background: rgba(14, 21, 27, 0.55); }
+.history-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 10px 14px 18px; border-bottom: 1px solid var(--line); flex: none; }
+.history-head h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
+.history-list { list-style: none; margin: 0; padding: 6px 18px 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+.history-item { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.history-item:last-child { border-bottom: 0; }
+.history-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; }
+.history-type { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
+.history-logged { font-family: var(--font-mono); font-size: 11px; color: var(--muted); white-space: nowrap; }
+.history-name { font-weight: 600; margin: 3px 0 0; }
+.history-link { all: unset; display: block; font-weight: 600; margin: 3px 0 0; cursor: pointer; color: var(--ink); }
+.history-link:hover { color: var(--pine); text-decoration: underline; }
+.history-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.history-meta { color: var(--muted); font-size: 13px; margin: 2px 0 0; }
+.history-empty { padding: 28px 0; text-align: center; color: var(--muted); }
+
 .empty { padding: 40px 0; text-align: center; color: var(--muted); }
 footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
 footer p { margin: 0 0 6px; }
@@ -357,6 +390,9 @@ footer p { margin: 0 0 6px; }
     <a class="logo" href="__HOME_URL__" target="_blank" rel="noopener"><img id="logo" alt="Truckee Roundhouse home" width="147" height="60"></a>
     <h1>__HEADING__</h1>
     <div class="tools">
+    <button type="button" class="icon-btn" id="historyToggle" aria-label="View change history" title="Change history">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+    </button>
     <a class="icon-btn" href="__ISSUES_URL__" target="_blank" rel="noopener" aria-label="Report a problem (opens GitHub in a new tab)" title="Report a problem">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
     </a>
@@ -366,6 +402,16 @@ footer p { margin: 0 0 6px; }
     </button>
     </div>
   </header>
+
+  <dialog class="history" id="historyDialog" aria-labelledby="historyTitle">
+    <div class="history-head">
+      <h2 id="historyTitle">Change history</h2>
+      <button type="button" class="icon-btn" id="historyClose" aria-label="Close change history">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <ul class="history-list" id="historyList"></ul>
+  </dialog>
 
   <div class="filters" id="filters">
   <div class="controls">
@@ -399,10 +445,15 @@ const EVENTS = __EVENTS_JSON__;
 const DESCS = __DESCS_JSON__;
 const ICONS = __ICONS_JSON__;
 const LOGO = "__LOGO__";
+// What changed between fetches of the Mindbody schedule; see classlist/changelog.py.
+const CHANGELOG = __CHANGELOG_JSON__;
+// change `type` -> its short display label, e.g. "added" -> "New event added".
+const CHANGELOG_LABELS = __CHANGELOG_LABELS_JSON__;
 
 const fmtDay = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric", year: "numeric" });
 const fmtTime = new Intl.DateTimeFormat("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit" });
 const fmtMonth = new Intl.DateTimeFormat("en-US", { timeZone: TZ, month: "long", year: "numeric" });
+const fmtLogged = new Intl.DateTimeFormat("en-US", { timeZone: TZ, month: "short", day: "numeric", year: "numeric" });
 
 function parts(fmt, d) {
   const o = {};
@@ -508,11 +559,13 @@ const items = EVENTS.map((e, id) => {
   const sessions = e.sessions.map((s) => {
     const start = new Date(s.start);
     const d = parts(fmtDay, start);
-    return { start, mins: s.mins, dow: d.weekday, mon: d.month, day: d.day };
+    return { start, mins: s.mins, id: s.id, dow: d.weekday, mon: d.month, day: d.day };
   });
   const first = sessions[0];
   return { ...e, id, desc: DESCS[e.desc], sessions, start: first.start, mins: first.mins, dow: first.dow, mon: first.mon, day: first.day, monthKey: fmtMonth.format(first.start) };
 });
+// Mindbody's own session id -> the event (tile) it belongs to, for jumping there from change history.
+const EVENT_BY_SESSION_ID = new Map(items.flatMap((c) => c.sessions.map((s) => [s.id, c])));
 
 // Category chips keep a fixed order (most sessions first) so they don't jump around as counts change
 const CAT_ORDER = Object.entries(items.filter((c) => c.status !== "x").reduce((o, c) => (o[c.cat] = (o[c.cat] || 0) + 1, o), {}))
@@ -618,7 +671,7 @@ function tile(c) {
   else if (c.status === "w") action = `<a class="btn alt" href="${c.link}" target="_blank" rel="noopener" aria-label="Join the waitlist for ${esc(label)} on Mindbody">Join waitlist</a>`;
   else action = `<span class="btn off" role="note">${{ x: "Cancelled", i: "Not bookable here" }[c.status] || "Full"}</span>`;
 
-  return `<li class="tile${c.status === "x" ? " is-off" : ""}">
+  return `<li class="tile${c.status === "x" ? " is-off" : ""}" id="evt-${c.id}">
     <div class="stub" aria-hidden="true"><span class="dow">${c.dow}</span><span class="day">${c.day}</span><span class="mon">${c.mon}</span>${multi ? `<span class="to">to ${lastS.mon} ${lastS.day}</span>` : ""}</div>
     <div class="body">
       <div class="top">
@@ -750,6 +803,75 @@ themeButton.addEventListener("click", () => {
 });
 systemDark.addEventListener("change", syncThemeButton);
 syncThemeButton();
+
+// Change history: a dialog listing what diff_snapshots found between fetches, most recent first.
+function historyMeta(e) {
+  const d = e.detail;
+  if (!d) return "";
+  if (e.type === "time_changed") {
+    const bits = [];
+    if (d.was_start) bits.push(`now ${fmtDay.format(new Date(e.start))}, ${fmtTime.format(new Date(e.start))} (was ${esc(d.was_start_label)})`);
+    if (d.was_duration != null) bits.push(`now ${d.duration} min (was ${d.was_duration} min)`);
+    return bits.join("; ");
+  }
+  if (e.type === "capacity_changed") return `${d.was_capacity} → ${d.capacity} seats`;
+  if (e.type === "instructor_changed") return `${esc(d.was_instructor)} → ${esc(d.instructor)}`;
+  return "";
+}
+function historyItem(e) {
+  const meta = historyMeta(e);
+  // A removed session, or one outside the current fetch window, has no live event to jump to.
+  const match = EVENT_BY_SESSION_ID.get(e.class_id);
+  const name = match
+    ? `<button type="button" class="history-link" data-event-id="${match.id}">${esc(e.name)}</button>`
+    : `<p class="history-name">${esc(e.name)}</p>`;
+  return `<li class="history-item">
+    <div class="history-row">
+      <span class="history-type">${esc(CHANGELOG_LABELS[e.type] || e.type)}</span>
+      <span class="history-logged">${fmtLogged.format(new Date(e.at))}</span>
+    </div>
+    ${name}
+    <p class="history-meta">${fmtDay.format(new Date(e.start))}${e.type === "time_changed" ? "" : `, ${fmtTime.format(new Date(e.start))}`}</p>
+    ${meta ? `<p class="history-meta">${meta}</p>` : ""}
+  </li>`;
+}
+// Closes the overlay and scrolls the main list to the event, loosening only whichever filters
+// would otherwise hide it (leaving the visitor's other filter choices alone).
+function goToEvent(match) {
+  if (filter !== "all" && filter !== match.kind) filter = "all";
+  if (cat !== "all" && cat !== match.cat) cat = "all";
+  if (match.status === "x") showCancelled = true;
+  if (match.status === "w") showWaitlisted = true;
+  document.getElementById("showWaitlisted").checked = showWaitlisted;
+  document.getElementById("showCancelled").checked = showCancelled;
+  renderControls();
+  render();
+  requestAnimationFrame(() => {
+    const el = document.getElementById("evt-" + match.id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    el.classList.add("jump-highlight");
+    setTimeout(() => el.classList.remove("jump-highlight"), 1600);
+  });
+}
+document.getElementById("historyList").addEventListener("click", (e) => {
+  const link = e.target.closest(".history-link");
+  if (!link) return;
+  historyDialog.close();
+  goToEvent(items[Number(link.dataset.eventId)]);
+});
+function renderHistory() {
+  const list = document.getElementById("historyList");
+  list.innerHTML = CHANGELOG.length
+    ? CHANGELOG.slice().reverse().map(historyItem).join("")
+    : `<li class="history-empty">No changes recorded yet.</li>`;
+}
+const historyDialog = document.getElementById("historyDialog");
+document.getElementById("historyToggle").addEventListener("click", () => historyDialog.showModal());
+document.getElementById("historyClose").addEventListener("click", () => historyDialog.close());
+// A click on the ::backdrop (outside the dialog's own box) lands on the <dialog> element itself.
+historyDialog.addEventListener("click", (e) => { if (e.target === historyDialog) historyDialog.close(); });
+renderHistory();
 
 readUrl();
 renderControls();

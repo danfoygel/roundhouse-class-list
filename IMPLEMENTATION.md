@@ -17,18 +17,55 @@ The same snapshot and config always produce the same page, byte for byte.
 ```
 Mindbody widget ──fetch──▶ data/snapshot.json ──normalize──▶ events ──render──▶ classes.html
   (classlist/fetch.py)        raw records          (classlist/normalize.py)  (classlist/render.py
-                                                                              + templates/page.html
+                                 │                                            + templates/page.html
+                                 └──diff against the old snapshot──▶ data/changelog.json
+                                    (classlist/changelog.py)
                                                                               + assets/)
 ```
 
 - **fetch** loads the widget page, reads the two server actions and their encrypted arguments
   that the page embeds, and calls the schedule action for consecutive 28-day windows (the server
   refuses ranges of about 31 days or more). For 90 days that is one page load and four requests.
-  It also saves the list of class types (the shops).
+  It also saves the list of class types (the shops). If a snapshot was already saved from a
+  previous fetch, it is diffed against the new one (see below) before being overwritten.
 - **normalize** turns raw records into events using rules, listed below.
 - **render** fills `templates/page.html` with the events as JSON, the icons and logo as data
   URIs, and a few strings from `config.json`. The page itself (filters, tiles, sticky bar) is
   plain JavaScript in the template and renders from the embedded events.
+
+## History (classlist/changelog.py)
+
+Every `fetch` compares the new snapshot against whatever was at `data/snapshot.json` before, and
+appends one entry per change to `data/changelog.json`. Changes are read per scheduled session
+(a single Mindbody class instance), not per grouped event, so one session of a multi-day course
+can change without affecting the others. Recognised changes:
+
+| Type | When |
+|---|---|
+| `added` | A session that should already have been in the old snapshot's window now exists. |
+| `removed` | A session that should still be in the new snapshot's window is gone. |
+| `cancelled` / `uncancelled` | The session's cancelled flag flipped. |
+| `time_changed` | Its start time and/or duration changed. |
+| `capacity_changed` | Its seat count changed. |
+| `fully_booked` / `spot_opened` | It became full (no longer bookable or waitlistable) or stopped being full. |
+| `instructor_changed` | Its listed staff changed. |
+
+A snapshot only covers a rolling window starting "today", so a session disappearing because its
+date has passed, or appearing only because the window rolled forward far enough to reach it, is
+not a real change — both are filtered out by checking that the session's date would also have
+fallen inside the *other* snapshot's window. Plain registration-count changes that don't cross the
+full/not-full line are not logged, to avoid an entry for every booking.
+
+Each entry has an `at` (fetch time), `type` (the enum above), the session's `class_id`, `name` and
+`start`, and for some types a `detail` object with the before/after values — never a pre-rendered
+sentence; `classlist.changelog.TYPE_LABELS` maps each `type` to a short label ("New event added",
+"Event cancelled", …) for anything that wants to display entries. `data/changelog.json` only
+grows; nothing is ever removed from it.
+
+The clock icon in the page header (see README) opens an overlay listing these entries, most
+recent first. `render.py` embeds the entries plus `TYPE_LABELS` as page data (`CHANGELOG` /
+`CHANGELOG_LABELS`), so the label text stays defined once, in `classlist/changelog.py`, instead
+of being duplicated in the template.
 
 ## The rules (classlist/normalize.py)
 
@@ -71,8 +108,12 @@ demand (Actions tab, "Update class list", "Run workflow").
 
 - If the fetch or the tests fail, nothing is deployed, so the last good page stays up, and
   GitHub emails the repository owner about the failed run.
-- The generated page is not committed. `data/snapshot.json` in the repo is only a seed for
-  offline builds; the workflow replaces it with a fresh fetch on every run.
+- The generated page (`classes.html`/`dist/`) is not committed, but the fetched
+  `data/snapshot.json` and the entries it adds to `data/changelog.json` are: after a successful
+  fetch, the workflow commits both back to `main` (as `github-actions[bot]`, message tagged
+  `[skip ci]`) so the next scheduled run has a real previous snapshot to diff against and the
+  changelog keeps growing. That commit is excluded from the push trigger (`paths-ignore:
+  data/**`) so it doesn't retrigger the workflow.
 - To change how often it runs, edit the `cron` line. Each run makes five requests to Mindbody.
 - One-time setup: Settings, Pages, Source: "GitHub Actions".
 
@@ -96,6 +137,7 @@ demand (Actions tab, "Update class list", "Run workflow").
 
 - `config.json`: studio, widget, timezone, shops, icons, rules' lists, overrides, page text.
 - `data/snapshot.json`: the last fetch, unmodified.
+- `data/changelog.json`: one entry per change seen between fetches (see History above).
 - `templates/page.html`: the page's markup, styles and script, with `__TOKENS__`.
 - `assets/`: logo and shop icons (the Roundhouse's artwork; see `assets/README.md`).
 - `tests/`: unit tests, a frozen snapshot, and the original hand-built values.

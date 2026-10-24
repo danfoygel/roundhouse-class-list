@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from . import changelog
+
 
 def _data_uri(path):
     return "data:image/png;base64," + base64.b64encode(Path(path).read_bytes()).decode("ascii")
@@ -22,7 +24,7 @@ def _long_date(iso_utc, tz_name):
     return "%s %d, %d" % (moment.strftime("%b"), moment.day, moment.year)
 
 
-def render_page(events, meta, config, template_path, assets_dir):
+def render_page(events, meta, config, template_path, assets_dir, changelog_entries=None):
     """Return the finished HTML. Same inputs always give the same output."""
     assets = Path(assets_dir)
     icons = {p.stem: _data_uri(p) for p in sorted((assets / "icons").glob("*.png"))}
@@ -51,6 +53,8 @@ def render_page(events, meta, config, template_path, assets_dir):
         "__DESCS_JSON__": _script_json(descriptions),
         "__ICONS_JSON__": _script_json({name: icons[name] for name in sorted(used)}),
         "__LOGO__": _data_uri(assets / "logo.png"),
+        "__CHANGELOG_JSON__": _script_json(changelog_entries or []),
+        "__CHANGELOG_LABELS_JSON__": _script_json(changelog.TYPE_LABELS),
     }
     page = Path(template_path).read_text(encoding="utf-8")
     for token, value in replacements.items():

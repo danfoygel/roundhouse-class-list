@@ -60,6 +60,12 @@ The page is a snapshot. Spots left and cancellations are as of the time it was l
 the footer shows when that was. It refreshes automatically every few hours, and weekly sessions
 continue to show even past the last date listed.
 
+## Change history
+
+The clock icon, left of the others, opens an overlay listing what's changed since the last
+refresh — new and removed listings, cancellations, reschedules, classes that filled up or opened
+a spot, and the like — most recent first.
+
 ## Report a problem
 
 The bug icon next to the sun/moon button opens the project's issue tracker in a new tab.

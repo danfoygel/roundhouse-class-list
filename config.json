@@ -6,6 +6,7 @@
   "timezone": "America/Los_Angeles",
   "horizon_days": 90,
   "snapshot_path": "data/snapshot.json",
+  "changelog_path": "data/changelog.json",
   "output_path": "classes.html",
   "page": {
     "title": "Roundhouse Class List",

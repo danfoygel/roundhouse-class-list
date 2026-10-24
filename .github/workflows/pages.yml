@@ -6,9 +6,10 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+    paths-ignore: ["data/**"]  # our own data commits (below) must not retrigger this workflow
 
 permissions:
-  contents: read
+  contents: write  # the build job commits the refreshed data/snapshot.json and data/changelog.json back to main
   pages: write
   id-token: write
 
@@ -29,6 +30,17 @@ jobs:
         run: python -m unittest discover -s tests -t .
       - name: Fetch Mindbody data and build the page
         run: python build.py refresh --out dist/index.html
+      - name: Commit the refreshed snapshot and changelog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "Refresh Mindbody data [skip ci]"
+            git push
+          fi
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist

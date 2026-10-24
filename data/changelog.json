@@ -112,5 +112,33 @@
    "was_capacity": 8,
    "capacity": 10
   }
+ },
+ {
+  "at": "2026-10-24T23:59:54Z",
+  "type": "removed",
+  "class_id": "cinst_113QRWkf6Krz16sKoY",
+  "name": "Public Tour - Come check out the space",
+  "start": "2026-10-24T20:00:00Z"
+ },
+ {
+  "at": "2026-10-24T23:59:54Z",
+  "type": "fully_booked",
+  "class_id": "cinst_113QRWkf6Krz16t3tv",
+  "name": "Butcher Blocks for Beginners",
+  "start": "2026-10-25T00:00:00Z"
+ },
+ {
+  "at": "2026-10-24T23:59:54Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4CD",
+  "name": "Intro to Gas Tungsten Arc Welding - Tig",
+  "start": "2026-12-07T01:00:00Z"
+ },
+ {
+  "at": "2026-10-24T23:59:54Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4DE",
+  "name": "Intro to Gas Tungsten Arc Welding - Tig",
+  "start": "2026-12-08T01:00:00Z"
  }
 ]

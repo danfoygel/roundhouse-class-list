@@ -350,6 +350,39 @@ h1 {
 .history-item:last-child { border-bottom: 0; }
 .history-item.is-new { border-left: 3px solid var(--brand); padding-left: 10px; margin-left: -13px; }
 .badge.new-badge { background: var(--brand); color: #fff; }
+
+/* subscribe-to-calendar dialog (shares .history's box, backdrop, and header) */
+.calendar-body { padding: 6px 18px 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+.calendar-body p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.calendar-body ol { margin: 0; padding-left: 1.3em; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.calendar-body a { color: var(--pine); font-weight: 600; text-decoration: none; }
+.calendar-body a:hover { text-decoration: underline; }
+.calendar-url-row { display: flex; gap: 8px; }
+.calendar-url-row input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+}
+.calendar-url-row button {
+  flex: none;
+  font: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--pine);
+  background: transparent;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.calendar-url-row button:hover { background: var(--pine-soft); border-color: var(--pine-soft); }
 .history-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; }
 .history-row-left { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .history-type { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
@@ -445,6 +478,9 @@ footer p { margin: 0 0 6px; }
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
       <span class="update-dot" id="updateDot" hidden aria-hidden="true"></span>
     </button>
+    <button type="button" class="icon-btn" id="calendarToggle" aria-label="Subscribe to this calendar" title="Subscribe to calendar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    </button>
     <a class="icon-btn" href="__ISSUES_URL__" target="_blank" rel="noopener" aria-label="Report a problem (opens GitHub in a new tab)" title="Report a problem">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
     </a>
@@ -474,6 +510,27 @@ footer p { margin: 0 0 6px; }
       </button>
     </div>
     <ul class="history-list" id="historyList"></ul>
+  </dialog>
+
+  <dialog class="history" id="calendarDialog" aria-labelledby="calendarTitle">
+    <div class="history-head">
+      <h2 id="calendarTitle">Subscribe to this calendar</h2>
+      <button type="button" class="icon-btn" id="calendarClose" aria-label="Close subscribe to calendar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="calendar-body">
+      <p>Add this feed to Google Calendar, Apple Calendar, or Outlook to see every class and event here, kept in sync automatically as the schedule changes.</p>
+      <ol>
+        <li>In Google Calendar, next to "Other calendars" click <strong>+</strong>, then <strong>From URL</strong>.</li>
+        <li>Paste the address below and click <strong>Add calendar</strong>.</li>
+      </ol>
+      <div class="calendar-url-row">
+        <input type="text" id="calendarUrlInput" readonly value="__CALENDAR_URL__" aria-label="Calendar feed address">
+        <button type="button" id="calendarCopy">Copy</button>
+      </div>
+      <p><a href="__CALENDAR_URL__" id="calendarDownload" target="_blank" rel="noopener">Download the .ics file</a> or <a href="#" id="calendarWebcal" target="_blank" rel="noopener">open directly in a calendar app</a>.</p>
+    </div>
   </dialog>
 
   <div class="filters" id="filters">
@@ -981,6 +1038,27 @@ document.getElementById("historyClose").addEventListener("click", () => historyD
 // A click on the ::backdrop (outside the dialog's own box) lands on the <dialog> element itself.
 historyDialog.addEventListener("click", (e) => { if (e.target === historyDialog) historyDialog.close(); });
 renderHistory();
+
+// --- Subscribe-to-calendar dialog -------------------------------------------
+const calendarDialog = document.getElementById("calendarDialog");
+const calendarUrlInput = document.getElementById("calendarUrlInput");
+document.getElementById("calendarWebcal").href = calendarUrlInput.value.replace(/^https?:/, "webcal:");
+document.getElementById("calendarToggle").addEventListener("click", () => calendarDialog.showModal());
+document.getElementById("calendarClose").addEventListener("click", () => calendarDialog.close());
+calendarDialog.addEventListener("click", (e) => { if (e.target === calendarDialog) calendarDialog.close(); });
+calendarUrlInput.addEventListener("click", () => calendarUrlInput.select());
+document.getElementById("calendarCopy").addEventListener("click", async (e) => {
+  // e.currentTarget is only valid while the event is dispatching, so it is captured before the await.
+  const btn = e.currentTarget;
+  try {
+    await navigator.clipboard.writeText(calendarUrlInput.value);
+  } catch (err) {
+    calendarUrlInput.select();
+  }
+  const prev = btn.textContent;
+  btn.textContent = "Copied!";
+  setTimeout(() => { btn.textContent = prev; }, 1500);
+});
 
 // "New" banner: newly added or reopened-spot events since last load, shown under the heading
 // until dismissed with its "x". Shares NEW_CHANGES with the clock icon's dot and history dialog.

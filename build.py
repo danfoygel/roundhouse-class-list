@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-from classlist import changelog, fetch, normalize, render  # noqa: E402
+from classlist import changelog, fetch, ics, normalize, render  # noqa: E402
 
 
 def load_config(path):
@@ -59,6 +59,11 @@ def do_build(config, output=None):
     print("Wrote %s: %d events (%d sessions), snapshot from %s" % (target, len(events), sessions, snapshot["meta"]["fetched_at"]))
     for warning in warnings:
         print("warning: " + warning)
+
+    feed = ics.build_feed(events, snapshot["meta"])
+    feed_target = target.parent / config["calendar_filename"]
+    feed_target.write_text(feed, encoding="utf-8")
+    print("Wrote %s" % feed_target)
 
 
 def main():

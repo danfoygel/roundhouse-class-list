@@ -3,11 +3,13 @@
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "home_url": "https://www.truckeeroundhouse.org/",
   "repo_url": "https://github.com/danfoygel/roundhouse-class-list",
+  "site_url": "https://danfoygel.github.io/roundhouse-class-list/",
   "timezone": "America/Los_Angeles",
   "horizon_days": 90,
   "snapshot_path": "data/snapshot.json",
   "changelog_path": "data/changelog.json",
   "output_path": "classes.html",
+  "calendar_filename": "calendar.ics",
   "page": {
     "title": "Roundhouse Class List",
     "heading": "Classes and Events"

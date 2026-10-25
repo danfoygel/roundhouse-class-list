@@ -160,5 +160,24 @@ class HistoryDialogTest(unittest.TestCase):
         self.assertEqual(embedded(page, "CHANGELOG"), [])
 
 
+class CalendarDialogTest(unittest.TestCase):
+    def setUp(self):
+        self.page = page_for([])
+
+    def test_calendar_icon_sits_in_the_tools_row(self):
+        tools = self.page.split('<div class="tools">')[1].split("</div>")[0]
+        self.assertIn('id="calendarToggle"', tools)
+
+    def test_dialog_is_closed_by_default_and_carries_the_feed_url(self):
+        feed_url = CONFIG["site_url"].rstrip("/") + "/" + CONFIG["calendar_filename"]
+        self.assertIn('<dialog class="history" id="calendarDialog"', self.page)
+        self.assertNotIn('<dialog class="history" id="calendarDialog" open', self.page)
+        self.assertIn('value="%s"' % feed_url, self.page)
+        self.assertIn('href="%s" id="calendarDownload"' % feed_url, self.page)
+
+    def test_webcal_link_is_built_from_the_https_url_in_script(self):
+        self.assertIn('document.getElementById("calendarWebcal").href = calendarUrlInput.value.replace(/^https?:/, "webcal:");', self.page)
+
+
 if __name__ == "__main__":
     unittest.main()

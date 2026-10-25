@@ -110,8 +110,19 @@ header { position: relative; display: flex; flex-wrap: wrap; align-items: center
 }
 .icon-btn:hover { border-color: var(--muted); }
 .icon-btn:focus-visible { outline: none; }
+.icon-btn { position: relative; }
 .icon-btn svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .icon-btn svg[hidden] { display: none; }
+.update-dot {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--brand);
+  border: 2px solid var(--surface);
+}
 .logo { display: block; flex: none; border-radius: 4px; }
 .logo img { display: block; height: 60px; width: auto; max-width: 100%; }
 h1 {
@@ -337,9 +348,44 @@ h1 {
 .history-list { list-style: none; margin: 0; padding: 6px 18px 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
 .history-item { padding: 10px 0; border-bottom: 1px dashed var(--line); }
 .history-item:last-child { border-bottom: 0; }
+.history-item.is-new { border-left: 3px solid var(--brand); padding-left: 10px; margin-left: -13px; }
+.badge.new-badge { background: var(--brand); color: #fff; }
 .history-top { display: flex; align-items: flex-start; gap: 12px; }
 .history-icon { width: 52px; height: 52px; flex: none; border-radius: 50%; }
 .history-body { min-width: 0; flex: 1; }
+
+/* subscribe-to-calendar dialog (shares .history's box, backdrop, and header) */
+.calendar-body { padding: 6px 18px 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+.calendar-body p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.calendar-body ol { margin: 0; padding-left: 1.3em; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.calendar-body a { color: var(--pine); font-weight: 600; text-decoration: none; }
+.calendar-body a:hover { text-decoration: underline; }
+.calendar-url-row { display: flex; gap: 8px; }
+.calendar-url-row input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+}
+.calendar-url-row button {
+  flex: none;
+  font: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--pine);
+  background: transparent;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.calendar-url-row button:hover { background: var(--pine-soft); border-color: var(--pine-soft); }
 .history-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; }
 .history-row-left { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .history-type { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
@@ -350,6 +396,43 @@ h1 {
 .history-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 .history-meta { color: var(--muted); font-size: 13px; margin: 2px 0 0; }
 .history-empty { padding: 28px 0; text-align: center; color: var(--muted); }
+
+/* "new since last visit" banner */
+.new-banner {
+  margin-top: 20px;
+  padding: 14px 18px 16px;
+  background: var(--pine-soft);
+  border: 1px solid var(--pine);
+  border-radius: 10px;
+}
+.new-banner-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.new-banner-head h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+.new-banner-close {
+  all: unset;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--muted);
+  cursor: pointer;
+}
+.new-banner-close:hover { color: var(--ink); background: rgba(0, 0, 0, 0.08); }
+.new-banner-close:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.new-banner-close svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.new-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; }
+.new-item { border-bottom: 1px dashed var(--line); }
+.new-item:last-child { border-bottom: 0; }
+.new-link { all: unset; display: block; width: 100%; box-sizing: border-box; padding: 9px 2px; cursor: pointer; }
+.new-link:hover .new-name { color: var(--pine); text-decoration: underline; }
+.new-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.new-type { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
+.new-name { display: block; font-weight: 600; color: var(--ink); margin: 2px 0 0; }
+.new-meta { color: var(--muted); font-size: 13px; margin: 2px 0 0; }
+.new-banner-all { all: unset; display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--pine); cursor: pointer; }
+.new-banner-all:hover { text-decoration: underline; }
+.new-banner-all:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 
 .empty { padding: 40px 0; text-align: center; color: var(--muted); }
 footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
@@ -396,6 +479,10 @@ footer p { margin: 0 0 6px; }
     <div class="tools">
     <button type="button" class="icon-btn" id="historyToggle" aria-label="View change history" title="Change history">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+      <span class="update-dot" id="updateDot" hidden aria-hidden="true"></span>
+    </button>
+    <button type="button" class="icon-btn" id="calendarToggle" aria-label="Subscribe to this calendar" title="Subscribe to calendar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
     </button>
     <a class="icon-btn" href="__ISSUES_URL__" target="_blank" rel="noopener" aria-label="Report a problem (opens GitHub in a new tab)" title="Report a problem">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
@@ -407,6 +494,17 @@ footer p { margin: 0 0 6px; }
     </div>
   </header>
 
+  <section class="new-banner" id="newBanner" hidden aria-labelledby="newBannerTitle">
+    <div class="new-banner-head">
+      <h2 id="newBannerTitle">New since your last visit</h2>
+      <button type="button" class="new-banner-close" id="newBannerClose" aria-label="Dismiss new events">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <ul class="new-list" id="newList"></ul>
+    <button type="button" class="new-banner-all" id="newBannerAll">Show all changes</button>
+  </section>
+
   <dialog class="history" id="historyDialog" aria-labelledby="historyTitle">
     <div class="history-head">
       <h2 id="historyTitle">Change history</h2>
@@ -415,6 +513,27 @@ footer p { margin: 0 0 6px; }
       </button>
     </div>
     <ul class="history-list" id="historyList"></ul>
+  </dialog>
+
+  <dialog class="history" id="calendarDialog" aria-labelledby="calendarTitle">
+    <div class="history-head">
+      <h2 id="calendarTitle">Subscribe to this calendar</h2>
+      <button type="button" class="icon-btn" id="calendarClose" aria-label="Close subscribe to calendar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="calendar-body">
+      <p>Add this feed to Google Calendar, Apple Calendar, or Outlook to see every class and event here, kept in sync automatically as the schedule changes.</p>
+      <ol>
+        <li>In Google Calendar, next to "Other calendars" click <strong>+</strong>, then <strong>From URL</strong>.</li>
+        <li>Paste the address below and click <strong>Add calendar</strong>.</li>
+      </ol>
+      <div class="calendar-url-row">
+        <input type="text" id="calendarUrlInput" readonly value="__CALENDAR_URL__" aria-label="Calendar feed address">
+        <button type="button" id="calendarCopy">Copy</button>
+      </div>
+      <p><a href="__CALENDAR_URL__" id="calendarDownload" target="_blank" rel="noopener">Download the .ics file</a> or <a href="#" id="calendarWebcal" target="_blank" rel="noopener">open directly in a calendar app</a>.</p>
+    </div>
   </dialog>
 
   <div class="filters" id="filters">
@@ -453,6 +572,19 @@ const LOGO = "__LOGO__";
 const CHANGELOG = __CHANGELOG_JSON__;
 // change `type` -> its short display label, e.g. "added" -> "New event added".
 const CHANGELOG_LABELS = __CHANGELOG_LABELS_JSON__;
+
+// Changelog entries added since the visitor last loaded this page, so the clock icon can
+// flag them with a dot and the history dialog can call them out once opened.
+const CHANGELOG_SEEN_KEY = "changelogSeenAt";
+let lastSeenAt = null;
+try { lastSeenAt = localStorage.getItem(CHANGELOG_SEEN_KEY); } catch (e) { /* private mode: no "new" tracking across loads */ }
+const lastSeenMs = lastSeenAt ? Date.parse(lastSeenAt) : null;
+// A never-visited browser has no baseline to compare against, so nothing counts as new yet.
+const NEW_CHANGES = new Set(lastSeenMs == null ? [] : CHANGELOG.filter((e) => Date.parse(e.at) > lastSeenMs));
+try { localStorage.setItem(CHANGELOG_SEEN_KEY, new Date().toISOString()); } catch (e) { /* private mode: the dot just won't persist across loads */ }
+// The banner under the heading only calls out the two change types worth a visitor's attention.
+const NEW_BANNER_TYPES = new Set(["added", "spot_opened"]);
+const NEW_BANNER_CHANGES = CHANGELOG.filter((e) => NEW_CHANGES.has(e) && NEW_BANNER_TYPES.has(e.type));
 
 const fmtDay = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric", year: "numeric" });
 const fmtTime = new Intl.DateTimeFormat("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit" });
@@ -809,6 +941,28 @@ systemDark.addEventListener("change", syncThemeButton);
 syncThemeButton();
 
 // Change history: a dialog listing what diff_snapshots found between fetches, most recent first.
+// Spells out which kind of listing changed, e.g. "New class added" or "Member session removed".
+const KIND_NOUN = { c: "class", m: "member session", p: "public event" };
+function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+const CHANGE_LABEL_TEMPLATES = {
+  added: (noun) => `New ${noun} added`,
+  removed: (noun) => `${cap(noun)} removed`,
+  cancelled: (noun) => `${cap(noun)} cancelled`,
+  uncancelled: (noun) => `${cap(noun)} un-cancelled`,
+  time_changed: (noun) => `${cap(noun)} date/time changed`,
+  capacity_changed: (noun) => `${cap(noun)} capacity changed`,
+  fully_booked: (noun) => `${cap(noun)} fully booked`,
+  spot_opened: (noun) => `${cap(noun)} spot opened up`,
+  instructor_changed: (noun) => `${cap(noun)} instructor changed`,
+};
+// `kind` is recorded on the entry itself by changelog.py, so this is correct even for a removed
+// session, which is no longer in EVENTS to look up. Older entries logged before that field existed
+// fall back to a match in EVENTS, then to the generic label.
+function changeLabel(e) {
+  const noun = KIND_NOUN[e.kind] || KIND_NOUN[EVENT_BY_SESSION_ID.get(e.class_id)?.kind];
+  const template = noun && CHANGE_LABEL_TEMPLATES[e.type];
+  return template ? template(noun) : (CHANGELOG_LABELS[e.type] || e.type);
+}
 function historyMeta(e) {
   const d = e.detail;
   if (!d) return "";
@@ -829,13 +983,14 @@ function historyItem(e) {
   const name = match
     ? `<button type="button" class="history-link" data-event-id="${match.id}">${esc(e.name)}</button>`
     : `<p class="history-name">${esc(e.name)}</p>`;
-  return `<li class="history-item">
+  return `<li class="history-item${NEW_CHANGES.has(e) ? " is-new" : ""}">
     <div class="history-top">
       <img class="history-icon" src="${ICONS[e.type]}" alt="" width="52" height="52">
       <div class="history-body">
         <div class="history-row">
           <div class="history-row-left">
-            <span class="history-type">${esc(CHANGELOG_LABELS[e.type] || e.type)}</span>
+            <span class="history-type">${esc(changeLabel(e))}</span>
+            ${NEW_CHANGES.has(e) ? `<span class="badge new-badge">New</span>` : ""}
             ${e.test ? `<span class="badge">Test data</span>` : ""}
           </div>
           <span class="history-logged">${fmtLogged.format(new Date(e.at))}</span>
@@ -879,11 +1034,64 @@ function renderHistory() {
     : `<li class="history-empty">No changes recorded yet.</li>`;
 }
 const historyDialog = document.getElementById("historyDialog");
-document.getElementById("historyToggle").addEventListener("click", () => historyDialog.showModal());
+const historyToggle = document.getElementById("historyToggle");
+if (NEW_CHANGES.size) {
+  document.getElementById("updateDot").hidden = false;
+  const label = `View change history (${NEW_CHANGES.size} new)`;
+  historyToggle.setAttribute("aria-label", label);
+  historyToggle.title = label;
+}
+historyToggle.addEventListener("click", () => historyDialog.showModal());
 document.getElementById("historyClose").addEventListener("click", () => historyDialog.close());
 // A click on the ::backdrop (outside the dialog's own box) lands on the <dialog> element itself.
 historyDialog.addEventListener("click", (e) => { if (e.target === historyDialog) historyDialog.close(); });
 renderHistory();
+
+// --- Subscribe-to-calendar dialog -------------------------------------------
+const calendarDialog = document.getElementById("calendarDialog");
+const calendarUrlInput = document.getElementById("calendarUrlInput");
+document.getElementById("calendarWebcal").href = calendarUrlInput.value.replace(/^https?:/, "webcal:");
+document.getElementById("calendarToggle").addEventListener("click", () => calendarDialog.showModal());
+document.getElementById("calendarClose").addEventListener("click", () => calendarDialog.close());
+calendarDialog.addEventListener("click", (e) => { if (e.target === calendarDialog) calendarDialog.close(); });
+calendarUrlInput.addEventListener("click", () => calendarUrlInput.select());
+document.getElementById("calendarCopy").addEventListener("click", async (e) => {
+  // e.currentTarget is only valid while the event is dispatching, so it is captured before the await.
+  const btn = e.currentTarget;
+  try {
+    await navigator.clipboard.writeText(calendarUrlInput.value);
+  } catch (err) {
+    calendarUrlInput.select();
+  }
+  const prev = btn.textContent;
+  btn.textContent = "Copied!";
+  setTimeout(() => { btn.textContent = prev; }, 1500);
+});
+
+// "New" banner: newly added or reopened-spot events since last load, shown under the heading
+// until dismissed with its "x". Shares NEW_CHANGES with the clock icon's dot and history dialog.
+function newBannerItem(e) {
+  // A removed session, or one outside the current fetch window, has no live event to jump to.
+  const match = EVENT_BY_SESSION_ID.get(e.class_id);
+  const inner = `<span class="new-type">${esc(changeLabel(e))}</span>
+    <span class="new-name">${esc(e.name)}</span>
+    <span class="new-meta">${fmtDay.format(new Date(e.start))}, ${fmtTime.format(new Date(e.start))}</span>`;
+  return `<li class="new-item">${match
+    ? `<button type="button" class="new-link" data-event-id="${match.id}">${inner}</button>`
+    : `<div class="new-link">${inner}</div>`}</li>`;
+}
+const newBanner = document.getElementById("newBanner");
+if (NEW_BANNER_CHANGES.length) {
+  document.getElementById("newList").innerHTML = NEW_BANNER_CHANGES.map(newBannerItem).join("");
+  newBanner.hidden = false;
+}
+document.getElementById("newList").addEventListener("click", (e) => {
+  const link = e.target.closest(".new-link");
+  if (!link || !link.dataset.eventId) return;
+  goToEvent(items[Number(link.dataset.eventId)]);
+});
+document.getElementById("newBannerClose").addEventListener("click", () => { newBanner.hidden = true; });
+document.getElementById("newBannerAll").addEventListener("click", () => historyDialog.showModal());
 
 readUrl();
 renderControls();

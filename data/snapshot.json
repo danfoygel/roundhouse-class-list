@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-10-25T16:17:10Z",
+  "fetched_at": "2026-10-25T20:50:09Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-10-25",
@@ -2549,7 +2549,7 @@
    "description": "<p><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p>\n<p>You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p>\n<p>This two-day class is an introduction to the fundamentals of TIG welding.</p>\n<p>Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p>\n<p>Ages 16 and over.</p>\n<p>4 students max</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkSd",
    "capacity": 4,
-   "numberRegistered": 3,
+   "numberRegistered": 4,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "startDateTime": "2026-12-07T01:00:00.0000000Z",
    "duration": 180,
@@ -2574,8 +2574,8 @@
      }
     }
    },
-   "bookable": true,
-   "waitlistable": false,
+   "bookable": false,
+   "waitlistable": true,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-10-25T07:00:00Z",
@@ -2649,7 +2649,7 @@
    "description": "<p><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p>\n<p>You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p>\n<p>This two-day class is an introduction to the fundamentals of TIG welding.</p>\n<p>Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p>\n<p>Ages 16 and over.</p>\n<p>4 students max</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkSd",
    "capacity": 4,
-   "numberRegistered": 3,
+   "numberRegistered": 4,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "startDateTime": "2026-12-08T01:00:00.0000000Z",
    "duration": 180,
@@ -2674,8 +2674,8 @@
      }
     }
    },
-   "bookable": true,
-   "waitlistable": false,
+   "bookable": false,
+   "waitlistable": true,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-10-25T07:00:00Z",

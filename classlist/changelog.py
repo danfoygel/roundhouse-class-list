@@ -125,8 +125,16 @@ def diff_snapshots(old_snapshot, new_snapshot, config):
     for class_id, record in new_classes.items():
         if class_id not in old_classes and old_first <= _start_date(record, tz) <= old_last:
             entries.append(_entry(fetched_at, "added", record, config, tz))
+    fetched_at_dt = normalize.parse_utc(fetched_at)
     for class_id, record in old_classes.items():
-        if class_id not in new_classes and new_first <= _start_date(record, tz) <= new_last:
+        if class_id in new_classes:
+            continue
+        # A session Mindbody has already started showing as past (even earlier today) drops out of
+        # the feed on its own; that is not a removal. Catching this needs the exact fetch instant,
+        # not just the day: a same-day session can start in the gap between two fetches.
+        if normalize.parse_utc(record["startDateTime"]) <= fetched_at_dt:
+            continue
+        if new_first <= _start_date(record, tz) <= new_last:
             entries.append(_entry(fetched_at, "removed", record, config, tz))
     for class_id, new_record in new_classes.items():
         old_record = old_classes.get(class_id)

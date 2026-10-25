@@ -55,6 +55,28 @@ class AddedRemovedTest(unittest.TestCase):
         new = snapshot([], first_day="2026-10-20")  # c1's date is now before the new window
         self.assertEqual(changelog.diff_snapshots(old, new, CONFIG), [])
 
+    def test_session_that_simply_started_between_fetches_is_not_removed(self):
+        # Same day for both fetches; the session's start time (5pm Pacific = 00:00 UTC) falls
+        # between them, so it drops out of Mindbody's own feed on its own, not because anything
+        # was cancelled or deleted. (These are the real timestamps from the bug this reproduces.)
+        old = snapshot(
+            [record("c1", "Butcher Blocks - 1 Day - $115", "2026-10-25T00:00:00")],
+            first_day="2026-10-24", fetched_at="2026-10-24T23:59:54Z",
+        )
+        new = snapshot([], first_day="2026-10-24", fetched_at="2026-10-25T00:07:36Z")
+        self.assertEqual(changelog.diff_snapshots(old, new, CONFIG), [])
+
+    def test_session_removed_before_it_was_due_to_start_is_still_removed(self):
+        # Same day for both fetches, but the session hasn't started yet when it vanishes: a genuine
+        # cancellation/deletion mid-day, not the session simply having happened.
+        old = snapshot(
+            [record("c1", "Butcher Blocks - 1 Day - $115", "2026-10-25T03:00:00")],
+            first_day="2026-10-24", fetched_at="2026-10-24T23:59:54Z",
+        )
+        new = snapshot([], first_day="2026-10-24", fetched_at="2026-10-25T00:07:36Z")
+        entries = changelog.diff_snapshots(old, new, CONFIG)
+        self.assertEqual(types_of(entries), ["removed"])
+
 
 class FieldChangeTest(unittest.TestCase):
     def test_cancelled(self):

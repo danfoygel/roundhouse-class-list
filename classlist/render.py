@@ -28,7 +28,7 @@ def render_page(events, meta, config, template_path, assets_dir, changelog_entri
     """Return the finished HTML. Same inputs always give the same output."""
     assets = Path(assets_dir)
     icons = {p.stem: _data_uri(p) for p in sorted((assets / "icons").glob("*.png"))}
-    used = {e["icon"] for e in events}
+    used = {e["icon"] for e in events} | set(changelog.TYPE_LABELS)
     missing = used - set(icons)
     if missing:
         raise ValueError("No icon image for: %s" % ", ".join(sorted(missing)))

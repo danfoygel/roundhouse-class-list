@@ -337,6 +337,9 @@ h1 {
 .history-list { list-style: none; margin: 0; padding: 6px 18px 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
 .history-item { padding: 10px 0; border-bottom: 1px dashed var(--line); }
 .history-item:last-child { border-bottom: 0; }
+.history-top { display: flex; align-items: flex-start; gap: 12px; }
+.history-icon { width: 52px; height: 52px; flex: none; border-radius: 50%; }
+.history-body { min-width: 0; flex: 1; }
 .history-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; }
 .history-row-left { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .history-type { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
@@ -827,16 +830,21 @@ function historyItem(e) {
     ? `<button type="button" class="history-link" data-event-id="${match.id}">${esc(e.name)}</button>`
     : `<p class="history-name">${esc(e.name)}</p>`;
   return `<li class="history-item">
-    <div class="history-row">
-      <div class="history-row-left">
-        <span class="history-type">${esc(CHANGELOG_LABELS[e.type] || e.type)}</span>
-        ${e.test ? `<span class="badge">Test data</span>` : ""}
+    <div class="history-top">
+      <img class="history-icon" src="${ICONS[e.type]}" alt="" width="52" height="52">
+      <div class="history-body">
+        <div class="history-row">
+          <div class="history-row-left">
+            <span class="history-type">${esc(CHANGELOG_LABELS[e.type] || e.type)}</span>
+            ${e.test ? `<span class="badge">Test data</span>` : ""}
+          </div>
+          <span class="history-logged">${fmtLogged.format(new Date(e.at))}</span>
+        </div>
+        ${name}
+        <p class="history-meta">${fmtDay.format(new Date(e.start))}${e.type === "time_changed" ? "" : `, ${fmtTime.format(new Date(e.start))}`}</p>
+        ${meta ? `<p class="history-meta">${meta}</p>` : ""}
       </div>
-      <span class="history-logged">${fmtLogged.format(new Date(e.at))}</span>
     </div>
-    ${name}
-    <p class="history-meta">${fmtDay.format(new Date(e.start))}${e.type === "time_changed" ? "" : `, ${fmtTime.format(new Date(e.start))}`}</p>
-    ${meta ? `<p class="history-meta">${meta}</p>` : ""}
   </li>`;
 }
 // Closes the overlay and scrolls the main list to the event, loosening only whichever filters

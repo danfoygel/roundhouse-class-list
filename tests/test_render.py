@@ -97,8 +97,10 @@ class RenderTest(unittest.TestCase):
         self.assertIn("Copied from their public Mindbody schedule on Oct 17, 2026.", self.page)
 
     def test_only_used_icons_are_embedded(self):
+        # "used" means icons shop events reference, plus one per changelog event type --
+        # the history dialog shows the latter regardless of which events are on the page.
         icons = embedded(self.page, "ICONS")
-        self.assertEqual(set(icons), {e["icon"] for e in self.events})
+        self.assertEqual(set(icons), {e["icon"] for e in self.events} | set(changelog.TYPE_LABELS))
         for uri in icons.values():
             self.assertTrue(uri.startswith("data:image/png;base64,"))
 
@@ -139,6 +141,10 @@ class HistoryDialogTest(unittest.TestCase):
         css = page.split("<style>")[1].split("</style>")[0]
         list_rule = css.split(".history-list {")[1].split("}")[0]
         self.assertIn("overflow-y: auto", list_rule)
+
+    def test_history_item_shows_its_type_icon(self):
+        page = page_for([], changelog_entries=self.ENTRIES)
+        self.assertIn('<img class="history-icon" src="${ICONS[e.type]}"', page)
 
     def test_entries_and_labels_are_embedded(self):
         page = page_for([], changelog_entries=self.ENTRIES)

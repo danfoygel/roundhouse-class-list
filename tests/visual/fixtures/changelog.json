@@ -1,0 +1,176 @@
+[
+ {
+  "at": "2026-10-19T23:00:00Z",
+  "type": "added",
+  "class_id": "cinst_SYN0068",
+  "name": "Electronics Repair - Free KTG Reuse & Repair Workshop",
+  "start": "2026-11-16T01:00:00Z",
+  "kind": "p"
+ },
+ {
+  "at": "2026-10-19T23:00:00Z",
+  "type": "added",
+  "class_id": "cinst_SYN0038",
+  "name": "Taller gratuito: reparación y arreglo de ropa - Free workshop in Spanish",
+  "start": "2026-11-21T01:00:00Z",
+  "kind": "p"
+ },
+ {
+  "at": "2026-10-21T17:00:00Z",
+  "type": "uncancelled",
+  "class_id": "cinst_SYN0059",
+  "name": "Block Printing",
+  "start": "2026-10-28T00:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-10-21T17:00:00Z",
+  "type": "removed",
+  "class_id": "cinst_SYN0900",
+  "name": "Intro to Glazing",
+  "start": "2026-11-22T18:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-10-23T17:00:00Z",
+  "type": "time_changed",
+  "class_id": "cinst_SYN0085",
+  "name": "Public Tour - Come check out the space",
+  "start": "2026-11-14T21:00:00Z",
+  "kind": "p",
+  "detail": {
+   "was_start": "2026-11-14T19:00:00Z",
+   "was_start_label": "Sat Nov 14, 2026, 11:00 AM"
+  }
+ },
+ {
+  "at": "2026-10-23T17:00:00Z",
+  "type": "time_changed",
+  "class_id": "cinst_SYN0062",
+  "name": "Mandala Drawing - with Pia Lindqvist",
+  "start": "2026-11-17T01:00:00Z",
+  "kind": "c",
+  "detail": {
+   "was_start": "2026-11-17T03:00:00Z",
+   "was_start_label": "Mon Nov 16, 2026, 7:00 PM",
+   "was_duration": 90,
+   "duration": 120
+  }
+ },
+ {
+  "at": "2026-10-23T17:00:00Z",
+  "type": "time_changed",
+  "class_id": "cinst_SYN0021",
+  "name": "Crochet 102: Make a Beanie",
+  "start": "2026-11-24T01:00:00Z",
+  "kind": "c",
+  "detail": {
+   "was_duration": 120,
+   "duration": 180
+  }
+ },
+ {
+  "at": "2026-10-23T17:00:00Z",
+  "type": "capacity_changed",
+  "class_id": "cinst_SYN0039",
+  "name": "Intro to Gas Tungsten Arc Welding - Tig",
+  "start": "2026-12-07T01:00:00Z",
+  "kind": "c",
+  "detail": {
+   "was_capacity": 4,
+   "capacity": 6
+  }
+ },
+ {
+  "at": "2026-10-23T17:00:00Z",
+  "type": "capacity_changed",
+  "class_id": "cinst_SYN0040",
+  "name": "Intro to Gas Tungsten Arc Welding - Tig",
+  "start": "2026-12-08T01:00:00Z",
+  "kind": "c",
+  "detail": {
+   "was_capacity": 4,
+   "capacity": 6
+  }
+ },
+ {
+  "at": "2026-10-23T17:00:00Z",
+  "type": "capacity_changed",
+  "class_id": "cinst_SYN0073",
+  "name": "Hand-Built Holiday Ornaments",
+  "start": "2026-12-13T18:00:00Z",
+  "kind": "c",
+  "detail": {
+   "was_capacity": 6,
+   "capacity": 8
+  }
+ },
+ {
+  "at": "2026-10-24T11:00:00Z",
+  "type": "instructor_changed",
+  "class_id": "cinst_SYN0025",
+  "name": "Textiles Open Studio",
+  "start": "2026-11-13T22:00:00Z",
+  "kind": "m",
+  "detail": {
+   "was_instructor": "Hollis Brandt",
+   "instructor": "Judi Morales"
+  }
+ },
+ {
+  "at": "2026-10-24T11:00:00Z",
+  "type": "fully_booked",
+  "class_id": "cinst_SYN0064",
+  "name": "Winter Terrarium Making",
+  "start": "2026-12-06T01:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-10-24T17:00:00Z",
+  "type": "cancelled",
+  "class_id": "cinst_SYN0041",
+  "name": "Intro to MIG Welding",
+  "start": "2026-10-31T16:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-10-24T17:00:00Z",
+  "type": "cancelled",
+  "class_id": "cinst_SYN0042",
+  "name": "Intro to MIG Welding",
+  "start": "2026-11-01T17:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-10-24T17:00:00Z",
+  "type": "spot_opened",
+  "class_id": "cinst_SYN0057",
+  "name": "Mixed Metal Geometric Earrings",
+  "start": "2026-11-15T01:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-10-24T17:00:00Z",
+  "type": "added",
+  "class_id": "cinst_SYN0011",
+  "name": "Woodshop Open Hours",
+  "start": "2026-12-05T18:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-10-24T17:00:00Z",
+  "type": "added",
+  "class_id": "cinst_SYN0095",
+  "name": "Holiday Open House",
+  "start": "2026-12-13T00:00:00Z",
+  "kind": "p"
+ },
+ {
+  "at": "2026-10-24T17:00:00Z",
+  "type": "added",
+  "class_id": "cinst_SYN0043",
+  "name": "Blacksmithing Basics: Forge a Bottle Opener",
+  "start": "2026-12-13T01:00:00Z",
+  "kind": "c"
+ }
+]

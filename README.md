@@ -66,6 +66,13 @@ The clock icon, left of the others, opens an overlay listing what's changed sinc
 refresh — new and removed listings, cancellations, reschedules, classes that filled up or opened
 a spot, and the like — most recent first.
 
+## Subscribe to the calendar
+
+The calendar icon opens an overlay with a feed address you can subscribe to in Google Calendar,
+Apple Calendar, or Outlook, so every class and event here shows up on your own calendar and stays
+in sync as the schedule changes. The feed itself is also published directly, at
+[`calendar.ics`](https://danfoygel.github.io/roundhouse-class-list/calendar.ics).
+
 ## Report a problem
 
 The bug icon next to the sun/moon button opens the project's issue tracker in a new tab.

@@ -108,6 +108,17 @@ tokens in `templates/page.html`: the light set on `:root`, the dark set under
 The bug icon next to the sun/moon button opens the repository's issues page in a new tab
 (`repo_url` in `config.json`).
 
+## Subscribe-to-calendar feed
+
+`classlist/ics.py` builds a single `.ics` file covering every non-cancelled event (one `VEVENT`
+per session), written by `do_build` next to the generated page — `calendar.ics` in `dist/`
+alongside `index.html`, so `upload-pages-artifact` publishes it with no workflow change. Like the
+page, it is a pure function of the snapshot: `DTSTAMP` comes from `meta.fetched_at`, not the
+clock, so the same snapshot always produces the same feed. The calendar icon's overlay in
+`templates/page.html` shows the feed's address (`site_url` + `calendar_filename` in
+`config.json`, baked in at build time as `__CALENDAR_URL__`), a copy button, and a `webcal://`
+link built client-side from that same address.
+
 ## Hosting (GitHub Actions + Pages)
 
 `.github/workflows/pages.yml` runs the tests, then `python build.py refresh --out dist/index.html`,

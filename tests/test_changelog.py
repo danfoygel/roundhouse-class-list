@@ -161,6 +161,39 @@ class FieldChangeTest(unittest.TestCase):
         self.assertEqual([e["class_id"] for e in entries], ["c2", "c1"])
 
 
+class KindTest(unittest.TestCase):
+    def test_added_entry_records_its_kind(self):
+        old = snapshot([])
+        new = snapshot([record("c1", "Woodworking", "2026-10-20T00:00:00")])
+        entries = changelog.diff_snapshots(old, new, CONFIG)
+        self.assertEqual(entries[0]["kind"], "c")
+
+    def test_member_session_name_pattern_gives_a_member_kind(self):
+        old = snapshot([])
+        new = snapshot([record("c1", "Metal Shop Mentor Hours", "2026-10-20T00:00:00")])
+        entries = changelog.diff_snapshots(old, new, CONFIG)
+        self.assertEqual(entries[0]["kind"], "m")
+
+    def test_seatless_listing_gives_a_public_kind(self):
+        old = snapshot([])
+        new = snapshot([record("c1", "Community Open House", "2026-10-20T00:00:00", capacity=0)])
+        entries = changelog.diff_snapshots(old, new, CONFIG)
+        self.assertEqual(entries[0]["kind"], "p")
+
+    def test_removed_entry_uses_the_old_snapshot_s_record(self):
+        old = snapshot([record("c1", "Metal Shop Mentor Hours", "2026-10-20T00:00:00")])
+        new = snapshot([], first_day="2026-10-18")
+        entries = changelog.diff_snapshots(old, new, CONFIG)
+        self.assertEqual(types_of(entries), ["removed"])
+        self.assertEqual(entries[0]["kind"], "m")
+
+    def test_spot_opened_entry_records_its_kind(self):
+        old = snapshot([record("c1", "Woodworking", "2026-10-20T00:00:00", bookable=False, waitlistable=False)])
+        new = snapshot([record("c1", "Woodworking", "2026-10-20T00:00:00", bookable=True, waitlistable=False)])
+        entries = changelog.diff_snapshots(old, new, CONFIG)
+        self.assertEqual(entries[0]["kind"], "c")
+
+
 class AppendEntriesTest(unittest.TestCase):
     def test_creates_file_and_appends_across_calls(self):
         import tempfile

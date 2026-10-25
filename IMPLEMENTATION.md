@@ -170,12 +170,16 @@ and commit the changed pictures with the change.
 - **One set of baselines per operating system.** Text is rasterized differently on each, so pictures live
   in `baselines/darwin` (macOS, for local work) and `baselines/linux` (what CI compares against). The
   runner uses the set for the system it is on; both are checked for completeness by the unit tests.
-- **In CI** (`.github/workflows/ci.yml`, job `visual`). Pull requests run `python -m tests.visual` on
-  Ubuntu with the Chromium that the pinned Playwright installs; a failure uploads `output/`
-  (including `report.html`) as the `visual-report` artifact. After an intended visual change, update
-  both sets: `--update` locally for macOS, and for Linux run the CI workflow by hand
-  (Actions, "CI", "Run workflow", tick *Take new Linux screenshots*), download the `linux-baselines`
-  artifact into `tests/visual/baselines/linux`, and commit it with the change.
+- **In CI** (`.github/workflows/visual.yml`). The run takes about 80 seconds, so it is not part of the
+  pull request checks (`ci.yml` runs only the quick, browser-free tests). It runs nightly on `main`,
+  on Ubuntu with the Chromium that the pinned Playwright installs, and can be started by hand
+  (Actions, "Visual tests", "Run workflow"). A failure emails the repository owner and uploads
+  `output/` (including `report.html`) as the `visual-report` artifact. So a pull request that changes
+  how the page looks will not fail anything itself: run `python -m tests.visual` locally to see the
+  differences, and update both sets of baselines in the same pull request. `--update` does macOS; for
+  Linux run the workflow by hand on the branch with *Take new Linux screenshots* ticked, download
+  the `linux-baselines` artifact into `tests/visual/baselines/linux`, and commit it. (GitHub only
+  lets you start a workflow by hand once its file is on the default branch.)
 
 ## Hosting (GitHub Actions + Pages)
 

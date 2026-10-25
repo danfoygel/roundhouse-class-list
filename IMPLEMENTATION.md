@@ -167,10 +167,15 @@ and commit the changed pictures with the change.
   produce byte-identical files.
 - **Comparison.** Identical bytes pass; otherwise a picture passes if fewer than 0.02% of its pixels
   differ by more than 16 per colour channel (anti-aliasing noise), and fails on any size change.
-- **One platform.** Text is rasterized differently on each operating system, so the baselines are
-  those captured on the platform recorded in `baselines/.platform` (macOS). Elsewhere expect
-  differences, and regenerate the baselines there. CI does not run these tests yet; it runs only the
-  browser-free checks above.
+- **One set of baselines per operating system.** Text is rasterized differently on each, so pictures live
+  in `baselines/darwin` (macOS, for local work) and `baselines/linux` (what CI compares against). The
+  runner uses the set for the system it is on; both are checked for completeness by the unit tests.
+- **In CI** (`.github/workflows/ci.yml`, job `visual`). Pull requests run `python -m tests.visual` on
+  Ubuntu with the Chromium that the pinned Playwright installs; a failure uploads `output/`
+  (including `report.html`) as the `visual-report` artifact. After an intended visual change, update
+  both sets: `--update` locally for macOS, and for Linux run the CI workflow by hand
+  (Actions, "CI", "Run workflow", tick *Take new Linux screenshots*), download the `linux-baselines`
+  artifact into `tests/visual/baselines/linux`, and commit it with the change.
 
 ## Hosting (GitHub Actions + Pages)
 

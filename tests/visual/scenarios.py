@@ -2,7 +2,7 @@
 
 A scenario is a starting address, a way of arriving (viewport, light/dark, whether the visitor has
 been here before), some clicks, and the picture to take afterwards. Its name is the baseline's file
-name under tests/visual/baselines/. Nothing here imports Playwright: the steps only call methods on
+name under tests/visual/baselines/<platform>/. Nothing here imports Playwright: the steps only call methods on
 the `page` they are handed, so the list can be inspected without a browser.
 """
 import re

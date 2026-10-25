@@ -27,7 +27,9 @@ from . import scenarios as scenario_module
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 FIXTURES = HERE / "fixtures"
-BASELINES = HERE / "baselines"
+# Text is rasterized differently on each operating system, so each keeps its own set of baselines.
+PLATFORM = sys.platform if sys.platform in ("darwin", "linux") else "other"
+BASELINES = HERE / "baselines" / PLATFORM
 OUTPUT = HERE / "output"
 FONTS = HERE / "fonts"
 
@@ -202,7 +204,7 @@ def write_report(results):
     rows = []
     for name, ok, message in results:
         cells = ""
-        for label, src in (("baseline", "../baselines/%s.png" % name), ("actual", "actual/%s.png" % name),
+        for label, src in (("baseline", "../baselines/%s/%s.png" % (PLATFORM, name)), ("actual", "actual/%s.png" % name),
                            ("difference", "diff/%s.png" % name)):
             if label == "difference" and ok:
                 continue
@@ -244,10 +246,8 @@ def main(argv=None):
                  "  .venv/bin/playwright install chromium\n"
                  "  .venv/bin/python -m tests.visual")
 
-    platform_file = BASELINES / ".platform"
-    if BASELINES.exists() and platform_file.exists() and platform_file.read_text().strip() != sys.platform and not args.update:
-        print("note: the baselines were captured on %s and this is %s; fonts render differently across "
-              "systems, so expect differences." % (platform_file.read_text().strip(), sys.platform))
+    if not BASELINES.exists() and not args.update:
+        sys.exit("No baselines for %s yet (tests/visual/baselines/%s). Create them with --update." % (PLATFORM, PLATFORM))
 
     for folder in ("actual", "diff"):
         if not args.match:
@@ -273,9 +273,8 @@ def main(argv=None):
                 print("ERROR  %-55s %s" % (scenario.name, results[-1][2]))
                 continue
             if args.update:
-                BASELINES.mkdir(exist_ok=True)
+                BASELINES.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(actual, baseline)
-                platform_file.write_text(sys.platform + "\n")
                 results.append((scenario.name, True, "baseline written"))
                 print("wrote  %s" % scenario.name)
                 continue

@@ -62,11 +62,14 @@ class ScenarioListTest(unittest.TestCase):
         for name in names:
             self.assertRegex(name, r"^[a-z0-9-]+$")
 
-    def test_every_scenario_has_a_baseline_and_none_are_orphaned(self):
+    def test_every_platform_with_baselines_has_all_of_them_and_no_orphans(self):
         wanted = {"%s.png" % s.name for s in SCENARIOS}
-        have = {p.name for p in BASELINES.glob("*.png")}
-        self.assertEqual(sorted(wanted - have), [], "no baseline: run python3 -m tests.visual --update")
-        self.assertEqual(sorted(have - wanted), [], "baseline for a scenario that no longer exists")
+        platforms = [p for p in BASELINES.iterdir() if p.is_dir()]
+        self.assertTrue(platforms, "no baselines: run python3 -m tests.visual --update")
+        for platform in platforms:
+            have = {p.name for p in platform.glob("*.png")}
+            self.assertEqual(sorted(wanted - have), [], "%s: run python3 -m tests.visual --update" % platform.name)
+            self.assertEqual(sorted(have - wanted), [], "%s: baseline for a scenario that no longer exists" % platform.name)
 
 
 if __name__ == "__main__":

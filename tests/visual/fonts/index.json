@@ -1,0 +1,26 @@
+{
+ "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Bricolage+Grotesque:wght@600;700&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap": {
+  "file": "d55ad84d07ba5bb7.css",
+  "type": "text/css; charset=utf-8"
+ },
+ "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuYMBYro.woff2": {
+  "file": "28c6fc478d5a8d01.woff2",
+  "type": "font/woff2"
+ },
+ "https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawA1XphjhQYg.woff2": {
+  "file": "e77317f889cbdea4.woff2",
+  "type": "font/woff2"
+ },
+ "https://fonts.gstatic.com/s/dmmono/v16/aFTR7PB1QTsUX8KYvumzEYOtbYf-Vlg.woff2": {
+  "file": "fa92f84062809e5e.woff2",
+  "type": "font/woff2"
+ },
+ "https://fonts.gstatic.com/s/dmmono/v16/aFTU7PB1QTsUX8KYthqQBK6PYK0.woff2": {
+  "file": "61f4626ada1f4b75.woff2",
+  "type": "font/woff2"
+ },
+ "https://fonts.gstatic.com/s/instrumentsans/v4/pxiTypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr0SZe1ZuWi3g.woff2": {
+  "file": "11aa495c85f84b65.woff2",
+  "type": "font/woff2"
+ }
+}

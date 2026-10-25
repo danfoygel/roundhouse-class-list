@@ -10,6 +10,8 @@ python3 build.py refresh    # fetch, then build
 python3 -m unittest discover -s tests -t .
 ```
 
+(Screenshot tests are separate; see Visual tests below.)
+
 The same snapshot and config always produce the same page, byte for byte.
 
 ## How it works
@@ -118,6 +120,57 @@ clock, so the same snapshot always produces the same feed. The calendar icon's o
 `templates/page.html` shows the feed's address (`site_url` + `calendar_filename` in
 `config.json`, baked in at build time as `__CALENDAR_URL__`), a copy button, and a `webcal://`
 link built client-side from that same address.
+
+## Visual tests (tests/visual)
+
+Screenshot tests for the page itself: a real browser opens the built page, uses every control, and
+each result is compared with a committed picture.
+
+```
+python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
+.venv/bin/playwright install chromium          # once
+
+.venv/bin/python -m tests.visual               # compare every scenario with its baseline
+.venv/bin/python -m tests.visual -k history    # only scenarios whose name contains "history"
+.venv/bin/python -m tests.visual --update      # accept the pictures just taken as the new baselines
+```
+
+Playwright and Pillow are needed only for this; the page and the other tests stay standard-library
+only. A failing run writes what it saw to `tests/visual/output/actual`, a red-highlighted difference
+to `output/diff`, and `output/report.html` shows baseline, actual and difference side by side
+(`output/` is not committed). After an intended visual change, look at the report, then `--update`
+and commit the changed pictures with the change.
+
+- **Synthetic data** (`synthetic.py`, written out to `fixtures/`). A made-up schedule modelled on the
+  real listings: the same naming habits, session-type spellings, policy boilerplate and booking
+  states, with every shop, kind of event, status (bookable, waitlist, full, cancelled, information
+  only), multi-session courses and several months. Names of people are invented. The older
+  snapshots are made by undoing specific changes in the current one, and the change history is
+  what the real `changelog.diff_snapshots` reports between them, so it covers all nine change
+  types in the production format. Regenerate with `python3 -m tests.visual.synthetic`; a normal
+  unit test fails if the committed fixtures and the generator disagree.
+- **Scenarios** (`scenarios.py`). Each is a starting address, a way of arriving (width, light or
+  dark, first visit or returning visitor) and some clicks: type and shop filters, the waitlisted and
+  cancelled checkboxes, shared links, one tile for each way a listing can look, "Show more", the add
+  to calendar menu, the change history (and jumping from it to an event, loosening the filters that
+  hide it), the "new since your last visit" banner, the subscribe dialog and the theme toggle. Some
+  also check the page address or theme the click should have produced. The scenario's name is its
+  baseline's file name; the unit tests fail for a scenario with no baseline and a baseline with no
+  scenario.
+- **Built the real way.** `runner.py` runs `build.py build` with a config pointing at the fixtures,
+  serves the result over HTTP, and drives Chromium.
+- **Deterministic.** The browser's clock is fixed (`NOW`, just after the newest fetch) and a returning
+  visitor's "last seen" time is seeded, so what counts as new never moves. The page loads its
+  typefaces from Google Fonts; the first response for each is saved in `fonts/` and replayed, and any
+  other outside request is refused, so a run never touches the network. Animations are disabled and
+  time is allowed to settle (fonts, scrolling, the jump highlight) before each picture. Repeated runs
+  produce byte-identical files.
+- **Comparison.** Identical bytes pass; otherwise a picture passes if fewer than 0.02% of its pixels
+  differ by more than 16 per colour channel (anti-aliasing noise), and fails on any size change.
+- **One platform.** Text is rasterized differently on each operating system, so the baselines are
+  those captured on the platform recorded in `baselines/.platform` (macOS). Elsewhere expect
+  differences, and regenerate the baselines there. CI does not run these tests yet; it runs only the
+  browser-free checks above.
 
 ## Hosting (GitHub Actions + Pages)
 

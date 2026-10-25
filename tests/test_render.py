@@ -145,6 +145,10 @@ class HistoryDialogTest(unittest.TestCase):
         self.assertEqual(embedded(page, "CHANGELOG"), self.ENTRIES)
         self.assertEqual(embedded(page, "CHANGELOG_LABELS"), changelog.TYPE_LABELS)
 
+    def test_entries_marked_test_show_a_test_data_badge(self):
+        page = page_for([], changelog_entries=self.ENTRIES)
+        self.assertIn('e.test ? `<span class="badge">Test data</span>', page)
+
     def test_no_changelog_entries_is_the_default(self):
         page = page_for([])  # changelog_entries omitted
         self.assertEqual(embedded(page, "CHANGELOG"), [])

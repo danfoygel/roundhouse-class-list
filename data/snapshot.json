@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-10-24T23:59:54Z",
+  "fetched_at": "2026-10-25T00:07:36Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-10-24",
@@ -503,56 +503,6 @@
   }
  ],
  "classes": [
-  {
-   "id": "cinst_113QRWkf6Krz16t3tv",
-   "name": "Butcher Blocks for Beginners- $115 all materials included-2 sessions ",
-   "description": "<div><strong>Butcher Blocks for Beginners&nbsp;</strong>$115 all materials included</div>\n<div>2 sessions</div>\n<div>&nbsp;</div>\n<div>This two-day class will walk you through all the steps in making a beautiful butcher block cutting board.&nbsp;</div>\n<div>&nbsp;</div>\n<div>This class will provide an introduction to the Wood Shop using the Butcher Block cutting board as a project.</div>\n<div>&nbsp;</div>\n<div>The course will cover the different types of wood you can use and address the difference and between domestic and exotic, light and dark wood species.</div>\n<div>&nbsp;</div>\n<div>You will be instructed on how to prepare your wood, including the cutting, milling, and attachment.</div>\n<div>&nbsp;</div>\n<div>The 2nd class will be focused on finishing: planner action, orbit sander, mineral oil, cleaning, how to attach handles, maintenance, and a short quiz about wood species.</div>\n<div><br>The material used for the class: dark walnut, redwood, poplar, aspen, maple, mahogany, white oak, and possibly cedar and hickory.</div>\n<div>&nbsp;</div>\n<div>Specs for butcher block: roughly 12\" by 22 \"and roughly 1 1/4 thickness.</div>\n<div>&nbsp;</div>\n<div>Those new to woodworking or looking for a refresher are welcome. This is a project-based class and does not qualify as a wood shop safety checkout for members. Those wishing to use the wood shop independently without prior skills will need to sign up for a Wood Shop 101 before becoming a member.&nbsp;</div>\n<div>&nbsp;</div>\n<div>Maximum 5 Students.&nbsp;</div>\n<div>Appropriate for students 12 and over.&nbsp;All youth under the age of 16 must be chaperoned by an adult also taking the class. <br><br>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</div>\n<div>&nbsp;</div>\n<div>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</div>\n<div>&nbsp;</div>\n<div>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkGT",
-   "capacity": 5,
-   "numberRegistered": 5,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4G8",
-   "startDateTime": "2026-10-25T00:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-10-25T03:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFa3E",
-     "displayLabel": "ALIN LUCHIAN"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": false,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-10-24T07:00:00Z",
-   "bookingWindowEnd": "2026-10-25T00:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Enrollment",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
   {
    "id": "cinst_113QRWkf6Krz16sxx4",
    "name": "Wood Shop 102:  Make a Picture Frame - 2 Days - $145",
@@ -2599,7 +2549,7 @@
    "description": "<p><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p>\n<p>You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p>\n<p>This two-day class is an introduction to the fundamentals of TIG welding.</p>\n<p>Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p>\n<p>Ages 16 and over.</p>\n<p>4 students max</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkSd",
    "capacity": 4,
-   "numberRegistered": 3,
+   "numberRegistered": 1,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "startDateTime": "2026-12-07T01:00:00.0000000Z",
    "duration": 180,
@@ -2699,7 +2649,7 @@
    "description": "<p><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p>\n<p>You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p>\n<p>This two-day class is an introduction to the fundamentals of TIG welding.</p>\n<p>Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p>\n<p>Ages 16 and over.</p>\n<p>4 students max</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkSd",
    "capacity": 4,
-   "numberRegistered": 3,
+   "numberRegistered": 1,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "startDateTime": "2026-12-08T01:00:00.0000000Z",
    "duration": 180,

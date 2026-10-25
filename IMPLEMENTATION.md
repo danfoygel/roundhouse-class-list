@@ -134,6 +134,10 @@ demand (Actions tab, "Update class list", "Run workflow").
   changelog keeps growing. That commit is excluded from the push trigger (`paths-ignore:
   data/**`) so it doesn't retrigger the workflow.
 - To change how often it runs, edit the `cron` line. Each run makes five requests to Mindbody.
+
+`.github/workflows/ci.yml` checks pull requests: it runs the same offline test suite and builds
+the page from the committed snapshot (`python build.py build`), without touching Mindbody or
+deploying anything. The live test (`tests/test_live.py`) stays skipped there.
 - One-time setup: Settings, Pages, Source: "GitHub Actions".
 
 ## Limits to know about

@@ -29,6 +29,14 @@ def _instructor_label(record):
     return " / ".join(s["displayLabel"] for s in staff if s.get("displayLabel"))
 
 
+def _kind(record, config, categories):
+    """c = class, m = member session, p = public event; see normalize.kind_for."""
+    raw_name = normalize.clean(record["name"])
+    category_name, _shop = categories.get(record.get("sessionTypeId"), ("", "Other"))
+    description = normalize.plain(record.get("description"))
+    return normalize.kind_for(raw_name, category_name, config, record.get("capacity"), description)
+
+
 def _horizon(meta):
     first_day = date.fromisoformat(meta["first_day"])
     return first_day, first_day + timedelta(days=meta["days"] - 1)
@@ -59,7 +67,7 @@ TYPE_LABELS = {
 }
 
 
-def _entry(fetched_at, change_type, record, config, tz, detail=None):
+def _entry(fetched_at, change_type, record, config, tz, categories, detail=None):
     detail = dict(detail or {})
     entry = {
         "at": fetched_at,
@@ -67,19 +75,20 @@ def _entry(fetched_at, change_type, record, config, tz, detail=None):
         "class_id": record["id"],
         "name": _display_name(record, config),
         "start": normalize.iso_utc(record["startDateTime"]),
+        "kind": _kind(record, config, categories),
     }
     if detail:
         entry["detail"] = detail
     return entry
 
 
-def _field_changes(fetched_at, old_record, new_record, config, tz):
+def _field_changes(fetched_at, old_record, new_record, config, tz, categories):
     changes = []
     old_cancelled, new_cancelled = bool(old_record.get("cancelled")), bool(new_record.get("cancelled"))
     if not old_cancelled and new_cancelled:
-        changes.append(_entry(fetched_at, "cancelled", new_record, config, tz))
+        changes.append(_entry(fetched_at, "cancelled", new_record, config, tz, categories))
     elif old_cancelled and not new_cancelled:
-        changes.append(_entry(fetched_at, "uncancelled", new_record, config, tz))
+        changes.append(_entry(fetched_at, "uncancelled", new_record, config, tz, categories))
 
     time_detail = {}
     if old_record["startDateTime"] != new_record["startDateTime"]:
@@ -89,23 +98,23 @@ def _field_changes(fetched_at, old_record, new_record, config, tz):
         time_detail["was_duration"] = old_record.get("duration")
         time_detail["duration"] = new_record.get("duration")
     if time_detail:
-        changes.append(_entry(fetched_at, "time_changed", new_record, config, tz, time_detail))
+        changes.append(_entry(fetched_at, "time_changed", new_record, config, tz, categories, time_detail))
 
     if old_record.get("capacity") != new_record.get("capacity"):
-        changes.append(_entry(fetched_at, "capacity_changed", new_record, config, tz, {
+        changes.append(_entry(fetched_at, "capacity_changed", new_record, config, tz, categories, {
             "was_capacity": old_record.get("capacity"), "capacity": new_record.get("capacity"),
         }))
 
     if not new_cancelled:
         old_status, new_status = normalize.status_for(old_record), normalize.status_for(new_record)
         if old_status != "f" and new_status == "f":
-            changes.append(_entry(fetched_at, "fully_booked", new_record, config, tz))
+            changes.append(_entry(fetched_at, "fully_booked", new_record, config, tz, categories))
         elif old_status == "f" and new_status in ("b", "w"):
-            changes.append(_entry(fetched_at, "spot_opened", new_record, config, tz))
+            changes.append(_entry(fetched_at, "spot_opened", new_record, config, tz, categories))
 
     old_instructor, new_instructor = _instructor_label(old_record), _instructor_label(new_record)
     if old_instructor and new_instructor and old_instructor != new_instructor:
-        changes.append(_entry(fetched_at, "instructor_changed", new_record, config, tz, {
+        changes.append(_entry(fetched_at, "instructor_changed", new_record, config, tz, categories, {
             "was_instructor": old_instructor, "instructor": new_instructor,
         }))
 
@@ -118,13 +127,17 @@ def diff_snapshots(old_snapshot, new_snapshot, config):
     fetched_at = new_snapshot["meta"]["fetched_at"]
     old_classes = {record["id"]: record for record in old_snapshot["classes"]}
     new_classes = {record["id"]: record for record in new_snapshot["classes"]}
+    # Each record's "kind" (class/member session/public event) is looked up by its own snapshot's
+    # session types, so a removed record resolves correctly even if the mapping has since changed.
+    old_categories = normalize.category_names(old_snapshot["session_types"], config)
+    new_categories = normalize.category_names(new_snapshot["session_types"], config)
     old_first, old_last = _horizon(old_snapshot["meta"])
     new_first, new_last = _horizon(new_snapshot["meta"])
 
     entries = []
     for class_id, record in new_classes.items():
         if class_id not in old_classes and old_first <= _start_date(record, tz) <= old_last:
-            entries.append(_entry(fetched_at, "added", record, config, tz))
+            entries.append(_entry(fetched_at, "added", record, config, tz, new_categories))
     fetched_at_dt = normalize.parse_utc(fetched_at)
     for class_id, record in old_classes.items():
         if class_id in new_classes:
@@ -135,11 +148,11 @@ def diff_snapshots(old_snapshot, new_snapshot, config):
         if normalize.parse_utc(record["startDateTime"]) <= fetched_at_dt:
             continue
         if new_first <= _start_date(record, tz) <= new_last:
-            entries.append(_entry(fetched_at, "removed", record, config, tz))
+            entries.append(_entry(fetched_at, "removed", record, config, tz, old_categories))
     for class_id, new_record in new_classes.items():
         old_record = old_classes.get(class_id)
         if old_record is not None:
-            entries.extend(_field_changes(fetched_at, old_record, new_record, config, tz))
+            entries.extend(_field_changes(fetched_at, old_record, new_record, config, tz, new_categories))
 
     entries.sort(key=lambda e: (e["start"], e["class_id"], e["type"]))
     return entries

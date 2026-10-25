@@ -337,7 +337,8 @@ h1 {
 .history-list { list-style: none; margin: 0; padding: 6px 18px 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
 .history-item { padding: 10px 0; border-bottom: 1px dashed var(--line); }
 .history-item:last-child { border-bottom: 0; }
-.history-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; }
+.history-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; }
+.history-row-left { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .history-type { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
 .history-logged { font-family: var(--font-mono); font-size: 11px; color: var(--muted); white-space: nowrap; }
 .history-name { font-weight: 600; margin: 3px 0 0; }
@@ -827,7 +828,10 @@ function historyItem(e) {
     : `<p class="history-name">${esc(e.name)}</p>`;
   return `<li class="history-item">
     <div class="history-row">
-      <span class="history-type">${esc(CHANGELOG_LABELS[e.type] || e.type)}</span>
+      <div class="history-row-left">
+        <span class="history-type">${esc(CHANGELOG_LABELS[e.type] || e.type)}</span>
+        ${e.test ? `<span class="badge">Test data</span>` : ""}
+      </div>
       <span class="history-logged">${fmtLogged.format(new Date(e.at))}</span>
     </div>
     ${name}

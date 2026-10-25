@@ -2,6 +2,7 @@
  {
   "at": "2026-09-21T08:05:12Z",
   "type": "added",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16t3mo",
   "name": "Electronics Repair - Free KTG Reuse & Repair Workshop",
   "start": "2026-11-16T01:00:00Z"
@@ -9,6 +10,7 @@
  {
   "at": "2026-09-21T08:05:12Z",
   "type": "added",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16t3np",
   "name": "Handsew Gingerbread People - Family-friendly",
   "start": "2026-11-28T01:00:00Z"
@@ -16,6 +18,7 @@
  {
   "at": "2026-09-21T08:05:12Z",
   "type": "added",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16t3rt",
   "name": "Winter Terrarium Making",
   "start": "2026-11-30T19:00:00Z"
@@ -23,6 +26,7 @@
  {
   "at": "2026-09-28T08:11:47Z",
   "type": "capacity_changed",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16sxqx",
   "name": "Beaded Necklaces & Bracelets - Jewelry",
   "start": "2026-11-08T01:00:00Z",
@@ -34,6 +38,7 @@
  {
   "at": "2026-10-03T08:14:33Z",
   "type": "removed",
+  "test": true,
   "class_id": "cinst_SYNTH_woodturning01",
   "name": "Beginning Woodturning",
   "start": "2026-10-24T18:00:00Z"
@@ -41,6 +46,7 @@
  {
   "at": "2026-10-03T08:14:33Z",
   "type": "instructor_changed",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16sxFN",
   "name": "Taller gratuito: reparación y arreglo de ropa - Free workshop in Spanish",
   "start": "2026-11-21T01:00:00Z",
@@ -52,6 +58,7 @@
  {
   "at": "2026-10-03T08:14:33Z",
   "type": "time_changed",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16t3rt",
   "name": "Winter Terrarium Making",
   "start": "2026-12-07T01:00:00Z",
@@ -63,6 +70,7 @@
  {
   "at": "2026-10-08T08:09:21Z",
   "type": "cancelled",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16t3qs",
   "name": "Fall Mini Rustic Porch Pots",
   "start": "2026-10-19T00:00:00Z"
@@ -70,6 +78,7 @@
  {
   "at": "2026-10-08T08:09:21Z",
   "type": "cancelled",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16sy4A",
   "name": "Metal Shop Mentor Hours",
   "start": "2026-10-20T21:00:00Z"
@@ -77,6 +86,7 @@
  {
   "at": "2026-10-08T08:09:21Z",
   "type": "cancelled",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16sKsc",
   "name": "Public Tour - Come check out the space",
   "start": "2026-11-21T21:00:00Z"
@@ -84,6 +94,7 @@
  {
   "at": "2026-10-08T08:09:21Z",
   "type": "cancelled",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16spo3",
   "name": "Textiles Open Studio",
   "start": "2026-12-04T22:00:00Z"
@@ -91,6 +102,7 @@
  {
   "at": "2026-10-14T08:02:40Z",
   "type": "fully_booked",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16sy6C",
   "name": "Metal Shop Mentor Hours",
   "start": "2026-11-03T22:00:00Z"
@@ -98,6 +110,7 @@
  {
   "at": "2026-10-16T20:11:58Z",
   "type": "spot_opened",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16sy6C",
   "name": "Metal Shop Mentor Hours",
   "start": "2026-11-03T22:00:00Z"
@@ -105,6 +118,7 @@
  {
   "at": "2026-10-16T20:11:58Z",
   "type": "capacity_changed",
+  "test": true,
   "class_id": "cinst_113QRWkf6Krz16sxqx",
   "name": "Beaded Necklaces & Bracelets - Jewelry",
   "start": "2026-11-08T01:00:00Z",

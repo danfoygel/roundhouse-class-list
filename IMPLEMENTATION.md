@@ -65,7 +65,15 @@ grows; nothing is ever removed from it.
 The clock icon in the page header (see README) opens an overlay listing these entries, most
 recent first. `render.py` embeds the entries plus `TYPE_LABELS` as page data (`CHANGELOG` /
 `CHANGELOG_LABELS`), so the label text stays defined once, in `classlist/changelog.py`, instead
-of being duplicated in the template.
+of being duplicated in the template. Clicking an entry's name closes the overlay and scrolls to
+the matching tile, found via the session's `class_id`, which is carried into each event's
+`sessions` list by `normalize.build_events`.
+
+The first 14 entries in `data/changelog.json` were seeded by hand as a demo of the feature,
+before any real fetch had run; each carries `"test": true` (nothing `diff_snapshots` produces
+ever sets that field) so they stay visibly marked — a "Test data" badge in the overlay — instead
+of being mistaken for real history once it accumulates. Remove them (and the field) once there's
+enough genuine history to make the point on its own.
 
 ## The rules (classlist/normalize.py)
 

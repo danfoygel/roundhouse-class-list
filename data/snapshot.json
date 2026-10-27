@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-10-27T18:00:39Z",
+  "fetched_at": "2026-10-27T22:13:14Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-10-27",
@@ -503,56 +503,6 @@
   }
  ],
  "classes": [
-  {
-   "id": "cinst_113QRWkf6Krz16sy5B",
-   "name": "Metal Shop Mentor Hours - Members Only",
-   "description": "<div><strong>Metal Shop Mentor Hours - Members Only</strong></div>\n<div>&nbsp;</div>\n<div>Metal Shop Mentor Hours is a dedicated time for active Roundhouse members who have completed their Metal Shop safety checkout to work on projects with our expert Shop Technician, Chris Cumberworth. Get help with tools and techniques, troubleshoot your ideas, and build your confidence in the shop to work independently.</div>\n<div>&nbsp;</div>\n<div>Bring your project, materials, and questions! Please Slack message Chris ahead of time with your project so he can be prepared.</div>\n<div>&nbsp;</div>\n<div>Free to Members Only. You must book your spot in advance.</div>\n<div>&nbsp;</div>\n<div>Members must be active and have taken Metal Shop 101 or Welding classes, or have successfully passed a metal shop safety checkout.</div>\n<div>&nbsp;</div>\n<div>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.<br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n<p>&nbsp;</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jk3E",
-   "capacity": 1,
-   "numberRegistered": 0,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4KB",
-   "startDateTime": "2026-10-27T21:00:00.0000000Z",
-   "duration": 60,
-   "endDateTime": "2026-10-27T22:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFcaj",
-     "displayLabel": "Chris Cumberworth"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-10-27T07:00:00Z",
-   "bookingWindowEnd": "2026-10-27T21:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
   {
    "id": "cinst_113QRWkf6Krz16spiy",
    "name": "Textiles Open Studio - Members Only",
@@ -2634,6 +2584,106 @@
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],
    "type": "Class",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
+   "id": "cinst_113QRWkf6Krz16t4JK",
+   "name": "Wood Shop 101 - 2 Days - $145",
+   "description": "<div><strong>Wood Shop 101&nbsp;$145</strong></div>\n<div>2 Days - 3.5 hours each</div>\n<div>&nbsp;</div>\n<div>Wood Shop 101 is designed to help you cultivate the skills, knowledge, and attitudes necessary to start and troubleshoot basic woodshop projects.</div>\n<div><br>You are not expected to have any prior woodshop experience and the information should be a helpful refresher for anyone looking to get back into the woodshop. This course is designed to give you hands-on experience with the woodshop power tools and machines and work on a project.&nbsp;\n<p>During the 2nd session of this course, you will demonstrate all that you have learned by creating a wood carry tote that can be used for beverages, gardening, etc.</p>\n<p>During this 2-session course, you will learn how to use the following tools:</p>\n<ul>\n<li>Sawstop Table Saw</li>\n<li>Miter Saw</li>\n<li>Bandsaw</li>\n<li>Basic hand tools</li>\n<li>Belt / Disc Sander — Orbital sander (optional)</li>\n<li>Drill Press</li>\n</ul>\n<p>This course counts as a safety checkout to use these tools as a member.</p>\n<p>You will also learn how to:</p>\n<p>-Practice strategies for safe making<br>-Be a steward of the woodshop<br>-Identify basic characteristics of wood (hardness, grain, cost, etc.) and their use in different projects<br>-Identity appropriate woodshop tools for different needs (prep, dimensioning)<br>-Summarize and use the design process to create a basic project<br>-Use appropriate tools of the woodshop to prepare, clean, and dimension wood for a project<br>-Fasten or connect multiple pieces of wood<br>-Clean up thoroughly after using the woodshop</p>\n<p>Two sessions, 7 hours of instruction.</p>\n<p>Ages 12 and above. All youth under the age of 16 must be chaperoned by an adult also taking the class.&nbsp;<br>Maximum 4 students.</p>\n<p>No previous woodworking skills are necessary.<br><br>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
+   "classGroupId": "csch_113QRWkf6Krz16jkVg",
+   "capacity": 4,
+   "numberRegistered": 0,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j4G8",
+   "startDateTime": "2026-12-14T01:00:00.0000000Z",
+   "duration": 210,
+   "endDateTime": "2026-12-14T04:30:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFaCP",
+     "displayLabel": "Brent Ferrera"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-10-27T07:00:00Z",
+   "bookingWindowEnd": "2026-12-14T01:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Enrollment",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
+   "id": "cinst_113QRWkf6Krz16t4KL",
+   "name": "Wood Shop 101 - 2 Days - $145",
+   "description": "<div><strong>Wood Shop 101&nbsp;$145</strong></div>\n<div>2 Days - 3.5 hours each</div>\n<div>&nbsp;</div>\n<div>Wood Shop 101 is designed to help you cultivate the skills, knowledge, and attitudes necessary to start and troubleshoot basic woodshop projects.</div>\n<div><br>You are not expected to have any prior woodshop experience and the information should be a helpful refresher for anyone looking to get back into the woodshop. This course is designed to give you hands-on experience with the woodshop power tools and machines and work on a project.&nbsp;\n<p>During the 2nd session of this course, you will demonstrate all that you have learned by creating a wood carry tote that can be used for beverages, gardening, etc.</p>\n<p>During this 2-session course, you will learn how to use the following tools:</p>\n<ul>\n<li>Sawstop Table Saw</li>\n<li>Miter Saw</li>\n<li>Bandsaw</li>\n<li>Basic hand tools</li>\n<li>Belt / Disc Sander — Orbital sander (optional)</li>\n<li>Drill Press</li>\n</ul>\n<p>This course counts as a safety checkout to use these tools as a member.</p>\n<p>You will also learn how to:</p>\n<p>-Practice strategies for safe making<br>-Be a steward of the woodshop<br>-Identify basic characteristics of wood (hardness, grain, cost, etc.) and their use in different projects<br>-Identity appropriate woodshop tools for different needs (prep, dimensioning)<br>-Summarize and use the design process to create a basic project<br>-Use appropriate tools of the woodshop to prepare, clean, and dimension wood for a project<br>-Fasten or connect multiple pieces of wood<br>-Clean up thoroughly after using the woodshop</p>\n<p>Two sessions, 7 hours of instruction.</p>\n<p>Ages 12 and above. All youth under the age of 16 must be chaperoned by an adult also taking the class.&nbsp;<br>Maximum 4 students.</p>\n<p>No previous woodworking skills are necessary.<br><br>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
+   "classGroupId": "csch_113QRWkf6Krz16jkVg",
+   "capacity": 4,
+   "numberRegistered": 0,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j4G8",
+   "startDateTime": "2026-12-15T01:00:00.0000000Z",
+   "duration": 210,
+   "endDateTime": "2026-12-15T04:30:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFaCP",
+     "displayLabel": "Brent Ferrera"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-10-27T07:00:00Z",
+   "bookingWindowEnd": "2026-12-15T01:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Enrollment",
    "pickASpotEnabled": false,
    "room": null,
    "roomLayout": null,

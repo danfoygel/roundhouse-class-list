@@ -18,7 +18,9 @@ permissions:
 
 jobs:
   visual:
-    runs-on: ubuntu-latest
+    # Pinned, not ubuntu-latest: the Linux baselines depend on the runner's fonts and rasterizer,
+    # so an image upgrade would change every screenshot at once.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7

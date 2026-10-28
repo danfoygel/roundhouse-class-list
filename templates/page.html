@@ -400,18 +400,19 @@ h1 {
 /* "new since last visit" banner */
 .new-banner {
   margin-top: 20px;
-  padding: 14px 18px 16px;
+  padding: 8px 14px 6px;
   background: var(--pine-soft);
   border: 1px solid var(--pine);
   border-radius: 10px;
 }
 .new-banner-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.new-banner-head h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+.new-banner-head h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; }
+.new-banner-head-end { display: flex; align-items: center; gap: 8px; }
 .new-banner-close {
   all: unset;
   flex: none;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -421,16 +422,21 @@ h1 {
 .new-banner-close:hover { color: var(--ink); background: rgba(0, 0, 0, 0.08); }
 .new-banner-close:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .new-banner-close svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.new-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; }
+.new-list { list-style: none; margin: 2px 0 0; padding: 0; display: flex; flex-direction: column; }
 .new-item { border-bottom: 1px dashed var(--line); }
 .new-item:last-child { border-bottom: 0; }
-.new-link { all: unset; display: block; width: 100%; box-sizing: border-box; padding: 9px 2px; cursor: pointer; }
+.new-link { all: unset; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 10px; width: 100%; box-sizing: border-box; padding: 4px 2px; font-size: 13px; cursor: pointer; }
 .new-link:hover .new-name { color: var(--pine); text-decoration: underline; }
 .new-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
-.new-type { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
-.new-name { display: block; font-weight: 600; color: var(--ink); margin: 2px 0 0; }
-.new-meta { display: block; color: var(--muted); font-size: 13px; margin: 2px 0 0; }
-.new-banner-all { all: unset; display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--pine); cursor: pointer; }
+.new-type { flex: none; min-width: 24em; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
+.new-name { font-weight: 600; color: var(--ink); }
+.new-meta { color: var(--muted); }
+.new-banner-all { all: unset; display: inline-block; font-size: 13px; font-weight: 600; color: var(--pine); cursor: pointer; }
+@media (max-width: 640px) {
+  .new-type { min-width: 0; flex-basis: 100%; }
+  .new-banner-head h2 { font-size: 0.9rem; }
+  .new-banner-all { white-space: nowrap; }
+}
 .new-banner-all:hover { text-decoration: underline; }
 .new-banner-all:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 
@@ -498,12 +504,14 @@ footer p { margin: 0 0 6px; }
   <section class="new-banner" id="newBanner" hidden aria-labelledby="newBannerTitle">
     <div class="new-banner-head">
       <h2 id="newBannerTitle">New since your last visit</h2>
-      <button type="button" class="new-banner-close" id="newBannerClose" aria-label="Dismiss new events">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
+      <div class="new-banner-head-end">
+        <button type="button" class="new-banner-all" id="newBannerAll">Show all changes</button>
+        <button type="button" class="new-banner-close" id="newBannerClose" aria-label="Dismiss new events">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
     </div>
     <ul class="new-list" id="newList"></ul>
-    <button type="button" class="new-banner-all" id="newBannerAll">Show all changes</button>
   </section>
 
   <dialog class="history" id="historyDialog" aria-labelledby="historyTitle">
@@ -1095,12 +1103,21 @@ document.getElementById("calendarCopy").addEventListener("click", async (e) => {
 
 // "New" banner: newly added or reopened-spot events since last load, shown under the heading
 // until dismissed with its "x". Shares NEW_CHANGES with the clock icon's dot and history dialog.
+// "Sun, Dec 6 & Mon, Dec 7 · 5 PM": no year, and the time is shown once when every session shares it.
+const fmtDayShort = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric" });
+const shortTime = (d) => fmtTime.format(d).replace(":00", "");
+function newBannerWhen(entries) {
+  const starts = entries.map((x) => new Date(x.start));
+  const times = new Set(starts.map(shortTime));
+  if (times.size === 1) return `${starts.map((d) => fmtDayShort.format(d)).join(" & ")} · ${[...times][0]}`;
+  return starts.map((d) => `${fmtDayShort.format(d)}, ${shortTime(d)}`).join(" & ");
+}
 function newBannerItem(e) {
   // A removed session, or one outside the current fetch window, has no live event to jump to.
   const match = EVENT_BY_SESSION_ID.get(e.class_id);
   const inner = `<span class="new-type">${esc(changeLabel(e))}</span>
     <span class="new-name">${esc(e.name)}</span>
-    ${e.entries.map((x) => `<span class="new-meta">${fmtDay.format(new Date(x.start))}, ${fmtTime.format(new Date(x.start))}</span>`).join("")}`;
+    <span class="new-meta">${newBannerWhen(e.entries)}</span>`;
   return `<li class="new-item">${match
     ? `<button type="button" class="new-link" data-event-id="${match.id}">${inner}</button>`
     : `<div class="new-link">${inner}</div>`}</li>`;

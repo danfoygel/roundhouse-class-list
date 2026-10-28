@@ -429,7 +429,7 @@ h1 {
 .new-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 .new-type { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pine); }
 .new-name { display: block; font-weight: 600; color: var(--ink); margin: 2px 0 0; }
-.new-meta { color: var(--muted); font-size: 13px; margin: 2px 0 0; }
+.new-meta { display: block; color: var(--muted); font-size: 13px; margin: 2px 0 0; }
 .new-banner-all { all: unset; display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--pine); cursor: pointer; }
 .new-banner-all:hover { text-decoration: underline; }
 .new-banner-all:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
@@ -977,6 +977,29 @@ function historyMeta(e) {
   if (e.type === "instructor_changed") return `${esc(d.was_instructor)} → ${esc(d.instructor)}`;
   return "";
 }
+// Entries are logged per session, but a multi-session course is one listing on the page, so
+// sessions of the same event that changed in the same way at the same fetch are shown as one item.
+// Entries with no live event (e.g. removed) can't be matched up, so they stay separate.
+function groupChanges(entries) {
+  const byKey = new Map();
+  return entries.reduce((out, e) => {
+    const match = EVENT_BY_SESSION_ID.get(e.class_id);
+    const key = match && [e.type, e.at, match.id, JSON.stringify(e.detail || null)].join("|");
+    let group = key && byKey.get(key);
+    if (!group) {
+      group = { ...e, entries: [] };
+      out.push(group);
+      if (key) byKey.set(key, group);
+    }
+    group.entries.push(e);
+    return out;
+  }, []);
+}
+const isNewChange = (g) => NEW_CHANGES.has(g.entries[0]);
+// "Sun, Dec 13, 2026, 5:00 PM" for each session, one per line (a time change shows only the day).
+function changeWhen(g) {
+  return g.entries.map((e) => `<p class="history-meta">${fmtDay.format(new Date(e.start))}${e.type === "time_changed" ? "" : `, ${fmtTime.format(new Date(e.start))}`}</p>`).join("");
+}
 function historyItem(e) {
   const meta = historyMeta(e);
   // A removed session, or one outside the current fetch window, has no live event to jump to.
@@ -984,20 +1007,20 @@ function historyItem(e) {
   const name = match
     ? `<button type="button" class="history-link" data-event-id="${match.id}">${esc(e.name)}</button>`
     : `<p class="history-name">${esc(e.name)}</p>`;
-  return `<li class="history-item${NEW_CHANGES.has(e) ? " is-new" : ""}">
+  return `<li class="history-item${isNewChange(e) ? " is-new" : ""}">
     <div class="history-top">
       <img class="history-icon" src="${ICONS[e.type]}" alt="" width="52" height="52">
       <div class="history-body">
         <div class="history-row">
           <div class="history-row-left">
             <span class="history-type">${esc(changeLabel(e))}</span>
-            ${NEW_CHANGES.has(e) ? `<span class="badge new-badge">New</span>` : ""}
+            ${isNewChange(e) ? `<span class="badge new-badge">New</span>` : ""}
             ${e.test ? `<span class="badge">Test data</span>` : ""}
           </div>
           <span class="history-logged">${fmtLogged.format(new Date(e.at))}</span>
         </div>
         ${name}
-        <p class="history-meta">${fmtDay.format(new Date(e.start))}${e.type === "time_changed" ? "" : `, ${fmtTime.format(new Date(e.start))}`}</p>
+        ${changeWhen(e)}
         ${meta ? `<p class="history-meta">${meta}</p>` : ""}
       </div>
     </div>
@@ -1031,14 +1054,15 @@ document.getElementById("historyList").addEventListener("click", (e) => {
 function renderHistory() {
   const list = document.getElementById("historyList");
   list.innerHTML = CHANGELOG.length
-    ? CHANGELOG.slice().reverse().map(historyItem).join("")
+    ? groupChanges(CHANGELOG).reverse().map(historyItem).join("")
     : `<li class="history-empty">No changes recorded yet.</li>`;
 }
 const historyDialog = document.getElementById("historyDialog");
 const historyToggle = document.getElementById("historyToggle");
-if (NEW_CHANGES.size) {
+const newChangeCount = groupChanges(CHANGELOG.filter((e) => NEW_CHANGES.has(e))).length;
+if (newChangeCount) {
   document.getElementById("updateDot").hidden = false;
-  const label = `View change history (${NEW_CHANGES.size} new)`;
+  const label = `View change history (${newChangeCount} new)`;
   historyToggle.setAttribute("aria-label", label);
   historyToggle.title = label;
 }
@@ -1076,14 +1100,15 @@ function newBannerItem(e) {
   const match = EVENT_BY_SESSION_ID.get(e.class_id);
   const inner = `<span class="new-type">${esc(changeLabel(e))}</span>
     <span class="new-name">${esc(e.name)}</span>
-    <span class="new-meta">${fmtDay.format(new Date(e.start))}, ${fmtTime.format(new Date(e.start))}</span>`;
+    ${e.entries.map((x) => `<span class="new-meta">${fmtDay.format(new Date(x.start))}, ${fmtTime.format(new Date(x.start))}</span>`).join("")}`;
   return `<li class="new-item">${match
     ? `<button type="button" class="new-link" data-event-id="${match.id}">${inner}</button>`
     : `<div class="new-link">${inner}</div>`}</li>`;
 }
 const newBanner = document.getElementById("newBanner");
-if (NEW_BANNER_CHANGES.length) {
-  document.getElementById("newList").innerHTML = NEW_BANNER_CHANGES.map(newBannerItem).join("");
+const newBannerGroups = groupChanges(NEW_BANNER_CHANGES);
+if (newBannerGroups.length) {
+  document.getElementById("newList").innerHTML = newBannerGroups.map(newBannerItem).join("");
   newBanner.hidden = false;
 }
 document.getElementById("newList").addEventListener("click", (e) => {

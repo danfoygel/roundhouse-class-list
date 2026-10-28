@@ -192,5 +192,21 @@
   "name": "Wood Shop 101",
   "start": "2026-12-15T01:00:00Z",
   "kind": "c"
+ },
+ {
+  "at": "2026-10-28T22:34:30Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4LM",
+  "name": "Intro to Gas Tungsten Arc Welding - Tig",
+  "start": "2026-12-15T17:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-10-28T22:34:30Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4MN",
+  "name": "Intro to Gas Tungsten Arc Welding - Tig",
+  "start": "2026-12-16T17:00:00Z",
+  "kind": "c"
  }
 ]

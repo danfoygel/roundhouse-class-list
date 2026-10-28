@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-10-28T12:52:58Z",
+  "fetched_at": "2026-10-28T17:34:30Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-10-28",
@@ -959,7 +959,7 @@
    "description": "<div><strong>Learn to Sew Pajama Pants -$90 </strong></div>\n<div>2 Days, 3 hours each</div>\n<div>&nbsp;</div>\n<div>Make a pair of one-of-a-kind cotton pajama pants to cozy up for the holidays or to gift! This 2-day class includes instruction in machine sewing, serging, pattern-making, basic construction, and design.\n<p>All materials are provided. We have a selection of fabric but you are welcome to bring your own (3 yards)!</p>\n<p>Beginner and Intermediate sewists are welcome.</p>\n</div>\n<div>\n<p>This is a project-based class, and does not count as a safety checkout to use the Roundhouse machines.</p>\n<p>Beginner, Intermediate.</p>\n<p>12 - Adult. Students under 15 must be accompanied by an adult.</p>\n<p>Maximum 6 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkAM",
    "capacity": 5,
-   "numberRegistered": 4,
+   "numberRegistered": 5,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4fX",
    "startDateTime": "2026-11-10T01:00:00.0000000Z",
    "duration": 180,
@@ -984,8 +984,8 @@
      }
     }
    },
-   "bookable": true,
-   "waitlistable": false,
+   "bookable": false,
+   "waitlistable": true,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-10-28T07:00:00Z",
@@ -1359,7 +1359,7 @@
    "description": "<div><strong>Learn to Sew Pajama Pants -$90 </strong></div>\n<div>2 Days, 3 hours each</div>\n<div>&nbsp;</div>\n<div>Make a pair of one-of-a-kind cotton pajama pants to cozy up for the holidays or to gift! This 2-day class includes instruction in machine sewing, serging, pattern-making, basic construction, and design.\n<p>All materials are provided. We have a selection of fabric but you are welcome to bring your own (3 yards)!</p>\n<p>Beginner and Intermediate sewists are welcome.</p>\n</div>\n<div>\n<p>This is a project-based class, and does not count as a safety checkout to use the Roundhouse machines.</p>\n<p>Beginner, Intermediate.</p>\n<p>12 - Adult. Students under 15 must be accompanied by an adult.</p>\n<p>Maximum 6 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkAM",
    "capacity": 5,
-   "numberRegistered": 4,
+   "numberRegistered": 5,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4fX",
    "startDateTime": "2026-11-17T01:00:00.0000000Z",
    "duration": 180,
@@ -1384,8 +1384,8 @@
      }
     }
    },
-   "bookable": true,
-   "waitlistable": false,
+   "bookable": false,
+   "waitlistable": true,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-10-28T07:00:00Z",

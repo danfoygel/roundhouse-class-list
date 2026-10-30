@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-10-30T12:54:08Z",
+  "fetched_at": "2026-10-30T22:18:42Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-10-30",
@@ -504,56 +504,6 @@
  ],
  "classes": [
   {
-   "id": "cinst_113QRWkf6Krz16spiy",
-   "name": "Textiles Open Studio - Members Only",
-   "description": "<div><strong>Textiles Open Studio - Members Only</strong></div>\n<div>&nbsp;</div>\n<div>Come down to sew with our textiles guru, Judi Morales. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.\n<p>This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p>\n<p>You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p>\n<p>We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p>\n<p><br>Limited to two people per session. Free to members only.</p>\n<p>Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jiMa",
-   "capacity": 2,
-   "numberRegistered": 1,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4E6",
-   "startDateTime": "2026-10-30T21:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-10-31T00:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz16j3A3",
-     "displayLabel": "Judi Morales"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-10-30T07:00:00Z",
-   "bookingWindowEnd": "2026-10-30T21:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
    "id": "cinst_113QRWkf6Krz16sKpZ",
    "name": "Public Tour - Come Check Out the Space",
    "description": "<div>This is a great opportunity to check out the space and learn about the great equipment, classes and community that we offer at the Roundhouse. Most tours last about 20 minutes.</div>",
@@ -859,7 +809,7 @@
    "description": "<div><strong>Jewelry: Simple Beaded Necklaces and Bracelets - 1 Day - $65</strong></div>\n<div>&nbsp;</div>\n<div>Learn how to design and string your own beaded necklaces or bracelets with jewlery artist, Aurora from Snowflower Studios! Use natural gemstones, freshwater pearls, Japanese glass beads, and sterling silver or gold-filled findings - all materials included with lots of options for different materials and sizes. This is a fun, casual class where you will learn techniques to secure findings on nylon-coated flexible beading wire for professional-looking jewelry. Materials will be provided for each person to make two items. All skill levels are welcome.</div>\n<div>&nbsp;</div>\n<div>Max 10 students\n<p>Ages: 12 and above. Students under the age of 16 must attend with an adult also taking the course.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jjw8",
    "capacity": 10,
-   "numberRegistered": 7,
+   "numberRegistered": 8,
    "sessionTypeId": "ctype_113QRWkf6Krz16j5VL",
    "startDateTime": "2026-11-08T01:00:00.0000000Z",
    "duration": 180,
@@ -1209,7 +1159,7 @@
    "description": "<div><strong>Free KTG Reuse &amp; Repair Workshop: Electronics Repair </strong></div>\n<div><strong>&nbsp;</strong></div>\n<div>Join us for a community-powered Electronics Repair workshop, brought to you by Keep Truckee Green! In this free class,&nbsp;you will diagnose and troubleshoot small electronic items—everything from radios to toasters to lamps. Everyone is welcome - especially beginners. One item per person.</div>\n<div>&nbsp;</div>\n<div>This free, quarterly community class is all about learning, sharing, and fixing together. With guidance from experienced instructors, you will&nbsp;learn new skills and keep useful things out of the landfill!</div>\n<div>&nbsp;</div>\n<div>Come join the repair fun and keep the fixing spirit alive year-round!</div>\n<div>&nbsp;</div>\n<div>Open to all levels, especially beginners.&nbsp;\n<p>Ages 12 - Adult. Students under 15 must be accompanied by an adult.</p>\n<p>Space is limited. Participants must sign up online to reserve their space.</p>\n<p>We kindly ask that you only reserve a space if you plan to attend the class -- canceling or not attending decreases our ability to serve the community with this free resource.</p>\n<p>Sponsored by Keep Truckee Green, these FREE workshops will teach you how to repair your clothing instead of throwing it away. Together, we can reduce textile waste while learning new skills.<br>Let's mend, not end!</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkBN",
    "capacity": 6,
-   "numberRegistered": 3,
+   "numberRegistered": 4,
    "sessionTypeId": "ctype_113QRWkf6Krz16j5MC",
    "startDateTime": "2026-11-16T01:00:00.0000000Z",
    "duration": 180,
@@ -2699,7 +2649,7 @@
    "description": "<p><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p>\n<p>You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p>\n<p>This two-day class is an introduction to the fundamentals of TIG welding.</p>\n<p>Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p>\n<p>Ages 16 and over.</p>\n<p>4 students max</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkWh",
    "capacity": 6,
-   "numberRegistered": 0,
+   "numberRegistered": 1,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "startDateTime": "2026-12-15T17:00:00.0000000Z",
    "duration": 180,
@@ -2799,7 +2749,7 @@
    "description": "<p><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p>\n<p>You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p>\n<p>This two-day class is an introduction to the fundamentals of TIG welding.</p>\n<p>Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p>\n<p>Ages 16 and over.</p>\n<p>4 students max</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkWh",
    "capacity": 6,
-   "numberRegistered": 0,
+   "numberRegistered": 1,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "startDateTime": "2026-12-16T17:00:00.0000000Z",
    "duration": 180,

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-01T13:22:22Z",
+  "fetched_at": "2026-11-01T22:00:45Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-01",
@@ -659,7 +659,7 @@
    "description": "<div><strong>Encaustic Photo Art - 2 Days - $85</strong><br>Iphone Image to Encaustic Display\n<p>In this 2-day class, you will learn to blend iphone photography and encaustic techniques to create textured works of art.</p>\n<p>Our friend and encaustic artist, Nancy Holliday, will teach you how to prepare and edit your photos by using the Snapseed and Diana apps, then mount your photos on wood panels, applying layers of encaustic wax to enhance depth, color, and texture. You will create 3 mounted wooden/encaustic photos.</p>\n<p><br>This class encourages creative exploration for artists and photographers of all levels and provides a unique opportunity to transform your images into mixed-media art.</p>\n<p>All materials are included. Bring your creativity, and a smock and join us for this special class!</p>\n<p>8 students maximum.</p>\n<p>Ages 12 and over. Students under 15 must be accompanied by adult.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkLX",
    "capacity": 8,
-   "numberRegistered": 7,
+   "numberRegistered": 8,
    "sessionTypeId": "ctype_113QRWkf6Krz16j5QF",
    "startDateTime": "2026-11-07T01:00:00.0000000Z",
    "duration": 150,
@@ -684,8 +684,8 @@
      }
     }
    },
-   "bookable": true,
-   "waitlistable": false,
+   "bookable": false,
+   "waitlistable": true,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-01T07:00:00Z",
@@ -809,7 +809,7 @@
    "description": "<div><strong>Encaustic Photo Art - 2 Days - $85</strong><br>Iphone Image to Encaustic Display\n<p>In this 2-day class, you will learn to blend iphone photography and encaustic techniques to create textured works of art.</p>\n<p>Our friend and encaustic artist, Nancy Holliday, will teach you how to prepare and edit your photos by using the Snapseed and Diana apps, then mount your photos on wood panels, applying layers of encaustic wax to enhance depth, color, and texture. You will create 3 mounted wooden/encaustic photos.</p>\n<p><br>This class encourages creative exploration for artists and photographers of all levels and provides a unique opportunity to transform your images into mixed-media art.</p>\n<p>All materials are included. Bring your creativity, and a smock and join us for this special class!</p>\n<p>8 students maximum.</p>\n<p>Ages 12 and over. Students under 15 must be accompanied by adult.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkLX",
    "capacity": 8,
-   "numberRegistered": 7,
+   "numberRegistered": 8,
    "sessionTypeId": "ctype_113QRWkf6Krz16j5QF",
    "startDateTime": "2026-11-08T01:00:00.0000000Z",
    "duration": 150,
@@ -834,8 +834,8 @@
      }
     }
    },
-   "bookable": true,
-   "waitlistable": false,
+   "bookable": false,
+   "waitlistable": true,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-01T07:00:00Z",
@@ -1259,7 +1259,7 @@
    "description": "<div><strong>Metal Shop 101</strong></div>\n<div>2 days, 3 hours each - $145</div>\n<div><br>In this two-day class, students will learn proper shop safety, use, and consumable changes of the \"basic\" metal shop tooling. These tools include the Drill Press, Horizontal Band Saw, Belt and Disc Sander, Bench Grinder, and common hand tools.<br><br>A small project will be completed on the 2nd day to utilize the Metal Shop tooling.<br><br>This class does not count as a safety checkout to use the tools covered in class. Students will need to schedule a safety checkout after completing the class so they can begin using the metal shop as an active Roundhouse Member.</div>\n<div>\n<p>Ages 12 and over. Students 15 and under must be accompanied by adult also taking the class.</p>\n<p>Maximum 4 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkYj",
    "capacity": 4,
-   "numberRegistered": 1,
+   "numberRegistered": 2,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "startDateTime": "2026-11-16T01:00:00.0000000Z",
    "duration": 180,
@@ -1459,7 +1459,7 @@
    "description": "<div><strong>Metal Shop 101</strong></div>\n<div>2 days, 3 hours each - $145</div>\n<div><br>In this two-day class, students will learn proper shop safety, use, and consumable changes of the \"basic\" metal shop tooling. These tools include the Drill Press, Horizontal Band Saw, Belt and Disc Sander, Bench Grinder, and common hand tools.<br><br>A small project will be completed on the 2nd day to utilize the Metal Shop tooling.<br><br>This class does not count as a safety checkout to use the tools covered in class. Students will need to schedule a safety checkout after completing the class so they can begin using the metal shop as an active Roundhouse Member.</div>\n<div>\n<p>Ages 12 and over. Students 15 and under must be accompanied by adult also taking the class.</p>\n<p>Maximum 4 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkYj",
    "capacity": 4,
-   "numberRegistered": 1,
+   "numberRegistered": 2,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "startDateTime": "2026-11-17T01:00:00.0000000Z",
    "duration": 180,

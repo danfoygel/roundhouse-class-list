@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-01T22:00:45Z",
+  "fetched_at": "2026-11-02T05:59:43Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-01",
@@ -503,56 +503,6 @@
   }
  ],
  "classes": [
-  {
-   "id": "cinst_113QRWkf6Krz16svv4",
-   "name": "Crochet Open Studio - Free to Member, $45 Non-Members",
-   "description": "<div>Crochet Open Studio - Free to Member, $45 Non-Members</div>\n<div>&nbsp;</div>\n<div>Come down to crochet with our volunteer and crochet instructor, Jane Rudolph-Bloom. Bring your own projects and get mentored help or just enjoy some socialization while you crochet.</div>\n<p>This class is for those who have some crochet experience. If you are new to crochet, please take crochet 101 or a beginning level crochet class.</p>\n<p>First Sundays of every month from 5pm - 8pm.</p>\n<p>12 and over. Under 15 must be accompanied by an adult.</p>\n<p>Maximum 4 students</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
-   "classGroupId": "csch_113QRWkf6Krz16jjFT",
-   "capacity": 4,
-   "numberRegistered": 4,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4pg",
-   "startDateTime": "2026-11-02T01:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-02T04:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFb5F",
-     "displayLabel": "Jane Rudolph-Bloom"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": false,
-   "waitlistable": true,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-01T07:00:00Z",
-   "bookingWindowEnd": "2026-11-02T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
   {
    "id": "cinst_113QRWkf6Krz16sy6C",
    "name": "Metal Shop Mentor Hours - Members Only",

@@ -352,5 +352,37 @@
   "name": "Textiles Open Studio",
   "start": "2027-01-26T20:00:00Z",
   "kind": "m"
+ },
+ {
+  "at": "2026-11-03T23:22:38Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5QQ",
+  "name": "Learn to Sew: Zippered Pouch",
+  "start": "2026-11-17T17:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-03T23:22:38Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5SS",
+  "name": "Sewing 101 - Practical Sewing Fundamentals",
+  "start": "2026-12-01T17:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-03T23:22:38Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5TT",
+  "name": "Sewing 101 - Practical Sewing Fundamentals",
+  "start": "2026-12-02T17:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-03T23:22:38Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5RR",
+  "name": "KIDS! Learn to Sew: Sock Monkey",
+  "start": "2026-12-08T01:00:00Z",
+  "kind": "c"
  }
 ]

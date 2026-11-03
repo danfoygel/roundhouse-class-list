@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-03T14:11:56Z",
+  "fetched_at": "2026-11-03T23:22:38Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-03",
@@ -503,108 +503,6 @@
   }
  ],
  "classes": [
-  {
-   "id": "cinst_113QRWkf6Krz16t4UV",
-   "name": "Textiles Open Studio - Members Only",
-   "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
-   "classGroupId": "csch_113QRWkf6Krz16jkbn",
-   "capacity": 2,
-   "numberRegistered": 1,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4E6",
-   "classServiceId": "csvc_113QRWkf6Krz16jBN7",
-   "startDateTime": "2026-11-03T20:00:00.0000000Z",
-   "duration": 120,
-   "endDateTime": "2026-11-03T22:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFcz8",
-     "displayLabel": "Bella Brinkman"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-03T08:00:00Z",
-   "bookingWindowEnd": "2026-11-03T20:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16sy6C",
-   "name": "Metal Shop Mentor Hours - Members Only",
-   "description": "<div><strong>Metal Shop Mentor Hours - Members Only</strong></div>\n<div>&nbsp;</div>\n<div>Metal Shop Mentor Hours is a dedicated time for active Roundhouse members who have completed their Metal Shop safety checkout to work on projects with our expert Shop Technician, Chris Cumberworth. Get help with tools and techniques, troubleshoot your ideas, and build your confidence in the shop to work independently.</div>\n<div>&nbsp;</div>\n<div>Bring your project, materials, and questions! Please Slack message Chris ahead of time with your project so he can be prepared.</div>\n<div>&nbsp;</div>\n<div>Free to Members Only. You must book your spot in advance.</div>\n<div>&nbsp;</div>\n<div>Members must be active and have taken Metal Shop 101 or Welding classes, or have successfully passed a metal shop safety checkout.</div>\n<div>&nbsp;</div>\n<div>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.<br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n<p>&nbsp;</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jk3E",
-   "capacity": 1,
-   "numberRegistered": 0,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4KB",
-   "classServiceId": "csvc_113QRWkf6Krz16jD5o",
-   "startDateTime": "2026-11-03T22:00:00.0000000Z",
-   "duration": 60,
-   "endDateTime": "2026-11-03T23:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFcaj",
-     "displayLabel": "Chris Cumberworth"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-03T08:00:00Z",
-   "bookingWindowEnd": "2026-11-03T22:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
   {
    "id": "cinst_113QRWkf6Krz16spjz",
    "name": "Textiles Open Studio - Members Only",
@@ -1325,7 +1223,7 @@
    "description": "<div><strong>Metal Shop 101</strong></div>\n<div>2 days, 3 hours each - $145</div>\n<div><br>In this two-day class, students will learn proper shop safety, use, and consumable changes of the \"basic\" metal shop tooling. These tools include the Drill Press, Horizontal Band Saw, Belt and Disc Sander, Bench Grinder, and common hand tools.<br><br>A small project will be completed on the 2nd day to utilize the Metal Shop tooling.<br><br>This class does not count as a safety checkout to use the tools covered in class. Students will need to schedule a safety checkout after completing the class so they can begin using the metal shop as an active Roundhouse Member.</div>\n<div>\n<p>Ages 12 and over. Students 15 and under must be accompanied by adult also taking the class.</p>\n<p>Maximum 4 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkYj",
    "capacity": 4,
-   "numberRegistered": 2,
+   "numberRegistered": 3,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "classServiceId": "csvc_113QRWkf6Krz16j8XK",
    "startDateTime": "2026-11-16T01:00:00.0000000Z",
@@ -1529,7 +1427,7 @@
    "description": "<div><strong>Metal Shop 101</strong></div>\n<div>2 days, 3 hours each - $145</div>\n<div><br>In this two-day class, students will learn proper shop safety, use, and consumable changes of the \"basic\" metal shop tooling. These tools include the Drill Press, Horizontal Band Saw, Belt and Disc Sander, Bench Grinder, and common hand tools.<br><br>A small project will be completed on the 2nd day to utilize the Metal Shop tooling.<br><br>This class does not count as a safety checkout to use the tools covered in class. Students will need to schedule a safety checkout after completing the class so they can begin using the metal shop as an active Roundhouse Member.</div>\n<div>\n<p>Ages 12 and over. Students 15 and under must be accompanied by adult also taking the class.</p>\n<p>Maximum 4 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkYj",
    "capacity": 4,
-   "numberRegistered": 2,
+   "numberRegistered": 3,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "classServiceId": "csvc_113QRWkf6Krz16j8XK",
    "startDateTime": "2026-11-17T01:00:00.0000000Z",
@@ -1616,6 +1514,57 @@
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],
    "type": "Enrollment",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
+   "id": "cinst_113QRWkf6Krz16t5QQ",
+   "name": "Learn to Sew: Zippered Pouch - 1 Day - $55",
+   "description": "<p style=\"text-align: left\"><strong>Learn to Sew: Zippered Pouch - $55</strong></p><p style=\"text-align: left\"><strong>1 Day, 3 Hours</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Make a zippered pouch out of our huge selection of printed cotton fabrics. Class includes instruction in machine sewing, serging, pattern-making, basic construction, design, and zipper installation.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">All materials are provided. Beginner and Intermediate sewist welcome.</p><p style=\"text-align: left\">This is a project-based class and does not count as a safety checkout to use the sewing machines as a member.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">Ages: 12 and over. Students under 15 must be accompanied by an adult.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">Max 6 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\"><br>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>",
+   "classGroupId": "csch_113QRWkf6Krz16jkco",
+   "capacity": 6,
+   "numberRegistered": 0,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j4PF",
+   "classServiceId": "csvc_113QRWkf6Krz16j9PA",
+   "startDateTime": "2026-11-17T17:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-11-17T20:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFcz8",
+     "displayLabel": "Bella Brinkman"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-03T08:00:00Z",
+   "bookingWindowEnd": "2026-11-17T17:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Class",
    "pickASpotEnabled": false,
    "room": null,
    "roomLayout": null,
@@ -2335,6 +2284,57 @@
    "restrictedToMemberships": []
   },
   {
+   "id": "cinst_113QRWkf6Krz16t5SS",
+   "name": "Sewing 101 - Practical Sewing Fundamentals - 2 Days -$145",
+   "description": "<div><strong>Sewing 101 - Practical Sewing Fundamentals -&nbsp;$145</strong></div>\n<div>2 Days - 3 Hours each day</div>\n<div>&nbsp;</div>\n<div>The broad goal of this course is to help students cultivate the skills, knowledge, and attitudes necessary to start and troubleshoot basic sewing projects. Students are not expected to have any prior textile experience and the information should be a helpful refresher for anyone looking to get back into the textile shop. <br><br>This course is designed to give students hands-on experience with the home sewing machine and work on a project.</div>\n<div>&nbsp;</div>\n<div>At the end of the course, students will be able to:</div>\n<p>-Learn, have fun, and be inspired in the textile shop while also managing expectations on new projects<br>-Be a steward of the textile shop<br>-Identify different types of fabrics and their appropriateness for different projects<br>-Perform basic hand sewing techniques / repairs including measuring, cutting, pinning, and stitching fabric<br>-Set up and operate a home sewing machine<br>-Plan and carry out a sewing project<br><br></p>\n<p>This class counts as a safety checkout for members to use the Roundhouse Heavy Duty Singer machines.</p>\n<p>Max 4 students</p>\n<p>Ages: 12 and above. Students under the age of 16 must attend with an adult also taking the course.&nbsp;</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
+   "classGroupId": "csch_113QRWkf6Krz16jkeq",
+   "capacity": 4,
+   "numberRegistered": 0,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j4fX",
+   "classServiceId": "csvc_113QRWkf6Krz16j8ym",
+   "startDateTime": "2026-12-01T17:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-01T20:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFcz8",
+     "displayLabel": "Bella Brinkman"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-03T08:00:00Z",
+   "bookingWindowEnd": "2026-12-01T17:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Enrollment",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
    "id": "cinst_113QRWkf6Krz16t4YZ",
    "name": "Textiles Open Studio - Members Only",
    "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
@@ -2427,6 +2427,57 @@
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],
    "type": "Class",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
+   "id": "cinst_113QRWkf6Krz16t5TT",
+   "name": "Sewing 101 - Practical Sewing Fundamentals - 2 Days -$145",
+   "description": "<div><strong>Sewing 101 - Practical Sewing Fundamentals -&nbsp;$145</strong></div>\n<div>2 Days - 3 Hours each day</div>\n<div>&nbsp;</div>\n<div>The broad goal of this course is to help students cultivate the skills, knowledge, and attitudes necessary to start and troubleshoot basic sewing projects. Students are not expected to have any prior textile experience and the information should be a helpful refresher for anyone looking to get back into the textile shop. <br><br>This course is designed to give students hands-on experience with the home sewing machine and work on a project.</div>\n<div>&nbsp;</div>\n<div>At the end of the course, students will be able to:</div>\n<p>-Learn, have fun, and be inspired in the textile shop while also managing expectations on new projects<br>-Be a steward of the textile shop<br>-Identify different types of fabrics and their appropriateness for different projects<br>-Perform basic hand sewing techniques / repairs including measuring, cutting, pinning, and stitching fabric<br>-Set up and operate a home sewing machine<br>-Plan and carry out a sewing project<br><br></p>\n<p>This class counts as a safety checkout for members to use the Roundhouse Heavy Duty Singer machines.</p>\n<p>Max 4 students</p>\n<p>Ages: 12 and above. Students under the age of 16 must attend with an adult also taking the course.&nbsp;</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
+   "classGroupId": "csch_113QRWkf6Krz16jkeq",
+   "capacity": 4,
+   "numberRegistered": 0,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j4fX",
+   "classServiceId": "csvc_113QRWkf6Krz16j8ym",
+   "startDateTime": "2026-12-02T17:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-02T20:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFcz8",
+     "displayLabel": "Bella Brinkman"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-03T08:00:00Z",
+   "bookingWindowEnd": "2026-12-02T17:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Enrollment",
    "pickASpotEnabled": false,
    "room": null,
    "roomLayout": null,
@@ -2789,6 +2840,57 @@
    "restrictedToMemberships": []
   },
   {
+   "id": "cinst_113QRWkf6Krz16t5RR",
+   "name": "KIDS! Learn to Sew: Sock Monkey",
+   "description": "<div>Kids will embark on a creative journey into the world of sewing while crafting their very own sock monkey! Our Kids Camp leader, sewing instructor, and amazing volunteer, Judi, will guide young learners through each step of the process, ensuring they develop essential sewing skills and ignite their imaginations.</div>\n<p>Ages 5 - 12. Kids 7 and under must be accompanied by an adult.</p>\n<p><br>Maximum 6 students.</p>\n<p><br>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
+   "classGroupId": "csch_113QRWkf6Krz16jkdp",
+   "capacity": 6,
+   "numberRegistered": 0,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j4PF",
+   "classServiceId": "csvc_113QRWkf6Krz16jA3p",
+   "startDateTime": "2026-12-08T01:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-08T04:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFcz8",
+     "displayLabel": "Bella Brinkman"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-03T08:00:00Z",
+   "bookingWindowEnd": "2026-12-08T01:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Class",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
    "id": "cinst_113QRWkf6Krz16t4Za",
    "name": "Textiles Open Studio - Members Only",
    "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
@@ -2998,7 +3100,7 @@
    "description": "<div><strong>Wood Shop 101&nbsp;$145</strong></div>\n<div>2 Days - 3.5 hours each</div>\n<div>&nbsp;</div>\n<div>Wood Shop 101 is designed to help you cultivate the skills, knowledge, and attitudes necessary to start and troubleshoot basic woodshop projects.</div>\n<div><br>You are not expected to have any prior woodshop experience and the information should be a helpful refresher for anyone looking to get back into the woodshop. This course is designed to give you hands-on experience with the woodshop power tools and machines and work on a project.&nbsp;\n<p>During the 2nd session of this course, you will demonstrate all that you have learned by creating a wood carry tote that can be used for beverages, gardening, etc.</p>\n<p>During this 2-session course, you will learn how to use the following tools:</p>\n<ul>\n<li>Sawstop Table Saw</li>\n<li>Miter Saw</li>\n<li>Bandsaw</li>\n<li>Basic hand tools</li>\n<li>Belt / Disc Sander — Orbital sander (optional)</li>\n<li>Drill Press</li>\n</ul>\n<p>This course counts as a safety checkout to use these tools as a member.</p>\n<p>You will also learn how to:</p>\n<p>-Practice strategies for safe making<br>-Be a steward of the woodshop<br>-Identify basic characteristics of wood (hardness, grain, cost, etc.) and their use in different projects<br>-Identity appropriate woodshop tools for different needs (prep, dimensioning)<br>-Summarize and use the design process to create a basic project<br>-Use appropriate tools of the woodshop to prepare, clean, and dimension wood for a project<br>-Fasten or connect multiple pieces of wood<br>-Clean up thoroughly after using the woodshop</p>\n<p>Two sessions, 7 hours of instruction.</p>\n<p>Ages 12 and above. All youth under the age of 16 must be chaperoned by an adult also taking the class.&nbsp;<br>Maximum 4 students.</p>\n<p>No previous woodworking skills are necessary.<br><br>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkVg",
    "capacity": 4,
-   "numberRegistered": 3,
+   "numberRegistered": 4,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4G8",
    "classServiceId": "csvc_113QRWkf6Krz16j8vi",
    "startDateTime": "2026-12-14T01:00:00.0000000Z",
@@ -3024,8 +3126,8 @@
      }
     }
    },
-   "bookable": true,
-   "waitlistable": false,
+   "bookable": false,
+   "waitlistable": true,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-03T08:00:00Z",
@@ -3100,7 +3202,7 @@
    "description": "<div><strong>Wood Shop 101&nbsp;$145</strong></div>\n<div>2 Days - 3.5 hours each</div>\n<div>&nbsp;</div>\n<div>Wood Shop 101 is designed to help you cultivate the skills, knowledge, and attitudes necessary to start and troubleshoot basic woodshop projects.</div>\n<div><br>You are not expected to have any prior woodshop experience and the information should be a helpful refresher for anyone looking to get back into the woodshop. This course is designed to give you hands-on experience with the woodshop power tools and machines and work on a project.&nbsp;\n<p>During the 2nd session of this course, you will demonstrate all that you have learned by creating a wood carry tote that can be used for beverages, gardening, etc.</p>\n<p>During this 2-session course, you will learn how to use the following tools:</p>\n<ul>\n<li>Sawstop Table Saw</li>\n<li>Miter Saw</li>\n<li>Bandsaw</li>\n<li>Basic hand tools</li>\n<li>Belt / Disc Sander — Orbital sander (optional)</li>\n<li>Drill Press</li>\n</ul>\n<p>This course counts as a safety checkout to use these tools as a member.</p>\n<p>You will also learn how to:</p>\n<p>-Practice strategies for safe making<br>-Be a steward of the woodshop<br>-Identify basic characteristics of wood (hardness, grain, cost, etc.) and their use in different projects<br>-Identity appropriate woodshop tools for different needs (prep, dimensioning)<br>-Summarize and use the design process to create a basic project<br>-Use appropriate tools of the woodshop to prepare, clean, and dimension wood for a project<br>-Fasten or connect multiple pieces of wood<br>-Clean up thoroughly after using the woodshop</p>\n<p>Two sessions, 7 hours of instruction.</p>\n<p>Ages 12 and above. All youth under the age of 16 must be chaperoned by an adult also taking the class.&nbsp;<br>Maximum 4 students.</p>\n<p>No previous woodworking skills are necessary.<br><br>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkVg",
    "capacity": 4,
-   "numberRegistered": 3,
+   "numberRegistered": 4,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4G8",
    "classServiceId": "csvc_113QRWkf6Krz16j8vi",
    "startDateTime": "2026-12-15T01:00:00.0000000Z",
@@ -3126,8 +3228,8 @@
      }
     }
    },
-   "bookable": true,
-   "waitlistable": false,
+   "bookable": false,
+   "waitlistable": true,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-03T08:00:00Z",

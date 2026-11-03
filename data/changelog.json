@@ -232,5 +232,125 @@
   "name": "Metal Shop 101",
   "start": "2026-11-17T01:00:00Z",
   "kind": "c"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4UV",
+  "name": "Textiles Open Studio",
+  "start": "2026-11-03T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4VW",
+  "name": "Textiles Open Studio",
+  "start": "2026-11-10T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4WX",
+  "name": "Textiles Open Studio",
+  "start": "2026-11-17T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4ST",
+  "name": "3D Printing 101: Bambu Lab X1 & H2D",
+  "start": "2026-11-22T01:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4XY",
+  "name": "Textiles Open Studio",
+  "start": "2026-11-24T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4YZ",
+  "name": "Textiles Open Studio",
+  "start": "2026-12-01T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4Za",
+  "name": "Textiles Open Studio",
+  "start": "2026-12-08T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4TU",
+  "name": "3D Printing 101: Bambu Lab X1 & H2D",
+  "start": "2026-12-14T01:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4ab",
+  "name": "Textiles Open Studio",
+  "start": "2026-12-15T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4bc",
+  "name": "Textiles Open Studio",
+  "start": "2026-12-22T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4cd",
+  "name": "Textiles Open Studio",
+  "start": "2026-12-29T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4de",
+  "name": "Textiles Open Studio",
+  "start": "2027-01-05T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4ef",
+  "name": "Textiles Open Studio",
+  "start": "2027-01-12T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4fg",
+  "name": "Textiles Open Studio",
+  "start": "2027-01-19T20:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-03T00:57:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t4gh",
+  "name": "Textiles Open Studio",
+  "start": "2027-01-26T20:00:00Z",
+  "kind": "m"
  }
 ]

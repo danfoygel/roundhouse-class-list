@@ -1003,9 +1003,48 @@ function groupChanges(entries) {
     return out;
   }, []);
 }
+// "Sun, Dec 6 & Mon, Dec 7 · 5 PM": no year, and the time is shown once when every session shares it.
+const fmtDayShort = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric" });
+const shortTime = (d) => fmtTime.format(d).replace(":00", "");
+const fmtWeekday = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "long" });
+const fmtMonthDay = new Intl.DateTimeFormat("en-US", { timeZone: TZ, month: "short", day: "numeric" });
+// Each date of a recurring member session or public event is its own listing, so groupChanges
+// can't join them; here same-named ones that changed the same way are folded into one line.
+// Classes stay one line per offering, since each date there is a separate signup. The history
+// dialog passes `sameFetch` so only changes logged together are joined.
+function mergeRecurring(groups, { sameFetch = false } = {}) {
+  const byKey = new Map();
+  return groups.reduce((out, g) => {
+    const kind = g.kind || EVENT_BY_SESSION_ID.get(g.class_id)?.kind;
+    const key = kind && kind !== "c" && [g.type, kind, g.name, JSON.stringify(g.detail || null), sameFetch ? g.at : ""].join("|");
+    const prev = key && byKey.get(key);
+    if (prev) {
+      prev.entries.push(...g.entries);
+      prev.recurring = true;
+    } else {
+      out.push({ ...g, entries: [...g.entries] });
+      if (key) byKey.set(key, out[out.length - 1]);
+    }
+    return out;
+  }, []).map((g) => ({ ...g, entries: g.entries.sort((a, b) => Date.parse(a.start) - Date.parse(b.start)) }));
+}
+function newBannerWhen(entries) {
+  const starts = entries.map((x) => new Date(x.start));
+  const times = new Set(starts.map(shortTime));
+  // Three or more dates: "Tuesdays, Nov 3 – Jan 26 · 12 PM (13 sessions)".
+  if (starts.length > 2) {
+    const days = new Set(starts.map((d) => fmtWeekday.format(d)));
+    const range = `${fmtMonthDay.format(starts[0])} – ${fmtMonthDay.format(starts[starts.length - 1])}`;
+    const when = days.size === 1 ? `${[...days][0]}s, ${range}` : range;
+    return `${when}${times.size === 1 ? ` · ${[...times][0]}` : ""} (${starts.length} sessions)`;
+  }
+  if (times.size === 1) return `${starts.map((d) => fmtDayShort.format(d)).join(" & ")} · ${[...times][0]}`;
+  return starts.map((d) => `${fmtDayShort.format(d)}, ${shortTime(d)}`).join(" & ");
+}
 const isNewChange = (g) => NEW_CHANGES.has(g.entries[0]);
 // "Sun, Dec 13, 2026, 5:00 PM" for each session, one per line (a time change shows only the day).
 function changeWhen(g) {
+  if (g.recurring) return `<p class="history-meta">${newBannerWhen(g.entries)}</p>`;
   return g.entries.map((e) => `<p class="history-meta">${fmtDay.format(new Date(e.start))}${e.type === "time_changed" ? "" : `, ${fmtTime.format(new Date(e.start))}`}</p>`).join("");
 }
 function historyItem(e) {
@@ -1062,12 +1101,12 @@ document.getElementById("historyList").addEventListener("click", (e) => {
 function renderHistory() {
   const list = document.getElementById("historyList");
   list.innerHTML = CHANGELOG.length
-    ? groupChanges(CHANGELOG).reverse().map(historyItem).join("")
+    ? mergeRecurring(groupChanges(CHANGELOG), { sameFetch: true }).reverse().map(historyItem).join("")
     : `<li class="history-empty">No changes recorded yet.</li>`;
 }
 const historyDialog = document.getElementById("historyDialog");
 const historyToggle = document.getElementById("historyToggle");
-const newChangeCount = groupChanges(CHANGELOG.filter((e) => NEW_CHANGES.has(e))).length;
+const newChangeCount = mergeRecurring(groupChanges(CHANGELOG.filter((e) => NEW_CHANGES.has(e))), { sameFetch: true }).length;
 if (newChangeCount) {
   document.getElementById("updateDot").hidden = false;
   const label = `View change history (${newChangeCount} new)`;
@@ -1103,42 +1142,6 @@ document.getElementById("calendarCopy").addEventListener("click", async (e) => {
 
 // "New" banner: newly added or reopened-spot events since last load, shown under the heading
 // until dismissed with its "x". Shares NEW_CHANGES with the clock icon's dot and history dialog.
-// "Sun, Dec 6 & Mon, Dec 7 · 5 PM": no year, and the time is shown once when every session shares it.
-const fmtDayShort = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric" });
-const shortTime = (d) => fmtTime.format(d).replace(":00", "");
-const fmtWeekday = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "long" });
-const fmtMonthDay = new Intl.DateTimeFormat("en-US", { timeZone: TZ, month: "short", day: "numeric" });
-// Each date of a recurring member session or public event is its own listing, so groupChanges
-// can't join them; here same-named ones that changed the same way are folded into one banner line.
-// Classes stay one line per offering, since each date there is a separate signup.
-function mergeRecurring(groups) {
-  const byKey = new Map();
-  return groups.reduce((out, g) => {
-    const kind = g.kind || EVENT_BY_SESSION_ID.get(g.class_id)?.kind;
-    const key = kind && kind !== "c" && [g.type, kind, g.name].join("|");
-    const prev = key && byKey.get(key);
-    if (prev) {
-      prev.entries.push(...g.entries);
-    } else {
-      out.push({ ...g, entries: [...g.entries] });
-      if (key) byKey.set(key, out[out.length - 1]);
-    }
-    return out;
-  }, []).map((g) => ({ ...g, entries: g.entries.sort((a, b) => Date.parse(a.start) - Date.parse(b.start)) }));
-}
-function newBannerWhen(entries) {
-  const starts = entries.map((x) => new Date(x.start));
-  const times = new Set(starts.map(shortTime));
-  // Three or more dates: "Tuesdays, Nov 3 – Jan 26 · 12 PM (13 sessions)".
-  if (starts.length > 2) {
-    const days = new Set(starts.map((d) => fmtWeekday.format(d)));
-    const range = `${fmtMonthDay.format(starts[0])} – ${fmtMonthDay.format(starts[starts.length - 1])}`;
-    const when = days.size === 1 ? `${[...days][0]}s, ${range}` : range;
-    return `${when}${times.size === 1 ? ` · ${[...times][0]}` : ""} (${starts.length} sessions)`;
-  }
-  if (times.size === 1) return `${starts.map((d) => fmtDayShort.format(d)).join(" & ")} · ${[...times][0]}`;
-  return starts.map((d) => `${fmtDayShort.format(d)}, ${shortTime(d)}`).join(" & ");
-}
 function newBannerItem(e) {
   // A removed session, or one outside the current fetch window, has no live event to jump to.
   const match = EVENT_BY_SESSION_ID.get(e.class_id);

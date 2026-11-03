@@ -1106,9 +1106,36 @@ document.getElementById("calendarCopy").addEventListener("click", async (e) => {
 // "Sun, Dec 6 & Mon, Dec 7 · 5 PM": no year, and the time is shown once when every session shares it.
 const fmtDayShort = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric" });
 const shortTime = (d) => fmtTime.format(d).replace(":00", "");
+const fmtWeekday = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "long" });
+const fmtMonthDay = new Intl.DateTimeFormat("en-US", { timeZone: TZ, month: "short", day: "numeric" });
+// Each date of a recurring member session or public event is its own listing, so groupChanges
+// can't join them; here same-named ones that changed the same way are folded into one banner line.
+// Classes stay one line per offering, since each date there is a separate signup.
+function mergeRecurring(groups) {
+  const byKey = new Map();
+  return groups.reduce((out, g) => {
+    const kind = g.kind || EVENT_BY_SESSION_ID.get(g.class_id)?.kind;
+    const key = kind && kind !== "c" && [g.type, kind, g.name].join("|");
+    const prev = key && byKey.get(key);
+    if (prev) {
+      prev.entries.push(...g.entries);
+    } else {
+      out.push({ ...g, entries: [...g.entries] });
+      if (key) byKey.set(key, out[out.length - 1]);
+    }
+    return out;
+  }, []).map((g) => ({ ...g, entries: g.entries.sort((a, b) => Date.parse(a.start) - Date.parse(b.start)) }));
+}
 function newBannerWhen(entries) {
   const starts = entries.map((x) => new Date(x.start));
   const times = new Set(starts.map(shortTime));
+  // Three or more dates: "Tuesdays, Nov 3 – Jan 26 · 12 PM (13 sessions)".
+  if (starts.length > 2) {
+    const days = new Set(starts.map((d) => fmtWeekday.format(d)));
+    const range = `${fmtMonthDay.format(starts[0])} – ${fmtMonthDay.format(starts[starts.length - 1])}`;
+    const when = days.size === 1 ? `${[...days][0]}s, ${range}` : range;
+    return `${when}${times.size === 1 ? ` · ${[...times][0]}` : ""} (${starts.length} sessions)`;
+  }
   if (times.size === 1) return `${starts.map((d) => fmtDayShort.format(d)).join(" & ")} · ${[...times][0]}`;
   return starts.map((d) => `${fmtDayShort.format(d)}, ${shortTime(d)}`).join(" & ");
 }
@@ -1123,7 +1150,7 @@ function newBannerItem(e) {
     : `<div class="new-link">${inner}</div>`}</li>`;
 }
 const newBanner = document.getElementById("newBanner");
-const newBannerGroups = groupChanges(NEW_BANNER_CHANGES);
+const newBannerGroups = mergeRecurring(groupChanges(NEW_BANNER_CHANGES));
 if (newBannerGroups.length) {
   document.getElementById("newList").innerHTML = newBannerGroups.map(newBannerItem).join("");
   newBanner.hidden = false;

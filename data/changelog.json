@@ -384,5 +384,21 @@
   "name": "KIDS! Learn to Sew: Sock Monkey",
   "start": "2026-12-08T01:00:00Z",
   "kind": "c"
+ },
+ {
+  "at": "2026-11-04T19:44:41Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5UU",
+  "name": "Trial Class (VOLUNTEER ONLY) - Mosaic Stained Glass Suncatcher",
+  "start": "2026-11-16T01:00:00Z",
+  "kind": "p"
+ },
+ {
+  "at": "2026-11-04T19:44:41Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5VV",
+  "name": "Trial Class (VOLUNTEER ONLY) - Mosaic Stained Glass Suncatcher",
+  "start": "2026-11-17T01:00:00Z",
+  "kind": "p"
  }
 ]

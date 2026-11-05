@@ -400,5 +400,13 @@
   "name": "Trial Class (VOLUNTEER ONLY) - Mosaic Stained Glass Suncatcher",
   "start": "2026-11-17T01:00:00Z",
   "kind": "p"
+ },
+ {
+  "at": "2026-11-05T19:56:10Z",
+  "type": "fully_booked",
+  "class_id": "cinst_113QRWkf6Krz16t4NP",
+  "name": "Intro to Serging: Arm or Leg Warmers",
+  "start": "2026-11-14T01:00:00Z",
+  "kind": "c"
  }
 ]

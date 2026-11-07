@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-07T12:59:00Z",
+  "fetched_at": "2026-11-07T21:49:18Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-07",
@@ -503,58 +503,6 @@
   }
  ],
  "classes": [
-  {
-   "id": "cinst_113QRWkf6Krz16sKqa",
-   "name": "Public Tour - Come Check Out the Space",
-   "description": "<div>This is a great opportunity to check out the space and learn about the great equipment, classes and community that we offer at the Roundhouse. Most tours last about 20 minutes.</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jh4J",
-   "capacity": 10,
-   "numberRegistered": 4,
-   "availableOnlineBookings": 6,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j44w",
-   "classServiceId": "csvc_113QRWkf6Krz16j5C3",
-   "startDateTime": "2026-11-07T21:00:00.0000000Z",
-   "duration": 30,
-   "endDateTime": "2026-11-07T21:30:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFbcn",
-     "displayLabel": "Volunteer Volunteer"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-07T08:00:00Z",
-   "bookingWindowEnd": "2026-11-07T21:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
   {
    "id": "cinst_113QRWkf6Krz16sxqx",
    "name": "Jewelry: Beaded Necklaces and Bracelets - 1 Day - $65",

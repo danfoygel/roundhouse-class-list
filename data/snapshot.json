@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-06T19:23:32Z",
+  "fetched_at": "2026-11-07T05:56:48Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-06",
@@ -504,117 +504,13 @@
  ],
  "classes": [
   {
-   "id": "cinst_113QRWkf6Krz16spjz",
-   "name": "Textiles Open Studio - Members Only",
-   "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
-   "classGroupId": "csch_113QRWkf6Krz16jiMa",
-   "capacity": 2,
-   "numberRegistered": 2,
-   "availableOnlineBookings": 0,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4E6",
-   "classServiceId": "csvc_113QRWkf6Krz16jBN7",
-   "startDateTime": "2026-11-06T22:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-07T01:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz16j3A3",
-     "displayLabel": "Judi Morales"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": false,
-   "waitlistable": true,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-06T08:00:00Z",
-   "bookingWindowEnd": "2026-11-06T22:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16t445",
-   "name": "Encaustic Photo Art - 2 Days - $85",
-   "description": "<div><strong>Encaustic Photo Art - 2 Days - $85</strong><br>Iphone Image to Encaustic Display\n<p>In this 2-day class, you will learn to blend iphone photography and encaustic techniques to create textured works of art.</p>\n<p>Our friend and encaustic artist, Nancy Holliday, will teach you how to prepare and edit your photos by using the Snapseed and Diana apps, then mount your photos on wood panels, applying layers of encaustic wax to enhance depth, color, and texture. You will create 3 mounted wooden/encaustic photos.</p>\n<p><br>This class encourages creative exploration for artists and photographers of all levels and provides a unique opportunity to transform your images into mixed-media art.</p>\n<p>All materials are included. Bring your creativity, and a smock and join us for this special class!</p>\n<p>8 students maximum.</p>\n<p>Ages 12 and over. Students under 15 must be accompanied by adult.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkLX",
-   "capacity": 8,
-   "numberRegistered": 7,
-   "availableOnlineBookings": 1,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j5QF",
-   "classServiceId": "csvc_113QRWkf6Krz16jDBu",
-   "startDateTime": "2026-11-07T01:00:00.0000000Z",
-   "duration": 150,
-   "endDateTime": "2026-11-07T03:30:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFcBL",
-     "displayLabel": "Nancy Holliday"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-06T08:00:00Z",
-   "bookingWindowEnd": "2026-11-07T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Enrollment",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
    "id": "cinst_113QRWkf6Krz16sKqa",
    "name": "Public Tour - Come Check Out the Space",
    "description": "<div>This is a great opportunity to check out the space and learn about the great equipment, classes and community that we offer at the Roundhouse. Most tours last about 20 minutes.</div>",
    "classGroupId": "csch_113QRWkf6Krz16jh4J",
    "capacity": 10,
-   "numberRegistered": 3,
-   "availableOnlineBookings": 7,
+   "numberRegistered": 4,
+   "availableOnlineBookings": 6,
    "sessionTypeId": "ctype_113QRWkf6Krz16j44w",
    "classServiceId": "csvc_113QRWkf6Krz16j5C3",
    "startDateTime": "2026-11-07T21:00:00.0000000Z",

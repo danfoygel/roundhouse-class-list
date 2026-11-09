@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-08T22:03:35Z",
+  "fetched_at": "2026-11-09T06:24:38Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-08",
@@ -821,8 +821,8 @@
    "description": "<div>This is a great opportunity to check out the space and learn about the great equipment, classes and community that we offer at the Roundhouse. Most tours last about 20 minutes.</div>",
    "classGroupId": "csch_113QRWkf6Krz16jh4J",
    "capacity": 10,
-   "numberRegistered": 2,
-   "availableOnlineBookings": 8,
+   "numberRegistered": 3,
+   "availableOnlineBookings": 7,
    "sessionTypeId": "ctype_113QRWkf6Krz16j44w",
    "classServiceId": "csvc_113QRWkf6Krz16j5C3",
    "startDateTime": "2026-11-14T21:00:00.0000000Z",

@@ -408,5 +408,61 @@
   "name": "Intro to Serging: Arm or Leg Warmers",
   "start": "2026-11-14T01:00:00Z",
   "kind": "c"
+ },
+ {
+  "at": "2026-11-09T22:20:40Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5WW",
+  "name": "CNC Boss Laser Mentor Hours",
+  "start": "2026-12-10T01:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-09T22:20:40Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5YY",
+  "name": "CNC Boss Laser Mentor Hours",
+  "start": "2026-12-24T01:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-09T22:20:40Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5aa",
+  "name": "CNC Boss Laser Mentor Hours",
+  "start": "2027-01-07T01:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-09T22:20:40Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5bb",
+  "name": "CNC Boss Laser Mentor Hours",
+  "start": "2027-01-14T01:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-09T22:20:40Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5cc",
+  "name": "CNC Boss Laser Mentor Hours",
+  "start": "2027-01-21T01:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-09T22:20:40Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5dd",
+  "name": "CNC Boss Laser Mentor Hours",
+  "start": "2027-01-28T01:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-09T22:20:40Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5ee",
+  "name": "CNC Boss Laser Mentor Hours",
+  "start": "2027-02-04T01:00:00Z",
+  "kind": "m"
  }
 ]

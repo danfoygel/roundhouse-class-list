@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-09T22:20:40Z",
+  "fetched_at": "2026-11-10T07:16:09Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-09",
@@ -503,58 +503,6 @@
   }
  ],
  "classes": [
-  {
-   "id": "cinst_113QRWkf6Krz16t3jm",
-   "name": "Learn to Sew Pajama Pants - 2 Days -$90",
-   "description": "<div><strong>Learn to Sew Pajama Pants -$90 </strong></div>\n<div>2 Days, 3 hours each</div>\n<div>&nbsp;</div>\n<div>Make a pair of one-of-a-kind cotton pajama pants to cozy up for the holidays or to gift! This 2-day class includes instruction in machine sewing, serging, pattern-making, basic construction, and design.\n<p>All materials are provided. We have a selection of fabric but you are welcome to bring your own (3 yards)!</p>\n<p>Beginner and Intermediate sewists are welcome.</p>\n</div>\n<div>\n<p>This is a project-based class, and does not count as a safety checkout to use the Roundhouse machines.</p>\n<p>Beginner, Intermediate.</p>\n<p>12 - Adult. Students under 15 must be accompanied by an adult.</p>\n<p>Maximum 6 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkAM",
-   "capacity": 5,
-   "numberRegistered": 5,
-   "availableOnlineBookings": 0,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4fX",
-   "classServiceId": "csvc_113QRWkf6Krz16j9F2",
-   "startDateTime": "2026-11-10T01:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-10T04:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFcz8",
-     "displayLabel": "Bella Brinkman"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": false,
-   "waitlistable": true,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-09T08:00:00Z",
-   "bookingWindowEnd": "2026-11-10T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Enrollment",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
   {
    "id": "cinst_113QRWkf6Krz16t4VW",
    "name": "Textiles Open Studio - Members Only",
@@ -1133,7 +1081,7 @@
    "description": "<div><strong>Learn to Sew Pajama Pants -$90 </strong></div>\n<div>2 Days, 3 hours each</div>\n<div>&nbsp;</div>\n<div>Make a pair of one-of-a-kind cotton pajama pants to cozy up for the holidays or to gift! This 2-day class includes instruction in machine sewing, serging, pattern-making, basic construction, and design.\n<p>All materials are provided. We have a selection of fabric but you are welcome to bring your own (3 yards)!</p>\n<p>Beginner and Intermediate sewists are welcome.</p>\n</div>\n<div>\n<p>This is a project-based class, and does not count as a safety checkout to use the Roundhouse machines.</p>\n<p>Beginner, Intermediate.</p>\n<p>12 - Adult. Students under 15 must be accompanied by an adult.</p>\n<p>Maximum 6 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkAM",
    "capacity": 5,
-   "numberRegistered": 5,
+   "numberRegistered": 6,
    "availableOnlineBookings": 0,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4fX",
    "classServiceId": "csvc_113QRWkf6Krz16j9F2",
@@ -2371,19 +2319,24 @@
    "restrictedToMemberships": []
   },
   {
-   "id": "cinst_113QRWkf6Krz16spo3",
-   "name": "Textiles Open Studio - Members Only",
-   "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
-   "classGroupId": "csch_113QRWkf6Krz16jiMa",
-   "capacity": 2,
-   "numberRegistered": 0,
-   "availableOnlineBookings": 2,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4E6",
-   "classServiceId": "csvc_113QRWkf6Krz16jBN7",
-   "startDateTime": "2026-12-04T22:00:00.0000000Z",
+   "id": "cinst_113QRWkf6Krz16t5kk",
+   "name": "SHOP CLEAN UP - Volunteers Needed",
+   "description": "<p style=\"text-align: left\">We need your help to keep the Roundhouse a safe and clean resource for all of us to learn, create, and build together. Gather your friends and family for our Shop Clean Up on Wednesday, December 2nd at 4pm.</p><p style=\"text-align: left\"><br>Whether you can only stay for an hour or join us the whole time, we can use your helping hands. We'll have refreshments and pizza to fuel the evening for all volunteers. Shop Clean Ups are a great way to meet other creative and service-minded folks while making our makerspace an even better place!</p>",
+   "classGroupId": "csch_113QRWkf6Krz16jkht",
+   "capacity": 50,
+   "numberRegistered": 1,
+   "availableOnlineBookings": 49,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j3sk",
+   "classServiceId": "csvc_113QRWkf6Krz16j79y",
+   "startDateTime": "2026-12-03T00:00:00.0000000Z",
    "duration": 180,
-   "endDateTime": "2026-12-05T01:00:00.0000000Z",
-   "staff": null,
+   "endDateTime": "2026-12-03T03:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFbcn",
+     "displayLabel": "Volunteer Volunteer"
+    }
+   ],
    "location": {
     "id": "loc_113QRWkf6Krz16j2xr",
     "name": "Truckee Roundhouse",
@@ -2400,10 +2353,10 @@
    },
    "bookable": true,
    "waitlistable": false,
-   "cancelled": true,
+   "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-09T08:00:00Z",
-   "bookingWindowEnd": "2026-12-04T22:00:00Z",
+   "bookingWindowEnd": "2026-12-03T00:00:00Z",
    "earlyAccessOpensAt": null,
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],
@@ -3718,110 +3671,6 @@
    "restrictedToMemberships": []
   },
   {
-   "id": "cinst_113QRWkf6Krz16spr6",
-   "name": "Textiles Open Studio - Members Only",
-   "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
-   "classGroupId": "csch_113QRWkf6Krz16jiMa",
-   "capacity": 2,
-   "numberRegistered": 0,
-   "availableOnlineBookings": 2,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4E6",
-   "classServiceId": "csvc_113QRWkf6Krz16jBN7",
-   "startDateTime": "2026-12-25T22:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-12-26T01:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz16j3A3",
-     "displayLabel": "Judi Morales"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-09T08:00:00Z",
-   "bookingWindowEnd": "2026-12-25T22:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16sKxh",
-   "name": "Public Tour - Come Check Out the Space",
-   "description": "<div>This is a great opportunity to check out the space and learn about the great equipment, classes and community that we offer at the Roundhouse. Most tours last about 20 minutes.</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jh4J",
-   "capacity": 10,
-   "numberRegistered": 0,
-   "availableOnlineBookings": 10,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j44w",
-   "classServiceId": "csvc_113QRWkf6Krz16j5C3",
-   "startDateTime": "2026-12-26T21:00:00.0000000Z",
-   "duration": 30,
-   "endDateTime": "2026-12-26T21:30:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFbcn",
-     "displayLabel": "Volunteer Volunteer"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-09T08:00:00Z",
-   "bookingWindowEnd": "2026-12-26T21:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
    "id": "cinst_113QRWkf6Krz16t4cd",
    "name": "Textiles Open Studio - Members Only",
    "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
@@ -3912,58 +3761,6 @@
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-09T08:00:00Z",
    "bookingWindowEnd": "2026-12-29T22:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16sps7",
-   "name": "Textiles Open Studio - Members Only",
-   "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
-   "classGroupId": "csch_113QRWkf6Krz16jiMa",
-   "capacity": 2,
-   "numberRegistered": 0,
-   "availableOnlineBookings": 2,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4E6",
-   "classServiceId": "csvc_113QRWkf6Krz16jBN7",
-   "startDateTime": "2027-01-01T22:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2027-01-02T01:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz16j3A3",
-     "displayLabel": "Judi Morales"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-09T08:00:00Z",
-   "bookingWindowEnd": "2027-01-01T22:00:00Z",
    "earlyAccessOpensAt": null,
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],
@@ -4380,58 +4177,6 @@
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-09T08:00:00Z",
    "bookingWindowEnd": "2027-01-12T22:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16t5bb",
-   "name": "CNC Boss Laser Mentor Hours - Members Only",
-   "description": "<p style=\"text-align: left\"><strong>CNC Boss Laser Mentor Hours are to help active Roundhouse members who have taken our CNC Boss Laser 101 course and need guidance on a project.</strong></p><p style=\"text-align: left\"></p><p style=\"text-align: left\">Come with your design and materials ready to work with our expert volunteers for mentored help on Lightburn and Boss Laser machine operation. Free to members.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">Please only sign up if you need guidance on a project and for one hour and leave space for everyone.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\"><strong>You MUST have taken our Boss Laser 101 workshop and be an active Roundhouse Member in order to sign up for Mentor Hours.</strong></p>",
-   "classGroupId": "csch_113QRWkf6Krz16jkgs",
-   "capacity": 1,
-   "numberRegistered": 0,
-   "availableOnlineBookings": 1,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4SJ",
-   "classServiceId": "csvc_113QRWkf6Krz16jB7s",
-   "startDateTime": "2027-01-14T01:00:00.0000000Z",
-   "duration": 30,
-   "endDateTime": "2027-01-14T01:30:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFa1C",
-     "displayLabel": "James  Cole"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-09T08:00:00Z",
-   "bookingWindowEnd": "2027-01-14T01:00:00Z",
    "earlyAccessOpensAt": null,
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],
@@ -4900,58 +4645,6 @@
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-09T08:00:00Z",
    "bookingWindowEnd": "2027-01-26T22:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16t5dd",
-   "name": "CNC Boss Laser Mentor Hours - Members Only",
-   "description": "<p style=\"text-align: left\"><strong>CNC Boss Laser Mentor Hours are to help active Roundhouse members who have taken our CNC Boss Laser 101 course and need guidance on a project.</strong></p><p style=\"text-align: left\"></p><p style=\"text-align: left\">Come with your design and materials ready to work with our expert volunteers for mentored help on Lightburn and Boss Laser machine operation. Free to members.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">Please only sign up if you need guidance on a project and for one hour and leave space for everyone.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\"><strong>You MUST have taken our Boss Laser 101 workshop and be an active Roundhouse Member in order to sign up for Mentor Hours.</strong></p>",
-   "classGroupId": "csch_113QRWkf6Krz16jkgs",
-   "capacity": 1,
-   "numberRegistered": 0,
-   "availableOnlineBookings": 1,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4SJ",
-   "classServiceId": "csvc_113QRWkf6Krz16jB7s",
-   "startDateTime": "2027-01-28T01:00:00.0000000Z",
-   "duration": 30,
-   "endDateTime": "2027-01-28T01:30:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFa1C",
-     "displayLabel": "James  Cole"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-09T08:00:00Z",
-   "bookingWindowEnd": "2027-01-28T01:00:00Z",
    "earlyAccessOpensAt": null,
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],

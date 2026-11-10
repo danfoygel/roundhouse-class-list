@@ -464,5 +464,61 @@
   "name": "CNC Boss Laser Mentor Hours",
   "start": "2027-02-04T01:00:00Z",
   "kind": "m"
+ },
+ {
+  "at": "2026-11-10T07:16:09Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5kk",
+  "name": "SHOP CLEAN UP - Volunteers Needed",
+  "start": "2026-12-03T00:00:00Z",
+  "kind": "p"
+ },
+ {
+  "at": "2026-11-10T07:16:09Z",
+  "type": "removed",
+  "class_id": "cinst_113QRWkf6Krz16spo3",
+  "name": "Textiles Open Studio",
+  "start": "2026-12-04T22:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-10T07:16:09Z",
+  "type": "removed",
+  "class_id": "cinst_113QRWkf6Krz16spr6",
+  "name": "Textiles Open Studio",
+  "start": "2026-12-25T22:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-10T07:16:09Z",
+  "type": "removed",
+  "class_id": "cinst_113QRWkf6Krz16sKxh",
+  "name": "Public Tour - Come check out the space",
+  "start": "2026-12-26T21:00:00Z",
+  "kind": "p"
+ },
+ {
+  "at": "2026-11-10T07:16:09Z",
+  "type": "removed",
+  "class_id": "cinst_113QRWkf6Krz16sps7",
+  "name": "Textiles Open Studio",
+  "start": "2027-01-01T22:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-10T07:16:09Z",
+  "type": "removed",
+  "class_id": "cinst_113QRWkf6Krz16t5bb",
+  "name": "CNC Boss Laser Mentor Hours",
+  "start": "2027-01-14T01:00:00Z",
+  "kind": "m"
+ },
+ {
+  "at": "2026-11-10T07:16:09Z",
+  "type": "removed",
+  "class_id": "cinst_113QRWkf6Krz16t5dd",
+  "name": "CNC Boss Laser Mentor Hours",
+  "start": "2027-01-28T01:00:00Z",
+  "kind": "m"
  }
 ]

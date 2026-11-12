@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-11T14:29:40Z",
+  "fetched_at": "2026-11-12T00:42:06Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-11",
@@ -509,8 +509,8 @@
    "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jiMa",
    "capacity": 2,
-   "numberRegistered": 0,
-   "availableOnlineBookings": 2,
+   "numberRegistered": 1,
+   "availableOnlineBookings": 1,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4E6",
    "classServiceId": "csvc_113QRWkf6Krz16jBN7",
    "startDateTime": "2026-11-13T22:00:00.0000000Z",

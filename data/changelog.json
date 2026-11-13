@@ -520,5 +520,29 @@
   "name": "CNC Boss Laser Mentor Hours",
   "start": "2027-01-28T01:00:00Z",
   "kind": "m"
+ },
+ {
+  "at": "2026-11-13T19:40:22Z",
+  "type": "spot_opened",
+  "class_id": "cinst_113QRWkf6Krz16t4NP",
+  "name": "Intro to Serging: Arm or Leg Warmers",
+  "start": "2026-11-14T01:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-13T19:40:22Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5oo",
+  "name": "PRIVATE Wood Shop - No Public Sign Ups",
+  "start": "2026-11-14T01:00:00Z",
+  "kind": "p"
+ },
+ {
+  "at": "2026-11-13T19:40:22Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5pp",
+  "name": "PRIVATE Wood Shop - No Public Sign Ups",
+  "start": "2026-11-15T01:00:00Z",
+  "kind": "p"
  }
 ]

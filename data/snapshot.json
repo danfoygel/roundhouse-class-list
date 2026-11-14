@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-14T17:59:44Z",
+  "fetched_at": "2026-11-14T22:23:11Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-14",
@@ -504,58 +504,6 @@
  ],
  "classes": [
   {
-   "id": "cinst_113QRWkf6Krz16sKrb",
-   "name": "Public Tour - Come Check Out the Space",
-   "description": "<div>This is a great opportunity to check out the space and learn about the great equipment, classes and community that we offer at the Roundhouse. Most tours last about 20 minutes.</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jh4J",
-   "capacity": 10,
-   "numberRegistered": 4,
-   "availableOnlineBookings": 6,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j44w",
-   "classServiceId": "csvc_113QRWkf6Krz16j5C3",
-   "startDateTime": "2026-11-14T21:00:00.0000000Z",
-   "duration": 30,
-   "endDateTime": "2026-11-14T21:30:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFbcn",
-     "displayLabel": "Volunteer Volunteer"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-14T08:00:00Z",
-   "bookingWindowEnd": "2026-11-14T21:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
    "id": "cinst_113QRWkf6Krz16t5pp",
    "name": "PRIVATE Wood Shop- No Public Sign Ups",
    "description": "",
@@ -816,58 +764,6 @@
    "restrictedToMemberships": []
   },
   {
-   "id": "cinst_113QRWkf6Krz16t5UU",
-   "name": "Trial Class (VOLUNTEER ONLY) - Mosaic Stained Glass Suncatcher",
-   "description": "<div><strong>PRIVATE CLASS, VOLUNTEER TRIAL ONLY<br>Mosaic Stained Glass Suncatcher</strong></div>\n<div>November 15th &amp; 16th, 5pm - 8pm<br><br>Using the glass-on-glass mosaic technique, students will make a framed window suncatcher using top-of-the-line stained glass. They will learn proper attachment techniques, discover how to grout fragile pieces, and leave with a beautiful finished project and the skills to keep exploring mosaics.\n<p>Liz Paulson is a local mosaic artist in Kings Beach and has been exploring the world of mosaics for the past five years. She has her art in the North Tahoe Arts Center in Kings Beach and Tahoe City.</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkfr",
-   "capacity": 0,
-   "numberRegistered": 7,
-   "availableOnlineBookings": 0,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j5QF",
-   "classServiceId": "csvc_113QRWkf6Krz16jDEx",
-   "startDateTime": "2026-11-16T01:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-16T04:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFd6E",
-     "displayLabel": "Liz Lundholm"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": false,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-14T08:00:00Z",
-   "bookingWindowEnd": "2026-11-16T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Enrollment",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
    "id": "cinst_113QRWkf6Krz16sxv2",
    "name": "Wood Shop 101 - 2 Days - $145",
    "description": "<div><strong>Wood Shop 101&nbsp;$145</strong></div>\n<div>2 Days - 3.5 hours each</div>\n<div>&nbsp;</div>\n<div>Wood Shop 101 is designed to help you cultivate the skills, knowledge, and attitudes necessary to start and troubleshoot basic woodshop projects.</div>\n<div><br>You are not expected to have any prior woodshop experience and the information should be a helpful refresher for anyone looking to get back into the woodshop. This course is designed to give you hands-on experience with the woodshop power tools and machines and work on a project.&nbsp;\n<p>During the 2nd session of this course, you will demonstrate all that you have learned by creating a wood carry tote that can be used for beverages, gardening, etc.</p>\n<p>During this 2-session course, you will learn how to use the following tools:</p>\n<ul>\n<li>Sawstop Table Saw</li>\n<li>Miter Saw</li>\n<li>Bandsaw</li>\n<li>Basic hand tools</li>\n<li>Belt / Disc Sander — Orbital sander (optional)</li>\n<li>Drill Press</li>\n</ul>\n<p>This course counts as a safety checkout to use these tools as a member.</p>\n<p>You will also learn how to:</p>\n<p>-Practice strategies for safe making<br>-Be a steward of the woodshop<br>-Identify basic characteristics of wood (hardness, grain, cost, etc.) and their use in different projects<br>-Identity appropriate woodshop tools for different needs (prep, dimensioning)<br>-Summarize and use the design process to create a basic project<br>-Use appropriate tools of the woodshop to prepare, clean, and dimension wood for a project<br>-Fasten or connect multiple pieces of wood<br>-Clean up thoroughly after using the woodshop</p>\n<p>Two sessions, 7 hours of instruction.</p>\n<p>Ages 12 and above. All youth under the age of 16 must be chaperoned by an adult also taking the class.&nbsp;<br>Maximum 4 students.</p>\n<p>No previous woodworking skills are necessary.<br><br>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
@@ -1058,58 +954,6 @@
    },
    "bookable": false,
    "waitlistable": true,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-14T08:00:00Z",
-   "bookingWindowEnd": "2026-11-17T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Enrollment",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16t5VV",
-   "name": "Trial Class (VOLUNTEER ONLY) - Mosaic Stained Glass Suncatcher",
-   "description": "<div><strong>PRIVATE CLASS, VOLUNTEER TRIAL ONLY<br>Mosaic Stained Glass Suncatcher</strong></div>\n<div>November 15th &amp; 16th, 5pm - 8pm<br><br>Using the glass-on-glass mosaic technique, students will make a framed window suncatcher using top-of-the-line stained glass. They will learn proper attachment techniques, discover how to grout fragile pieces, and leave with a beautiful finished project and the skills to keep exploring mosaics.\n<p>Liz Paulson is a local mosaic artist in Kings Beach and has been exploring the world of mosaics for the past five years. She has her art in the North Tahoe Arts Center in Kings Beach and Tahoe City.</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkfr",
-   "capacity": 0,
-   "numberRegistered": 7,
-   "availableOnlineBookings": 0,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j5QF",
-   "classServiceId": "csvc_113QRWkf6Krz16jDEx",
-   "startDateTime": "2026-11-17T01:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-17T04:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFd6E",
-     "displayLabel": "Liz Lundholm"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": false,
-   "waitlistable": false,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-14T08:00:00Z",

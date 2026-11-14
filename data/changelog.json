@@ -544,5 +544,13 @@
   "name": "PRIVATE Wood Shop - No Public Sign Ups",
   "start": "2026-11-15T01:00:00Z",
   "kind": "p"
+ },
+ {
+  "at": "2026-11-14T06:20:16Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5qq",
+  "name": "Intro to Serging: Arm or Leg Warmers",
+  "start": "2026-11-15T01:00:00Z",
+  "kind": "c"
  }
 ]

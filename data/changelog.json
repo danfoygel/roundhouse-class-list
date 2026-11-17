@@ -576,5 +576,37 @@
   "name": "Public Tour - Come check out the space",
   "start": "2026-11-28T21:00:00Z",
   "kind": "p"
+ },
+ {
+  "at": "2026-11-17T07:53:30Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t643",
+  "name": "Learn to Sew: Holiday Stocking",
+  "start": "2026-12-08T17:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-17T07:53:30Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t654",
+  "name": "Learn to Handsew: Holiday Garland",
+  "start": "2026-12-15T01:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-17T07:53:30Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t621",
+  "name": "Intro to Serging: Neck Warmer",
+  "start": "2026-12-15T17:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-17T07:53:30Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t5zz",
+  "name": "Wood Shop: Make a Bottle Opener",
+  "start": "2026-12-16T17:00:00Z",
+  "kind": "c"
  }
 ]

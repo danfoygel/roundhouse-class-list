@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-16T21:59:56Z",
+  "fetched_at": "2026-11-17T07:53:30Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-16",
@@ -503,162 +503,6 @@
   }
  ],
  "classes": [
-  {
-   "id": "cinst_113QRWkf6Krz16t3kn",
-   "name": "Learn to Sew Pajama Pants - 2 Days -$90",
-   "description": "<div><strong>Learn to Sew Pajama Pants -$90 </strong></div>\n<div>2 Days, 3 hours each</div>\n<div>&nbsp;</div>\n<div>Make a pair of one-of-a-kind cotton pajama pants to cozy up for the holidays or to gift! This 2-day class includes instruction in machine sewing, serging, pattern-making, basic construction, and design.\n<p>All materials are provided. We have a selection of fabric but you are welcome to bring your own (3 yards)!</p>\n<p>Beginner and Intermediate sewists are welcome.</p>\n</div>\n<div>\n<p>This is a project-based class, and does not count as a safety checkout to use the Roundhouse machines.</p>\n<p>Beginner, Intermediate.</p>\n<p>12 - Adult. Students under 15 must be accompanied by an adult.</p>\n<p>Maximum 6 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkAM",
-   "capacity": 5,
-   "numberRegistered": 6,
-   "availableOnlineBookings": 0,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4fX",
-   "classServiceId": "csvc_113QRWkf6Krz16j9F2",
-   "startDateTime": "2026-11-17T01:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-17T04:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFcz8",
-     "displayLabel": "Bella Brinkman"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": false,
-   "waitlistable": true,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-16T08:00:00Z",
-   "bookingWindowEnd": "2026-11-17T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Enrollment",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16t412",
-   "name": "Mandala Drawing w/ Nicole Stirling - 2 Days - $140",
-   "description": "<div><strong>Mandala Drawing</strong><br><strong>2-Day Class | 3 Hours per Day</strong><br><strong>$140</strong></div>\n<div><br>Join artist and friend, Nicole Stirling, to learn the basics of drawing your own mandalas, starting at the roots with a compass, ruler, and protractor. Discover the joy of sacred geometry and the amazing things you can do with simply a compass and ruler. In this workshop, you’ll be creating your own mandala using these tools and basic drawing skills. This beginner-friendly workshop guides you through the full process - from designing and drawing a simple mandala to finishing it with ink and color.</div>\n<div><br><strong>Day 1:</strong><br>You’ll begin with learning the ‘mandala map’ basics, and a primer on using your new geometry tools. After getting comfortable with your tools and drawing your map you’ll learn the basics of mandala design including symmetry and pattern building.</div>\n<div><br><strong>Day 2:</strong><br>Transform your design into a vibrant work of art! Using colored pencils, ink, or markers you’ll bring your mandala to life with color while learning tips for clean lines, blending, and long-lasting results.</div>\n<div>&nbsp;</div>\n<div>All materials are provided, and no artistic experience is needed. You’ll leave with your own set of mandala drawing tools, and a beautiful piece of artwork that will be ready to frame and display in your space, or gift to someone you love.</div>\n<div><br>Create something colorful, calming, and uniquely yours!</div>\n<div>&nbsp;</div>\n<div>Ages: 12 to adult.<br>Maximum 12 students.</div>\n<div>&nbsp;</div>\n<div><strong>Artist Bio</strong></div>\n<div>Nicole Stirling is a vibrant visual artist known for her love of bold color, intricate detail, and geometric pattern. Born and raised in Lake Tahoe, California, Nicole draws deep inspiration from the magical, forested landscapes of her home - places she has spent countless days exploring and observing.</div>\n<div>&nbsp;</div>\n<div>From a young age she was enrolled in local art classes, experimenting with landscape painting, clay, and ink drawings. Though she majored in music in college, Nicole consistently pursued her passion for visual art, taking painting and drawing classes alongside her studies. Her early college painting courses included woodshop labs, where she learned to build her own stretcher bars; a skill that empowered her to create large-scale oil paintings and step fully into her identity as an artist.</div>\n<div><br>Nicole has long been captivated by circular forms and began developing mandala-inspired works featuring concentric patterns, sacred geometry, and global motifs. Her mandalas incorporate natural elements and psychedelic designs, blending structure and spontaneity in a deeply meditative process. She sees both the act of creation and the final piece as opportunities for mindful exploration and the opportunity to slow down.</div>\n<div>&nbsp;</div>\n<div>Nicole is also the owner of Chickadee Art Collective in Kings Beach - a gallery and retail shop showcasing artists from the Tahoe, Truckee, and Reno areas.</div>\n<div>&nbsp;</div>\n<div><strong>Links:&nbsp;</strong></div>\n<div><a href=\"https://www.chickadeetahoe.com\" target=\"_blank\">https://www.chickadeetahoe.com</a></div>\n<div><a href=\"https://www.stirlingstudiostahoe.com\" target=\"_blank\">https://www.stirlingstudiostahoe.com</a></div>\n<div>&nbsp;</div>\n<div><a href=\"https://www.instagram.com/nicolestirlingart/\" target=\"_blank\">https://www.instagram.com/nicolestirlingart/</a></div>\n<div><a href=\"https://www.instagram.com/chickadeetahoe/\" target=\"_blank\">https://www.instagram.com/chickadeetahoe/</a></div>\n<div>&nbsp;</div>\n<div>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n<p>&nbsp;</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkKW",
-   "capacity": 12,
-   "numberRegistered": 6,
-   "availableOnlineBookings": 6,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j5QF",
-   "classServiceId": "csvc_113QRWkf6Krz16jCjT",
-   "startDateTime": "2026-11-17T01:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-17T04:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFcr_",
-     "displayLabel": "Nicole Stirling"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-16T08:00:00Z",
-   "bookingWindowEnd": "2026-11-17T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Enrollment",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16t4QR",
-   "name": "Metal Shop 101 - 2 Days -$145",
-   "description": "<div><strong>Metal Shop 101</strong></div>\n<div>2 days, 3 hours each - $145</div>\n<div><br>In this two-day class, students will learn proper shop safety, use, and consumable changes of the \"basic\" metal shop tooling. These tools include the Drill Press, Horizontal Band Saw, Belt and Disc Sander, Bench Grinder, and common hand tools.<br><br>A small project will be completed on the 2nd day to utilize the Metal Shop tooling.<br><br>This class does not count as a safety checkout to use the tools covered in class. Students will need to schedule a safety checkout after completing the class so they can begin using the metal shop as an active Roundhouse Member.</div>\n<div>\n<p>Ages 12 and over. Students 15 and under must be accompanied by adult also taking the class.</p>\n<p>Maximum 4 students.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkYj",
-   "capacity": 4,
-   "numberRegistered": 4,
-   "availableOnlineBookings": 0,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
-   "classServiceId": "csvc_113QRWkf6Krz16j8XK",
-   "startDateTime": "2026-11-17T01:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-17T04:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFcSb",
-     "displayLabel": "Kian Berreman"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": false,
-   "waitlistable": true,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-16T08:00:00Z",
-   "bookingWindowEnd": "2026-11-17T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Enrollment",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
   {
    "id": "cinst_113QRWkf6Krz16sxw3",
    "name": "Wood Shop 101 - 2 Days - $145",
@@ -2106,6 +1950,58 @@
    "restrictedToMemberships": []
   },
   {
+   "id": "cinst_113QRWkf6Krz16t643",
+   "name": "Learn to Sew: Holiday Stocking - 1 Day - $65",
+   "description": "<div><strong>Learn to Sew: Holiday Stocking</strong><br>1 Day, 3 hours - $65</div>\n<p>Get into the holiday spirit and learn to sew your own festive stocking!</p>\n<p>In this beginner-friendly sewing class, you'll learn basic sewing machine skills as you cut, stitch, and assemble your own holiday stocking. Choose from a selection of fabrics and take home a handmade stocking ready to hang or gift!</p>\n<p>All materials are provided, but you are welcome to bring your own. Beginner, Intermediate.</p>\n<p><em>12 - Adult. Students under 15 must be accompanied by an adult.</em></p>\n<p><em>Maximum 5 students.</em></p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>",
+   "classGroupId": "csch_113QRWkf6Krz16jkp_",
+   "capacity": 5,
+   "numberRegistered": 0,
+   "availableOnlineBookings": 5,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j41t",
+   "classServiceId": "csvc_113QRWkf6Krz16jDH_",
+   "startDateTime": "2026-12-08T17:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-08T20:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFcz8",
+     "displayLabel": "Bella Brinkman"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-16T08:00:00Z",
+   "bookingWindowEnd": "2026-12-08T17:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Class",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
    "id": "cinst_113QRWkf6Krz16t4Za",
    "name": "Textiles Open Studio - Members Only",
    "description": "<p style=\"text-align: left\"><strong>Textiles Open Studio - Members Only</strong></p><p style=\"text-align: left\">&nbsp;</p><p style=\"text-align: left\">Come down to sew with our textiles volunteers, Judi Morales and Bella Brinkman. Bring your own projects and get mentored help, or be set up with a fun project using our large fabric supply.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">This class is for active Roundhouse members who have been safety checked out in the textiles shop. If you are new to sewing, please take Sewing 101 or one of our Learn to Sew project-based classes before attending Open Studio.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">You can also bring your own machine and get a hands-on tutorial of the great things your machine can do!</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">We kindly request you only book ONE Open Studio Session per Friday to leave space for all to enjoy.</p><p style=\"text-align: left\"><br>Limited to two people per session. Free to members only.</p><p style=\"text-align: left\">Ages 12 and over. Students under 15 must be accompanied by adult.<br>Maximum 2 students.</p><p style=\"text-align: left\"></p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\">Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>",
@@ -2522,6 +2418,58 @@
    "restrictedToMemberships": []
   },
   {
+   "id": "cinst_113QRWkf6Krz16t654",
+   "name": "Learn to Handsew: Holiday Garland - 1 Day - $65",
+   "description": "<div><strong>Learn to Hands</strong><strong>ew: Holiday Garland</strong></div>\n<div>1 Day, 3 hours - $65<br>\n<p>Get creative this holiday season and learn to hand-sew your own festive garland!</p>\n<p>In this beginner-friendly class, you'll learn basic hand-sewing techniques as you cut, stitch, and assemble decorative shapes to create a unique holiday garland. Take home a handmade decoration to hang in your home or give as a gift!</p>\n<p>All materials are provided, but you are welcome to bring your own. Beginner, Intermediate.</p>\n<p><em>12 - Adult. Students under 15 must be accompanied by an adult.</em></p>\n<p><em>Maximum 6 students.</em></p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
+   "classGroupId": "csch_113QRWkf6Krz16jkq1",
+   "capacity": 6,
+   "numberRegistered": 0,
+   "availableOnlineBookings": 6,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j41t",
+   "classServiceId": "csvc_113QRWkf6Krz16jDJ1",
+   "startDateTime": "2026-12-15T01:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-15T04:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFcz8",
+     "displayLabel": "Bella Brinkman"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-16T08:00:00Z",
+   "bookingWindowEnd": "2026-12-15T01:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Class",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
    "id": "cinst_113QRWkf6Krz16t4LM",
    "name": "Intro to Gas Tungsten Arc Welding (TIG) - 2 Days -$145",
    "description": "<p style=\"text-align: left\"><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p><p style=\"text-align: left\">You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p><p style=\"text-align: left\">This two-day class is an introduction to the fundamentals of TIG welding.</p><p style=\"text-align: left\">Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p><p style=\"text-align: left\">Ages 16 and over.</p><p style=\"text-align: left\">6 students max</p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\"><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p><p style=\"text-align: left\">Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
@@ -2564,6 +2512,58 @@
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],
    "type": "Enrollment",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
+   "id": "cinst_113QRWkf6Krz16t621",
+   "name": "Intro to Serging: Neck Warmer - 1 Day - $65",
+   "description": "<div><strong>Intro to Serging: Neck Warmer 1 Day - $65</strong></div>\n<div>&nbsp;</div>\n<div>Learn the basics of serging while making neck warmers out of upcycled sweaters and fleece! This beginner class will walk you through our serger machines, from threading to tension, and allow you to gain confidence to use them for simple projects. If you are a member, this class is a safety check to be able to use the machines independently.\n<p>Class includes instruction in serging, threading, hand sewing, using a pattern, basic construction and design.</p>\n<p><br><em>Ages 12 and over. Under 15 must be accompanied by an adult.</em><br><em>Max 4 students.</em></p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n</div>",
+   "classGroupId": "csch_113QRWkf6Krz16jkoz",
+   "capacity": 4,
+   "numberRegistered": 0,
+   "availableOnlineBookings": 4,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j41t",
+   "classServiceId": "csvc_113QRWkf6Krz16jBtd",
+   "startDateTime": "2026-12-15T17:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-15T20:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFcz8",
+     "displayLabel": "Bella Brinkman"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-16T08:00:00Z",
+   "bookingWindowEnd": "2026-12-15T17:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Class",
    "pickASpotEnabled": false,
    "room": null,
    "roomLayout": null,
@@ -2720,6 +2720,58 @@
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],
    "type": "Enrollment",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
+   "id": "cinst_113QRWkf6Krz16t5zz",
+   "name": "Wood Shop: Make a Bottle Opener - 1 Day - $65",
+   "description": "<div>Learn how to make your own wooden bottle opener in this beginner-friendly woodworking class!</div>\n<p>You'll practice basic woodworking skills as you shape, sand, and finish your own bottle opener to take home. A fun, practical project that's perfect for gifting or keeping for yourself!</p>\n<p><em>5 students maximum.</em></p>\n<p><em>Ages 12 and over. Students 15 and under must be accompanied by an adult also taking the class.</em></p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n<p><em><br></em></p>",
+   "classGroupId": "csch_113QRWkf6Krz16jkmx",
+   "capacity": 5,
+   "numberRegistered": 0,
+   "availableOnlineBookings": 5,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j4um",
+   "classServiceId": "csvc_113QRWkf6Krz16jDGz",
+   "startDateTime": "2026-12-16T17:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-16T20:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFbpz",
+     "displayLabel": "Terry Cavanagh"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-16T08:00:00Z",
+   "bookingWindowEnd": "2026-12-16T17:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Class",
    "pickASpotEnabled": false,
    "room": null,
    "roomLayout": null,

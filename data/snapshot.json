@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-18T20:29:36Z",
+  "fetched_at": "2026-11-19T07:24:06Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-18",
@@ -1331,8 +1331,8 @@
    "description": "<p style=\"text-align: left\">We need your help to keep the Roundhouse a safe and clean resource for all of us to learn, create, and build together. Gather your friends and family for our Shop Clean Up on Wednesday, December 2nd at 4pm.</p><p style=\"text-align: left\"><br>Whether you can only stay for an hour or join us the whole time, we can use your helping hands. We'll have refreshments and pizza to fuel the evening for all volunteers. Shop Clean Ups are a great way to meet other creative and service-minded folks while making our makerspace an even better place!</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkht",
    "capacity": 50,
-   "numberRegistered": 6,
-   "availableOnlineBookings": 44,
+   "numberRegistered": 7,
+   "availableOnlineBookings": 43,
    "sessionTypeId": "ctype_113QRWkf6Krz16j3sk",
    "classServiceId": "csvc_113QRWkf6Krz16j79y",
    "startDateTime": "2026-12-03T00:00:00.0000000Z",

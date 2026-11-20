@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-19T20:35:19Z",
+  "fetched_at": "2026-11-20T07:13:01Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-19",
@@ -2267,8 +2267,8 @@
    "description": "<p style=\"text-align: left\"><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p><p style=\"text-align: left\">You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p><p style=\"text-align: left\">This two-day class is an introduction to the fundamentals of TIG welding.</p><p style=\"text-align: left\">Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p><p style=\"text-align: left\">Ages 16 and over.</p><p style=\"text-align: left\">6 students max</p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\"><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p><p style=\"text-align: left\">Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkWh",
    "capacity": 6,
-   "numberRegistered": 4,
-   "availableOnlineBookings": 2,
+   "numberRegistered": 5,
+   "availableOnlineBookings": 1,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "classServiceId": "csvc_113QRWkf6Krz16j9nZ",
    "startDateTime": "2026-12-15T17:00:00.0000000Z",
@@ -2475,8 +2475,8 @@
    "description": "<p style=\"text-align: left\"><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p><p style=\"text-align: left\">You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p><p style=\"text-align: left\">This two-day class is an introduction to the fundamentals of TIG welding.</p><p style=\"text-align: left\">Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p><p style=\"text-align: left\">Ages 16 and over.</p><p style=\"text-align: left\">6 students max</p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\"><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p><p style=\"text-align: left\">Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkWh",
    "capacity": 6,
-   "numberRegistered": 4,
-   "availableOnlineBookings": 2,
+   "numberRegistered": 5,
+   "availableOnlineBookings": 1,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "classServiceId": "csvc_113QRWkf6Krz16j9nZ",
    "startDateTime": "2026-12-16T17:00:00.0000000Z",
@@ -2538,6 +2538,58 @@
     {
      "id": "sspec_113QRWkf6Krz9wFbpz",
      "displayLabel": "Terry Cavanagh"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-19T08:00:00Z",
+   "bookingWindowEnd": "2026-12-16T17:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Class",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
+   "id": "cinst_113QRWkf6Krz16t687",
+   "name": "Watercolor Holiday Cards - 1 Day - $55",
+   "description": "<div>Watercolor Holiday Greeting Cards\n<p>3 Hours - $55</p>\n<p>Fall leaves and wintry landscapes. Let's make our own holiday cards with expert Troy Corliss, and sample a smorgasbord of watercolor techniques!</p>\n<p>This will be an open workshop format. No prior experience with watercolors necessary. Bring your curiosity and desire for shared experimentation.</p>\n<p>All materials are provided.</p>\n<p><em>12 students maximum.</em><br><em>Ages 12 and above. All youth under the age of 16 must be chaperoned by an adult</em>.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.<br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
+   "classGroupId": "csch_113QRWkf6Krz16jks3",
+   "capacity": 12,
+   "numberRegistered": 0,
+   "availableOnlineBookings": 12,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j47z",
+   "classServiceId": "csvc_113QRWkf6Krz16jDK2",
+   "startDateTime": "2026-12-16T17:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-16T20:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFcKU",
+     "displayLabel": "Troy Corliss"
     }
    ],
    "location": {

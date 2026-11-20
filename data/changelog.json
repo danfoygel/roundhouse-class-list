@@ -608,5 +608,13 @@
   "name": "Wood Shop: Make a Bottle Opener",
   "start": "2026-12-16T17:00:00Z",
   "kind": "c"
+ },
+ {
+  "at": "2026-11-20T07:13:01Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t687",
+  "name": "Watercolor Holiday Cards",
+  "start": "2026-12-16T17:00:00Z",
+  "kind": "c"
  }
 ]

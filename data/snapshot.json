@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-21T19:14:11Z",
+  "fetched_at": "2026-11-22T06:45:43Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-21",
@@ -503,157 +503,6 @@
   }
  ],
  "classes": [
-  {
-   "id": "cinst_113QRWkf6Krz16sKsc",
-   "name": "Public Tour - Come Check Out the Space",
-   "description": "<div>This is a great opportunity to check out the space and learn about the great equipment, classes and community that we offer at the Roundhouse. Most tours last about 20 minutes.</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jh4J",
-   "capacity": 10,
-   "numberRegistered": 0,
-   "availableOnlineBookings": 10,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j44w",
-   "classServiceId": "csvc_113QRWkf6Krz16j5C3",
-   "startDateTime": "2026-11-21T21:00:00.0000000Z",
-   "duration": 30,
-   "endDateTime": "2026-11-21T21:30:00.0000000Z",
-   "staff": null,
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": true,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-21T08:00:00Z",
-   "bookingWindowEnd": "2026-11-21T21:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16t49A",
-   "name": "Butcher Blocks for Beginners- $115 all materials included-2 sessions ",
-   "description": "<div><strong>Butcher Blocks for Beginners&nbsp;</strong>$115 all materials included</div>\n<div>2 sessions</div>\n<div>&nbsp;</div>\n<div>This two-day class will walk you through all the steps in making a beautiful butcher block cutting board.&nbsp;</div>\n<div>&nbsp;</div>\n<div>This class will provide an introduction to the Wood Shop using the Butcher Block cutting board as a project.</div>\n<div>&nbsp;</div>\n<div>The course will cover the different types of wood you can use and address the difference and between domestic and exotic, light and dark wood species.</div>\n<div>&nbsp;</div>\n<div>You will be instructed on how to prepare your wood, including the cutting, milling, and attachment.</div>\n<div>&nbsp;</div>\n<div>The 2nd class will be focused on finishing: planner action, orbit sander, mineral oil, cleaning, how to attach handles, maintenance, and a short quiz about wood species.</div>\n<div><br>The material used for the class: dark walnut, redwood, poplar, aspen, maple, mahogany, white oak, and possibly cedar and hickory.</div>\n<div>&nbsp;</div>\n<div>Specs for butcher block: roughly 12\" by 22 \"and roughly 1 1/4 thickness.</div>\n<div>&nbsp;</div>\n<div>Those new to woodworking or looking for a refresher are welcome. This is a project-based class and does not qualify as a wood shop safety checkout for members. Those wishing to use the wood shop independently without prior skills will need to sign up for a Wood Shop 101 before becoming a member.&nbsp;</div>\n<div>&nbsp;</div>\n<div>Maximum 5 Students.&nbsp;</div>\n<div>Appropriate for students 12 and over.&nbsp;All youth under the age of 16 must be chaperoned by an adult also taking the class. <br><br>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</div>\n<div>&nbsp;</div>\n<div>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</div>\n<div>&nbsp;</div>\n<div>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkPa",
-   "capacity": 5,
-   "numberRegistered": 5,
-   "availableOnlineBookings": 0,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j4G8",
-   "classServiceId": "csvc_113QRWkf6Krz16j5zq",
-   "startDateTime": "2026-11-22T01:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-22T04:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFa3E",
-     "displayLabel": "ALIN LUCHIAN"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": false,
-   "waitlistable": true,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-21T08:00:00Z",
-   "bookingWindowEnd": "2026-11-22T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Enrollment",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
-  {
-   "id": "cinst_113QRWkf6Krz16t4ST",
-   "name": "3D Printing 101: Bambu Lab X1 & H2D - 1 Day - $55",
-   "description": "<div><strong>3D Printing 101: Bambu Lab X1 &amp;&nbsp;H2D $55</strong></div>\n<div><strong>1 Day, 3 Hours</strong></div>\n<div>&nbsp;</div>\n<div>This course is designed to teach the fundamentals of 3D printing. Students will learn about all the tools they need to design and launch their own 3D printing projects using our Bambu X1 Carbon and H2D printers. If you are a Roundhouse member, this is a safety checkout to use these machines.</div>\n<div>&nbsp;</div>\n<div>We will cover basic theory, limitations, and possibilities, as well as translating virtual objects into a language the printer can understand, controlling the printer, and basic post-processing. Jump in and learn how to print your ideas into 3D reality!</div>\n<div><br>This is not a 3D design class, and students do not need any design experience.</div>\n<div>&nbsp;</div>\n<div>5 students max.</div>\n<div><br>Must be age 12 and above. All youth under the age of 16 must be chaperoned by an adult also taking the class.\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>\n</div>",
-   "classGroupId": "csch_113QRWkf6Krz16jkZk",
-   "capacity": 5,
-   "numberRegistered": 3,
-   "availableOnlineBookings": 2,
-   "sessionTypeId": "ctype_113QRWkf6Krz16j3ph",
-   "classServiceId": "csvc_113QRWkf6Krz16j9vh",
-   "startDateTime": "2026-11-22T01:00:00.0000000Z",
-   "duration": 180,
-   "endDateTime": "2026-11-22T04:00:00.0000000Z",
-   "staff": [
-    {
-     "id": "sspec_113QRWkf6Krz9wFbep",
-     "displayLabel": "Dory Breaux"
-    }
-   ],
-   "location": {
-    "id": "loc_113QRWkf6Krz16j2xr",
-    "name": "Truckee Roundhouse",
-    "localeDetails": {
-     "timeZone": "America/Los_Angeles",
-     "cultureName": "en-US",
-     "currency": {
-      "currencyCode": "USD",
-      "currencySymbol": "$$",
-      "isoDecimalDigits": 2,
-      "subUnitMultiplier": 100
-     }
-    }
-   },
-   "bookable": true,
-   "waitlistable": false,
-   "cancelled": false,
-   "isBookableOnline": true,
-   "bookingWindowStart": "2026-11-21T08:00:00Z",
-   "bookingWindowEnd": "2026-11-22T01:00:00Z",
-   "earlyAccessOpensAt": null,
-   "earlyAccessUpToDays": null,
-   "earlyAccessMembershipIds": [],
-   "type": "Class",
-   "pickASpotEnabled": false,
-   "room": null,
-   "roomLayout": null,
-   "PASClassId": null,
-   "roomName": null,
-   "themeName": null,
-   "isTbd": false,
-   "restrictedToMemberships": []
-  },
   {
    "id": "cinst_113QRWkf6Krz16t467",
    "name": "Crochet 102: Make a Beanie - 1 Day - $65",
@@ -1435,8 +1284,8 @@
    "description": "<div><strong>Intermediate Silversmithing: Bezel Making and Stone Setting (ring or pendant)</strong><br>1 Day, 4 Hours - $140\n<p>Join Aurora from Snowflower Studios to create a silver and stone ring or pendant. You will learn how to create your own bezel by shaping and soldering sterling silver, adding texture, setting a stone, and attaching components. We will also go over finishing techniques, including sanding and polishing. Attendance at a prior silversmithing class is encouraged, but all levels, including beginners, are welcome. All materials provided.</p>\n<p><br>NOTE: The workshop cost includes the majority of sterling silver materials for a basic ring, pendant, or hoops, and gemstones of your choice. Those making earrings may have a small additional materials cost ($5-10), depending on the size and cost of stones selected. Due to the recent jump in silver prices, if your metal weighs over .25 ounces, there will be an additional materials fee ranging from $10 to $20. Sterling silver chains will also be available for purchase at wholesale cost.</p>\n<p>Ages 12 and above. All youth under the age of 16 must be chaperoned by an adult.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.orgr</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jjx9",
    "capacity": 8,
-   "numberRegistered": 8,
-   "availableOnlineBookings": 0,
+   "numberRegistered": 7,
+   "availableOnlineBookings": 1,
    "sessionTypeId": "ctype_113QRWkf6Krz16j5eV",
    "classServiceId": "csvc_113QRWkf6Krz16jD4n",
    "startDateTime": "2026-12-07T21:00:00.0000000Z",
@@ -1462,8 +1311,8 @@
      }
     }
    },
-   "bookable": false,
-   "waitlistable": true,
+   "bookable": true,
+   "waitlistable": false,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-21T08:00:00Z",
@@ -2059,8 +1908,8 @@
    "description": "<div><strong>Learn to Hands</strong><strong>ew: Holiday Garland</strong></div>\n<div>1 Day, 3 hours - $65<br>\n<p>Get creative this holiday season and learn to hand-sew your own festive garland!</p>\n<p>In this beginner-friendly class, you'll learn basic hand-sewing techniques as you cut, stitch, and assemble decorative shapes to create a unique holiday garland. Take home a handmade decoration to hang in your home or give as a gift!</p>\n<p>All materials are provided, but you are welcome to bring your own. Beginner, Intermediate.</p>\n<p><em>12 - Adult. Students under 15 must be accompanied by an adult.</em></p>\n<p><em>Maximum 6 students.</em></p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
    "classGroupId": "csch_113QRWkf6Krz16jkq1",
    "capacity": 6,
-   "numberRegistered": 0,
-   "availableOnlineBookings": 6,
+   "numberRegistered": 1,
+   "availableOnlineBookings": 5,
    "sessionTypeId": "ctype_113QRWkf6Krz16j41t",
    "classServiceId": "csvc_113QRWkf6Krz16jDJ1",
    "startDateTime": "2026-12-15T01:00:00.0000000Z",

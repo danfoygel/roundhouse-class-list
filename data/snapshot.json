@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-22T19:38:06Z",
+  "fetched_at": "2026-11-23T07:35:55Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-22",
@@ -1279,6 +1279,58 @@
    "restrictedToMemberships": []
   },
   {
+   "id": "cinst_113QRWkf6Krz16t698",
+   "name": "Woodworking Through ASL: Butcher Board Workshop for the Deaf and Hard of Hearing - 2 Days - $115 - all materials included",
+   "description": "<div><strong>Woodworking Through ASL: Butcher Board Workshop for the Deaf and Hard of Hearing </strong>-&nbsp;$115 all materials included</div>\n<div><br><strong>2 sessions, 3 hours each day</strong>\n<p>This two-day class will walk you through all the steps in making a beautiful butcher block cutting board, taught through American Sign Language (ASL). This class will provide an introduction to the Wood Shop using the Butcher Block cutting board as a project.</p>\n<p>The course will cover the different types of wood you can use and address the difference between domestic and exotic, light and dark wood species. You will be instructed on how to prepare your wood, including the cutting, milling, and attachment.</p>\n<p>The 2nd class will be focused on finishing: planner action, orbit sander, mineral oil, cleaning, how to attach handles, maintenance, and a short quiz about wood species.</p>\n<p>The material used for the class: dark walnut, redwood, poplar, maple, mahogany, white oak, and possibly cedar and hickory.</p>\n<p>Specs for butcher block: roughly 12\" by 22 “and roughly 1 1/4 thickness.</p>\n<p>Those new to woodworking or looking for a refresher are welcome. This is a project-based class and does not qualify as a wood shop safety checkout for members. Those wishing to use the wood shop independently without prior skills will need to sign up for a Wood Shop 101 before becoming a member.</p>\n<p><em>Maximum 5 Students.</em><br><em>Appropriate for students 12 and over. All youth under the age of 16 must be chaperoned by an adult also taking the class.</em></p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
+   "classGroupId": "csch_113QRWkf6Krz16jkt4",
+   "capacity": 5,
+   "numberRegistered": 1,
+   "availableOnlineBookings": 4,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j4G8",
+   "classServiceId": "csvc_113QRWkf6Krz16jDL3",
+   "startDateTime": "2026-12-07T01:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-07T04:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFd7F",
+     "displayLabel": "Nicole Bringolf"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-22T08:00:00Z",
+   "bookingWindowEnd": "2026-12-07T01:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Enrollment",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
    "id": "cinst_113QRWkf6Krz16sxry",
    "name": "Intermediate Silversmithing: Bezel Making and Stone Setting - 1 Day - $140",
    "description": "<div><strong>Intermediate Silversmithing: Bezel Making and Stone Setting (ring or pendant)</strong><br>1 Day, 4 Hours - $140\n<p>Join Aurora from Snowflower Studios to create a silver and stone ring or pendant. You will learn how to create your own bezel by shaping and soldering sterling silver, adding texture, setting a stone, and attaching components. We will also go over finishing techniques, including sanding and polishing. Attendance at a prior silversmithing class is encouraged, but all levels, including beginners, are welcome. All materials provided.</p>\n<p><br>NOTE: The workshop cost includes the majority of sterling silver materials for a basic ring, pendant, or hoops, and gemstones of your choice. Those making earrings may have a small additional materials cost ($5-10), depending on the size and cost of stones selected. Due to the recent jump in silver prices, if your metal weighs over .25 ounces, there will be an additional materials fee ranging from $10 to $20. Sterling silver chains will also be available for purchase at wholesale cost.</p>\n<p>Ages 12 and above. All youth under the age of 16 must be chaperoned by an adult.</p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p>\n<p>Please be advised that when signing up for the WAITLIST, you will be charged for the class. Should a space not open up, your fee will be a credit on your account for a future class. If you wish for a refund instead of a class credit, you will need to call us during business hours at 530-582-4007 after the class has started.</p>\n<p><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.orgr</p>\n</div>",
@@ -1425,6 +1477,58 @@
    "earlyAccessUpToDays": null,
    "earlyAccessMembershipIds": [],
    "type": "Class",
+   "pickASpotEnabled": false,
+   "room": null,
+   "roomLayout": null,
+   "PASClassId": null,
+   "roomName": null,
+   "themeName": null,
+   "isTbd": false,
+   "restrictedToMemberships": []
+  },
+  {
+   "id": "cinst_113QRWkf6Krz16t6A9",
+   "name": "Woodworking Through ASL: Butcher Board Workshop for the Deaf and Hard of Hearing - 2 Days - $115 - all materials included",
+   "description": "<div><strong>Woodworking Through ASL: Butcher Board Workshop for the Deaf and Hard of Hearing </strong>-&nbsp;$115 all materials included</div>\n<div><br><strong>2 sessions, 3 hours each day</strong>\n<p>This two-day class will walk you through all the steps in making a beautiful butcher block cutting board, taught through American Sign Language (ASL). This class will provide an introduction to the Wood Shop using the Butcher Block cutting board as a project.</p>\n<p>The course will cover the different types of wood you can use and address the difference between domestic and exotic, light and dark wood species. You will be instructed on how to prepare your wood, including the cutting, milling, and attachment.</p>\n<p>The 2nd class will be focused on finishing: planner action, orbit sander, mineral oil, cleaning, how to attach handles, maintenance, and a short quiz about wood species.</p>\n<p>The material used for the class: dark walnut, redwood, poplar, maple, mahogany, white oak, and possibly cedar and hickory.</p>\n<p>Specs for butcher block: roughly 12\" by 22 “and roughly 1 1/4 thickness.</p>\n<p>Those new to woodworking or looking for a refresher are welcome. This is a project-based class and does not qualify as a wood shop safety checkout for members. Those wishing to use the wood shop independently without prior skills will need to sign up for a Wood Shop 101 before becoming a member.</p>\n<p><em>Maximum 5 Students.</em><br><em>Appropriate for students 12 and over. All youth under the age of 16 must be chaperoned by an adult also taking the class.</em></p>\n<p>To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or WAITLIST button, the class and waitlist are full.</p>\n<p>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p>\n<p>Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org</p>\n</div>",
+   "classGroupId": "csch_113QRWkf6Krz16jkt4",
+   "capacity": 5,
+   "numberRegistered": 1,
+   "availableOnlineBookings": 4,
+   "sessionTypeId": "ctype_113QRWkf6Krz16j4G8",
+   "classServiceId": "csvc_113QRWkf6Krz16jDL3",
+   "startDateTime": "2026-12-08T01:00:00.0000000Z",
+   "duration": 180,
+   "endDateTime": "2026-12-08T04:00:00.0000000Z",
+   "staff": [
+    {
+     "id": "sspec_113QRWkf6Krz9wFd7F",
+     "displayLabel": "Nicole Bringolf"
+    }
+   ],
+   "location": {
+    "id": "loc_113QRWkf6Krz16j2xr",
+    "name": "Truckee Roundhouse",
+    "localeDetails": {
+     "timeZone": "America/Los_Angeles",
+     "cultureName": "en-US",
+     "currency": {
+      "currencyCode": "USD",
+      "currencySymbol": "$$",
+      "isoDecimalDigits": 2,
+      "subUnitMultiplier": 100
+     }
+    }
+   },
+   "bookable": true,
+   "waitlistable": false,
+   "cancelled": false,
+   "isBookableOnline": true,
+   "bookingWindowStart": "2026-11-22T08:00:00Z",
+   "bookingWindowEnd": "2026-12-08T01:00:00Z",
+   "earlyAccessOpensAt": null,
+   "earlyAccessUpToDays": null,
+   "earlyAccessMembershipIds": [],
+   "type": "Enrollment",
    "pickASpotEnabled": false,
    "room": null,
    "roomLayout": null,

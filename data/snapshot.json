@@ -1,6 +1,6 @@
 {
  "meta": {
-  "fetched_at": "2026-11-25T08:30:49Z",
+  "fetched_at": "2026-11-25T21:40:25Z",
   "widget_url": "https://go.mindbodyonline.com/book/widgets/schedules/view/d2308654707/schedule",
   "timezone": "America/Los_Angeles",
   "first_day": "2026-11-25",
@@ -868,8 +868,8 @@
    "description": "<p style=\"text-align: left\">We need your help to keep the Roundhouse a safe and clean resource for all of us to learn, create, and build together. Gather your friends and family for our Shop Clean Up on Wednesday, December 2nd at 4pm.</p><p style=\"text-align: left\"><br>Whether you can only stay for an hour or join us the whole time, we can use your helping hands. We'll have refreshments and pizza to fuel the evening for all volunteers. Shop Clean Ups are a great way to meet other creative and service-minded folks while making our makerspace an even better place!</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkht",
    "capacity": 50,
-   "numberRegistered": 7,
-   "availableOnlineBookings": 43,
+   "numberRegistered": 6,
+   "availableOnlineBookings": 44,
    "sessionTypeId": "ctype_113QRWkf6Krz16j3sk",
    "classServiceId": "csvc_113QRWkf6Krz16j79y",
    "startDateTime": "2026-12-03T00:00:00.0000000Z",
@@ -2116,8 +2116,8 @@
    "description": "<p style=\"text-align: left\"><strong>Intro to Gas Tungsten Arc Welding (TIG)</strong><br><strong>2 Days -$145</strong>&nbsp;</p><p style=\"text-align: left\">You MUST have prior welding experience or have taken the Intro to MIG welding class. The TIG welding class will assume knowledge of the fundamentals of arc welding, electricity, and metallurgy. TIG Welding materials are costly and must be supplied by members if using them outside of class.</p><p style=\"text-align: left\">This two-day class is an introduction to the fundamentals of TIG welding.</p><p style=\"text-align: left\">Welding is a skill that requires hours of practice. You will not be a proficient welder with this class alone. The goal will be to provide enough knowledge to allow and encourage independent learning and practice. This will include a basic understanding of the TIG welding machine and equipment, safety issues, and techniques in welding aluminum and steel as well as TIG braze welding.</p><p style=\"text-align: left\">Ages 16 and over.</p><p style=\"text-align: left\">6 students max</p><p style=\"text-align: left\">To register, click on the BOOK button. If the class is full, you can add your name to the waitlist. If there is no BOOK or button, the class and waitlist are full.</p><p style=\"text-align: left\"><br>Cancellations made 72 hours or more in advance will receive a Roundhouse class credit. Cancellations made 72 hours or less are non-refundable and non-transferable. Roundhouse class credit may be issued for medical or family emergencies. Due to our limited class sizes, we kindly ask that you give us as much advance notice as possible -- not showing up for a class without communication affects our ability to offer valuable programming to our community.</p><p style=\"text-align: left\">Please note that we may take photos during the workshop to use for future marketing. If you do not wish to be photographed, please email info@truckeeroundhouse.org.</p>",
    "classGroupId": "csch_113QRWkf6Krz16jkWh",
    "capacity": 6,
-   "numberRegistered": 6,
-   "availableOnlineBookings": 0,
+   "numberRegistered": 5,
+   "availableOnlineBookings": 1,
    "sessionTypeId": "ctype_113QRWkf6Krz16j4TK",
    "classServiceId": "csvc_113QRWkf6Krz16j9nZ",
    "startDateTime": "2026-12-16T17:00:00.0000000Z",
@@ -2143,8 +2143,8 @@
      }
     }
    },
-   "bookable": false,
-   "waitlistable": true,
+   "bookable": true,
+   "waitlistable": false,
    "cancelled": false,
    "isBookableOnline": true,
    "bookingWindowStart": "2026-11-25T08:00:00Z",

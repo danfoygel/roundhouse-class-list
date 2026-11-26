@@ -656,5 +656,21 @@
    "was_capacity": 4,
    "capacity": 5
   }
+ },
+ {
+  "at": "2026-11-26T08:14:43Z",
+  "type": "removed",
+  "class_id": "cinst_113QRWkf6Krz16t4TU",
+  "name": "3D Printing 101: Bambu Lab X1 & H2D",
+  "start": "2026-12-14T01:00:00Z",
+  "kind": "c"
+ },
+ {
+  "at": "2026-11-26T08:14:43Z",
+  "type": "added",
+  "class_id": "cinst_113QRWkf6Krz16t6BA",
+  "name": "3D Printing 101: Bambu Lab X1 & H2D",
+  "start": "2026-12-21T01:00:00Z",
+  "kind": "c"
  }
 ]
